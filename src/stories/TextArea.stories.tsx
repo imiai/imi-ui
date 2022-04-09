@@ -37,3 +37,16 @@ Label.args = {
     error: '',
     label: 'Label Name'
 };
+
+
+export const Length = Template.bind({});
+Length.storyName = 'Length counter'
+Length.args = {
+    placeholder: 'Placeholder',
+    isError: false,
+    disabled: false,
+    hint: '',
+    error: '',
+    label: 'Label Name',
+    showLengthCounter: true,
+};
