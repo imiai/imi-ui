@@ -1,0 +1,65 @@
+@import 'styles/mixin.scss';
+
+.imiui-checkbox {
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    height: 40px;
+    width: fit-content;
+
+    &.disabled {
+        svg {
+            fill: var(--imiui-gray-100)
+        }
+        label {
+            color: var(--imiui-gray-100);
+        }
+    }
+    .checkbox-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 40px;
+        height: 40px;
+        z-index: 0;
+        border-radius: 20px;
+    }
+    &:active:not(.disabled) {
+        .checkbox-overlay.checked {
+            background: var(--imiui-primary-blue);
+            opacity: 0.1;
+        }
+    }
+    &:active:not(.disabled) {
+        .checkbox-overlay.unchecked {
+            background: var(--imiui-gray-100);
+            opacity: 1;
+        }
+    }
+
+    .checkbox-svg-warrper {
+        position: absolute;
+        top: 0;
+        left: 0;
+        padding: 10px; 
+        width: 40px;
+        height: 40px;
+        z-index: 1;
+    }
+    .checkbox-svg {
+        width: 20px;
+        height: 20px;
+    }
+
+    input[type="checkbox"] {
+        display: none;
+    }
+
+    label {
+        cursor: pointer;
+        padding-left: 40px;
+        @include font(400, 14px, 18px)
+    }
+    
+}
