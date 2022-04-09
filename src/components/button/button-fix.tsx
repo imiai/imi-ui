@@ -21,7 +21,7 @@ const ButtonFix = (props: IButtonFixProps) => {
     if (href && !disabled) {
         return (
             <div className="imiui-button-fix">
-                <a href={href} target={target} className={`imiui-button ${type} ${disabled ? 'disabled' : ''} ${className}`.trim()}>
+                <a href={href} target={target} className={`imiui-button ${type}${disabled ? ' disabled' : ''}${className ? ` ${className}` : ''}`}>
                     {content}
                 </a>
             </div>
@@ -30,7 +30,7 @@ const ButtonFix = (props: IButtonFixProps) => {
 
     return (
         <div className="imiui-button-fix">
-            <button disabled={disabled} className={`imiui-button ${type} ${disabled ? 'disabled' : ''} ${className}`.trim()} {...rest}>
+            <button disabled={disabled} className={`imiui-button ${type}${disabled ? ' disabled' : ''}${className ? ` ${className}` : ''}`} {...rest}>
                 {content}
             </button>
         </div>

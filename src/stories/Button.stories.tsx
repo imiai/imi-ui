@@ -1,6 +1,6 @@
 import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
-import { Button } from 'components/button';
+import { Button } from 'components';
 import { EyeClose, EyeOpen } from 'icons';
 
 
@@ -47,5 +47,5 @@ Primary.args = {
   size: 54,
   disabled: false,
   label: 'Button',
-  href: 'https://www.google.com/',
+  href: '',
 };

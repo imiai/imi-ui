@@ -9,7 +9,7 @@ interface IButtonProps extends React.HTMLProps<HTMLButtonElement> {
     children?: React.ReactNode;
 }
 
-const Button = (props: IButtonProps) => {
+export const Button = (props: IButtonProps) => {
 
     const { className = '', href = '', target = '_blank', type, size, disabled = false, startIcon, endIcon, children, ...rest } = props;
 
@@ -23,14 +23,14 @@ const Button = (props: IButtonProps) => {
 
     if (href && !disabled) {
         return (
-            <a href={href} target={target} className={`imiui-button ${type} size-${size} ${disabled ? 'disabled' : ''} ${className}`.trim()}>
+            <a href={href} target={target} className={`imiui-button ${type} size-${size}${disabled ? ' disabled' : ''}${className ? ` ${className}` : ''}`}>
                 {content}
             </a>
         )
     }
 
     return (
-        <button disabled={disabled} className={`imiui-button ${type} size-${size} ${disabled ? 'disabled' : ''} ${className}`.trim()} {...rest}>
+        <button disabled={disabled} className={`imiui-button ${type} size-${size}${disabled ? ' disabled' : ''}${className ? ` ${className}` : ''}`} {...rest}>
            {content}
         </button>
     )

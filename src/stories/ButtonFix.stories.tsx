@@ -1,7 +1,7 @@
 import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 import { EyeClose, EyeOpen } from 'icons';
-import { ButtonFix } from 'components/button';
+import { ButtonFix } from 'components';
 
 
 export default {
@@ -38,7 +38,7 @@ Primary.args = {
   type: 'primary',
   disabled: false,
   label: 'Button',
-  href: 'https://www.google.com/'
+  href: ''
 };
 
 console.log('asdfghjkl');

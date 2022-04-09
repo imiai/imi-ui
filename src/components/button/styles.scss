@@ -11,10 +11,7 @@
     align-items: center;
     justify-content: center;
 
-    text-decoration: none;
     width: fit-content;
-
-    cursor: pointer;
     &.primary {
         background: var(--imiui-primary-blue);
         border: 1.5px solid  var(--imiui-primary-blue);
