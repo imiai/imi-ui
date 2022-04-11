@@ -8,26 +8,17 @@ interface ICheckboxProps extends React.HTMLProps<HTMLInputElement> {
 }
 
 const Checkbox = (props: ICheckboxProps) => {
-    const {checked, label, disabled, ...rest} = props;
-    const [isChecked, setIsChecked] = useState(checked)
-
-    const toggleCheck = (e: any) => {
-        if (disabled) {
-            return;
-        }
-        setIsChecked(!isChecked)
-        props.onChange && props.onChange(e)
-    }
+    const {label, ...rest} = props;
 
     return (
-        <span className={`imiui-checkbox${disabled ? ' disabled' : ''}`} onClick={toggleCheck}>
-            <input type={'checkbox'} {...rest}/>
-            <span className="checkbox-svg-warrper">
-                {isChecked ? <CheckboxChecked className="checkbox-svg"/> : <CheckboxUnchecked className="checkbox-svg"/>}
+        <label className="imiui-checkbox">
+            <input {...rest} type="checkbox" />
+            <span>{label}</span>
+            <span className="checkmark ripple">
+                <CheckboxChecked className="svg-checked" />
+                <CheckboxUnchecked className="svg-unchecked" />
             </span>
-            <span className={`checkbox-overlay${checked ? ' checked' : ' unchecked'}`}></span>
-            {label && <label>{label}</label>}
-        </span>
+        </label>
     )
 }
 

@@ -1,10 +1,15 @@
 import { useState } from 'react';
-import { Button, Checkbox, Input, TextArea } from './components';
+import { Button, Checkbox, Input, Radio, RadioGroup, TextArea } from './components';
 import { EyeOpen } from './icons';
 
 function App() {
   const [value, setValue] = useState('');
   const [isChecked, setIsChecked] = useState(false);
+  const [selectedValue, setSelectedValue] = useState('Male')
+
+  const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setSelectedValue(event.target.value);
+  }
 
   return (
     <div>
@@ -20,6 +25,13 @@ function App() {
         <TextArea placeholder='This is placeholder' showLengthCounter hint='asd'/> */}
 
         <Checkbox checked={isChecked} onChange={() => setIsChecked(!isChecked)} label={"Label"}/>
+        <Checkbox checked={isChecked} disabled onChange={() => setIsChecked(!isChecked)} label={"Label"}/>
+
+        <RadioGroup onChange={handleChange} value={selectedValue}>
+          <Radio label='Male' name='Gender' value='Male'/>
+          <Radio label='Female' name='Gender' value='Female'/>
+        </RadioGroup>
+        <p>{selectedValue}</p>
     </div>
   );
 }

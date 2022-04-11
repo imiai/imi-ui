@@ -1,6 +1,6 @@
 @import 'styles/mixin.scss';
 
-.imiui-checkbox {
+.imiui-radio {
     display: flex;
     align-items: center;
     width: max-content;
@@ -63,26 +63,14 @@
     }
 
     input:not(:disabled):checked~.ripple:active {
-        background-color: var(--imiui-gray-100);
-        background-size: 100%;
-        transition: all 0s;
-    }
-
-    input:not(:disabled):not(:checked)~.ripple:hover {
-        background: var(--imiui-gray-50) radial-gradient(circle, transparent 1%, var(--imiui-gray-50) 1%) center/15000%;
-    }
-
-    input:not(:disabled):not(:checked)~.ripple:active {
         background-color: var(--imiui-blue-200);
         background-size: 100%;
         transition: all 0s;
     }
 
-
     /* disabled */
     input:disabled {
         ~.checkmark {
-
             .svg-checked,
             .svg-unchecked {
                 fill: var(--imiui-gray-100);

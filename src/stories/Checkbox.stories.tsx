@@ -16,5 +16,4 @@ Default.args = {
     checked: false,
     label: "Label",
     disabled: false,
-    onChange: () => {},
 };
