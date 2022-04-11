@@ -31,7 +31,12 @@ export default {
   },
 } as ComponentMeta<typeof ButtonFix>;
 
-const Template: ComponentStory<typeof ButtonFix> = (args) => <ButtonFix {...args} >{args.label}</ButtonFix>;
+const Template: ComponentStory<typeof ButtonFix> = (args) => {
+  const {label, ...rest} = args;
+  return (
+    <ButtonFix {...rest} >{label}</ButtonFix>
+  )
+}
 
 export const Primary = Template.bind({});
 Primary.args = {
