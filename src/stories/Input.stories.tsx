@@ -24,8 +24,8 @@ export default {
 } as ComponentMeta<typeof Input>;
 
 const Template: ComponentStory<typeof Input> = (args) => <Input {...args} />
-export const Default = Template.bind({});
-Default.args = {
+export const Base = Template.bind({});
+Base.args = {
     placeholder: 'Placeholder',
     isError: false,
     disabled: false,
@@ -48,7 +48,7 @@ IconAndClear.argTypes = {
     },
 }
 IconAndClear.args = {
-    ...Default.args,
+    ...Base.args,
     endIcon: undefined,
     onEndIconClick: () => {},
     onClear: () => {},

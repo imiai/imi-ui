@@ -1,0 +1,54 @@
+@import 'styles/mixin.scss';
+
+.imiui-inform {
+    padding: 10px 16px;
+    display: flex;
+    align-items: center;
+    &.icon-align-top {
+        align-items: flex-start;
+    }
+    &.info {
+        background-color: var(--imiui-blue-50);
+        .left-icon {
+            fill: var(--imiui-primary-blue);
+        }
+    }
+    &.success {
+        background-color: var(--imiui-green-50);
+        .left-icon {
+            fill: var(--imiui-secondary-green);
+        }
+    }
+    &.warning {
+        background-color: var(--imiui-orange-50);
+        .left-icon {
+            fill: var(--imiui-primary-orange);
+        }
+    }
+    &.error {
+        background-color: var(--imiui-red-25);
+        .left-icon {
+            fill: var(--imiui-secondary-red);
+        }
+    }
+    .content {
+        width: 100%;
+        @include font(400, 12px, 16px);
+    }
+    .left-icon {
+        min-width: 24px;
+        min-height: 24px;
+        margin-right: 8px;
+    }
+    .close-button {
+        width: 16px;
+        height: 16px;
+        margin-left: 12px;
+        .close-icon {
+            width: 16px;
+            height: 16px;
+            fill: var(--imiui-gray-200) !important;
+        }
+    }
+  
+}

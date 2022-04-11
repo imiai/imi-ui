@@ -2,13 +2,12 @@ import Radio from "components/radio";
 import React, { useEffect } from "react";
 
 interface IRadioGroupProps extends React.HTMLAttributes<HTMLDivElement> {
-    defaultValue?: any;
     value?: any;
     children?: React.ReactNode;
 }
 
 const RadioGroup = (props: IRadioGroupProps) => {
-    const { children, value, defaultValue, ...rest } = props;
+    const { children, value, ...rest } = props;
 
     const childrenWithProps = React.Children.map(children, child => {
         if (React.isValidElement(child)) {

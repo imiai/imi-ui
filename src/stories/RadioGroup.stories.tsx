@@ -18,8 +18,8 @@ const Template: ComponentStory<typeof RadioGroup> = (args) => {
         </RadioGroup>
     )
 }
-export const Default = Template.bind({});
-Default.args = {
+export const Base = Template.bind({});
+Base.args = {
     value: 'Male',
     onChange: () => {},
 };

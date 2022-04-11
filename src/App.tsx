@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Button, Checkbox, Input, Radio, RadioGroup, TextArea } from './components';
+import { Button, Checkbox, Inform, Input, Radio, RadioGroup, TextArea } from './components';
 import { EyeOpen } from './icons';
 
 function App() {
@@ -24,14 +24,15 @@ function App() {
         {/* <TextArea value={value} label='LabelName' placeholder='This is placeholder' showLengthCounter onChange={e => setValue(e.currentTarget.value)}/>
         <TextArea placeholder='This is placeholder' showLengthCounter hint='asd'/> */}
 
-        <Checkbox checked={isChecked} onChange={() => setIsChecked(!isChecked)} label={"Label"}/>
+        {/* <Checkbox checked={isChecked} onChange={() => setIsChecked(!isChecked)} label={"Label"}/>
         <Checkbox checked={isChecked} disabled onChange={() => setIsChecked(!isChecked)} label={"Label"}/>
 
         <RadioGroup onChange={handleChange} value={selectedValue}>
           <Radio label='Male' name='Gender' value='Male'/>
           <Radio label='Female' name='Gender' value='Female'/>
-        </RadioGroup>
-        <p>{selectedValue}</p>
+        </RadioGroup> */}
+
+        <Inform severity='info' icon={<EyeOpen />} content='Informative inform with dismiss button'/>
     </div>
   );
 }

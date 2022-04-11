@@ -19,8 +19,8 @@ export default {
 } as ComponentMeta<typeof TextArea>;
 
 const Template: ComponentStory<typeof TextArea> = (args) => <TextArea {...args} />
-export const Default = Template.bind({});
-Default.args = {
+export const Base = Template.bind({});
+Base.args = {
     placeholder: 'Placeholder',
     isError: false,
     disabled: false,

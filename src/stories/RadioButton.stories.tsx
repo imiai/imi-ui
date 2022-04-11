@@ -15,8 +15,8 @@ const Template: ComponentStory<typeof Radio> = (args) => {
         <Radio {...args} />
     )
 }
-export const Default = Template.bind({});
-Default.args = {
+export const Base = Template.bind({});
+Base.args = {
     label: 'Male',
     value: 'Male',
     name: 'Gender'

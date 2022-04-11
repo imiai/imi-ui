@@ -1,4 +1,4 @@
-import { Close } from "icons";
+import { CloseT2 } from "icons";
 import React, { Fragment } from "react";
 import './styles.scss';
 
@@ -35,7 +35,7 @@ const Input = (props: IInputProps) => {
                 <div className="icon-container">
                     {onClear && !rest.disabled &&
                         <button className="icon close">
-                            <Close />
+                            <CloseT2 />
                         </button>}
                     {onClear && endIcon && <hr />}
                     {endIcon &&
