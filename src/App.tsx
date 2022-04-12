@@ -1,11 +1,12 @@
 import { useState } from 'react';
-import { Button, Checkbox, Inform, Input, Radio, RadioGroup, TextArea } from './components';
+import { Button, Checkbox, Inform, Input, Popup, Radio, RadioGroup, TextArea } from './components';
 import { EyeOpen } from './icons';
 
 function App() {
   const [value, setValue] = useState('');
   const [isChecked, setIsChecked] = useState(false);
   const [selectedValue, setSelectedValue] = useState('Male')
+  const [isOpenPopup, setIsOpenPopup] = useState(false);
 
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setSelectedValue(event.target.value);
@@ -32,7 +33,9 @@ function App() {
           <Radio label='Female' name='Gender' value='Female'/>
         </RadioGroup> */}
 
-        <Inform severity='info' icon={<EyeOpen />} content='Informative inform with dismiss button'/>
+        {/* <Inform severity='info' icon={<EyeOpen />} content='Informative inform with dismiss button'/> */}
+        <Button type='primary' size={54} onClick={() => setIsOpenPopup(true)}>Open Popup</Button>
+        <Popup open={isOpenPopup} onClose={() => setIsOpenPopup(false)} imageSize='large' title='Large Popup' subTitle='This message of the popup is wrapped by the container.' mainButton='Main button' subButton='Sub button'/>
     </div>
   );
 }
