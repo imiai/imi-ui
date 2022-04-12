@@ -2,6 +2,7 @@ import 'styles/colors.scss';
 import 'styles/common.scss';
 import 'styles/mixin.scss';
 import 'styles/typography.scss';
+import 'styles/spacing.scss';
 
 export const parameters = {
   actions: { argTypesRegex: "^on[A-Z].*" },
