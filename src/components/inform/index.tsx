@@ -32,7 +32,7 @@ const Inform = (props: IInformProps) => {
     return (
         <div id='imiui-inform' {...rest} className={`imiui-inform ${severity}${className ? ` ${className}` : ''}${iconAlignTop ? ` icon-align-top` : ''}`}>
             {iconClone}
-            <p className="content">{content}</p>
+            <p className="content t-label-regular-supertiny">{content}</p>
             {closeable && <button onClick={() => setVisible(false)} className='close-button'>
                 <Close className="close-icon"/>
             </button>}

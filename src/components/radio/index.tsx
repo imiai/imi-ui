@@ -12,7 +12,7 @@ const Radio = (props: IRadioProps) => {
     return (
         <label className="imiui-radio">
             <input {...rest} type="radio" />
-            <span>{label}</span>
+            <span className='t-label-regular-tiny'>{label}</span>
             <span className="checkmark ripple">
                 <RadioChecked className="svg-checked" />
                 <RadioUnchecked className="svg-unchecked" />

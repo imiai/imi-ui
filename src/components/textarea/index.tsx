@@ -10,7 +10,7 @@ interface ITextAreaProps extends React.HTMLProps<HTMLTextAreaElement> {
 }
 
 const TextArea = (props: ITextAreaProps) => {
-    const { showLengthCounter = false, maxLength = 320, label = '', placeholder = '', hint = '', error = '', isError = false, ...rest } = props;
+    const { showLengthCounter = false, className = '', maxLength = 320, label = '', placeholder = '', hint = '', error = '', isError = false, ...rest } = props;
 
     const handleKeyDown = (e: any) => {
         e.target.style.height = 'inherit';
@@ -21,12 +21,12 @@ const TextArea = (props: ITextAreaProps) => {
     return (
         <Fragment>
             <div className={`imiui-textarea${isError ? ' error' : ''}${rest.disabled ? ' disabled' : ''}${label ? ' label' : ''}`}>
-                <textarea {...rest} maxLength={maxLength} placeholder={placeholder} onChange={handleKeyDown}/>
-                {label && <label>{label}</label>}
-                {showLengthCounter && <span className="length-counter">{rest.value ? rest.value.toString().length : 0}/{maxLength}</span>}
+                <textarea {...rest} className={`t-body-regular-small ${className ? ` ${className}` :''}`} maxLength={maxLength} placeholder={placeholder} onChange={handleKeyDown}/>
+                {label && <label className="t-label-semibold-supertiny">{label}</label>}
+                {showLengthCounter && <span className="length-counter t-label-regular-supertiny">{rest.value ? rest.value.toString().length : 0}/{maxLength}</span>}
             </div>
-            {!error && hint && <p className="imiui-textarea-note hint">{hint}</p>}
-            {error && <p className="imiui-textarea-note error">{error}</p>}
+            {!error && hint && <p className="imiui-textarea-note hint t-label-regular-supertiny">{hint}</p>}
+            {error && <p className="imiui-textarea-note error t-label-regular-supertiny">{error}</p>}
         </Fragment>
     )
 }

@@ -17,23 +17,23 @@ function App() {
         {/* <Button size={54} type='primary' startIcon={<EyeOpen />} href='https://www.google.com/'>asd</Button> */}
 
         {/* INPUT */}
-        {/* <Input placeholder='Nhập họ tên' withLabel onClear={() => {}} />
+        <Input placeholder='Nhập họ tên' withLabel onClear={() => {}} />
         <Input value='asd' placeholder='Nhập họ tên' withLabel onClear={() => {}} />
         <Input placeholder='Nhập họ tên' onClear={() => {}} onChange={e => setValue(e.currentTarget.value)}/>
-        <Input value='asd' placeholder='Nhập họ tên' onClear={() => {}} /> */}
+        <Input value='asd' placeholder='Nhập họ tên' onClear={() => {}} />
 
-        {/* <TextArea value={value} label='LabelName' placeholder='This is placeholder' showLengthCounter onChange={e => setValue(e.currentTarget.value)}/>
-        <TextArea placeholder='This is placeholder' showLengthCounter hint='asd'/> */}
+        <TextArea value={value} label='LabelName' placeholder='This is placeholder' showLengthCounter onChange={e => setValue(e.currentTarget.value)}/>
+        <TextArea placeholder='This is placeholder' showLengthCounter hint='asd'/>
 
-        {/* <Checkbox checked={isChecked} onChange={() => setIsChecked(!isChecked)} label={"Label"}/>
-        <Checkbox checked={isChecked} disabled onChange={() => setIsChecked(!isChecked)} label={"Label"}/>
+        <Checkbox checked={isChecked} onChange={() => setIsChecked(!isChecked)} label={"Label"}/>
+        {/* <Checkbox checked={isChecked} disabled onChange={() => setIsChecked(!isChecked)} label={"Label"}/>*/}
 
         <RadioGroup onChange={handleChange} value={selectedValue}>
           <Radio label='Male' name='Gender' value='Male'/>
           <Radio label='Female' name='Gender' value='Female'/>
-        </RadioGroup> */}
+        </RadioGroup> 
 
-        {/* <Inform severity='info' icon={<EyeOpen />} content='Informative inform with dismiss button'/> */}
+        <Inform severity='info' icon={<EyeOpen />} content='Informative inform with dismiss button'/>
         <Button type='primary' size={54} onClick={() => setIsOpenPopup(true)}>Open Popup</Button>
         <Popup open={isOpenPopup} onClose={() => setIsOpenPopup(false)} imageSize='large' title='Large Popup' subTitle='This message of the popup is wrapped by the container.' mainButton='Main button' subButton='Sub button'/>
     </div>

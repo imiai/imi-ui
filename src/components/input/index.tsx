@@ -13,7 +13,7 @@ interface IInputProps extends React.HTMLProps<HTMLInputElement> {
 }
 
 const Input = (props: IInputProps) => {
-    const { placeholder = '', withLabel = false, hint = '', error = '', isError = false, onClear, endIcon, onEndIconClick, ...rest } = props;
+    const { placeholder = '', className, withLabel = false, hint = '', error = '', isError = false, onClear, endIcon, onEndIconClick, ...rest } = props;
 
     const getInputWidth = () => {
         let minus = 32;
@@ -30,8 +30,8 @@ const Input = (props: IInputProps) => {
     return (
         <Fragment>
             <div className={`imiui-input${isError ? ' error' : ''}${rest.disabled ? ' disabled' : ''}${withLabel ? ' label' : ''}`}>
-                <input {...rest} placeholder={placeholder} style={{ width: `calc(100% - ${getInputWidth()}px` }} />
-                {withLabel && <label>{placeholder}</label>}
+                <input {...rest} className={`t-label-regular-tiny${className ? ` ${className}` : ''}`} placeholder={placeholder} style={{ width: `calc(100% - ${getInputWidth()}px` }} />
+                {withLabel && <label className="t-label-semibold-supertiny">{placeholder}</label>}
                 <div className="icon-container">
                     {onClear && !rest.disabled &&
                         <button className="icon close">
@@ -45,8 +45,8 @@ const Input = (props: IInputProps) => {
                     }
                 </div>
             </div>
-            {!error && hint && <p className="imiui-input-note hint">{hint}</p>}
-            {error && <p className="imiui-input-note error">{error}</p>}
+            {!error && hint && <p className="imiui-input-note hint t-label-regular-supertiny">{hint}</p>}
+            {error && <p className="imiui-input-note error t-label-regular-supertiny">{error}</p>}
         </Fragment>
     )
 }

@@ -47,7 +47,6 @@
             color: var(--imiui-primary-blue);
             top: 12px;
             cursor: pointer;
-            @include font(600, 12px, 16px);
         }
         textarea {
             &::placeholder {
@@ -75,7 +74,6 @@
 
         transition: all 0.2s;
         width: 100%;
-        @include font(400, 14px, 18px);
         caret-color: var(--imiui-primary-blue);
         color: var(--imiui-primary-dark);
         background-color: transparent;
@@ -92,7 +90,6 @@
         }
     }
     .length-counter {
-        @include font(400, 12px, 16px);
         color: var(--imiui-gray-200);
         margin-left: auto;
     }
@@ -102,7 +99,6 @@
     margin-top: 8px;
     width: 100%;
     padding: 0 16px;
-    @include font(400, 12px, 16px);
     word-wrap: break-word;
     max-height: 32px;
     overflow: hidden;
