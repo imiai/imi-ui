@@ -1,9 +1,8 @@
 @import 'styles/mixin.scss';
 
 .imiui-radio {
-    display: flex;
+    display: inline-flex;
     align-items: center;
-    width: max-content;
     height: 40px;
     position: relative;
     padding-left: 40px;
