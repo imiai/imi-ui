@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Button, Checkbox, Inform, Input, Popup, Radio, RadioGroup, TextArea } from './components';
+import { BottomSheet, Button, Checkbox, Inform, Input, Popup, Radio, RadioGroup, TextArea } from './components';
 import { EyeOpen } from './icons';
 
 function App() {
@@ -7,6 +7,7 @@ function App() {
   const [isChecked, setIsChecked] = useState(false);
   const [selectedValue, setSelectedValue] = useState('Male')
   const [isOpenPopup, setIsOpenPopup] = useState(false);
+  const [isOpenSheet, setIsOpenSheet] = useState(false);
 
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setSelectedValue(event.target.value);
@@ -34,8 +35,16 @@ function App() {
         </RadioGroup> 
 
         <Inform severity='info' icon={<EyeOpen />} content='Informative inform with dismiss button'/>
+
         <Button type='primary' size={54} onClick={() => setIsOpenPopup(true)}>Open Popup</Button>
         <Popup open={isOpenPopup} onClose={() => setIsOpenPopup(false)} imageSize='large' title='Large Popup' subTitle='This message of the popup is wrapped by the container.' mainButton='Main button' subButton='Sub button'/>
+
+        <Button type='primary' size={54} onClick={() => setIsOpenSheet(true)}>Open Sheet</Button>
+        <BottomSheet open={isOpenSheet} onClose={() => setIsOpenSheet(false)} title='title'>
+          <div>
+            content
+          </div>
+        </BottomSheet>
     </div>
   );
 }

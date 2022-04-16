@@ -20,10 +20,13 @@
         svg {
             fill: var(--imiui-primary-white);
         }
-        &:hover {
-            background: var(--imiui-blue-600);
-            border: 1.5px solid var(--imiui-blue-300);
+        @media (hover: hover) and (pointer: fine) {
+            &:hover {
+                background: var(--imiui-blue-600);
+                border: 1.5px solid var(--imiui-blue-300);
+            }
         }
+       
         &:active {
             background: var(--imiui-blue-700);
             border: 1.5px solid var(--imiui-blue-700);
@@ -46,12 +49,14 @@
         svg {
             fill: var(--imiui-primary-blue);
         }
-        &:hover {
-            background: var(--imiui-primary-background);
-            border: 1.5px solid var(--imiui-blue-600);
-            color: var(--imiui-blue-600);
-            svg {
-                fill: var(--imiui-blue-600);
+        @media (hover: hover) and (pointer: fine) {
+            &:hover {
+                background: var(--imiui-primary-background);
+                border: 1.5px solid var(--imiui-blue-600);
+                color: var(--imiui-blue-600);
+                svg {
+                    fill: var(--imiui-blue-600);
+                }
             }
         }
         &:active {
@@ -77,11 +82,13 @@
         svg {
             fill: var(--imiui-primary-blue);
         }
-        &:hover {
-            background: var(--imiui-primary-background);
-            color: var(--imiui-blue-600);
-            svg {
-                fill: var(--imiui-blue-600);
+        @media (hover: hover) and (pointer: fine) {
+            &:hover {
+                background: var(--imiui-primary-background);
+                color: var(--imiui-blue-600);
+                svg {
+                    fill: var(--imiui-blue-600);
+                }
             }
         }
         &:active {

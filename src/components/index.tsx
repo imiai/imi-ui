@@ -7,3 +7,4 @@ export {default as RadioGroup} from './radio-group';
 export {default as Radio} from './radio';
 export {default as Inform} from './inform';
 export {default as Popup} from './popup';
+export {default as BottomSheet} from './bottom-sheet';
