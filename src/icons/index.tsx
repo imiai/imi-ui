@@ -8,3 +8,4 @@ export {ReactComponent as Close} from './close.svg';
 export {ReactComponent as CloseT2} from './close-t2.svg';
 export {ReactComponent as Notify} from './notify.svg';
 export {ReactComponent as ImagePlaceholder} from './img-placeholder.svg';
+export {ReactComponent as StatusChecked} from './status-checked.svg';

@@ -1,6 +1,6 @@
 import { useState } from 'react';
-import { BottomSheet, Button, Checkbox, Inform, Input, Popup, Radio, RadioGroup, TextArea } from './components';
-import { EyeOpen } from './icons';
+import { BottomSheet, Button, Checkbox, Inform, Input, Popup, Radio, RadioGroup, Snackbar, TextArea } from './components';
+import { EyeOpen, StatusChecked } from './icons';
 
 function App() {
   const [value, setValue] = useState('');
@@ -8,6 +8,7 @@ function App() {
   const [selectedValue, setSelectedValue] = useState('Male')
   const [isOpenPopup, setIsOpenPopup] = useState(false);
   const [isOpenSheet, setIsOpenSheet] = useState(false);
+  const [isOpenSnackbar, setIsOpenSnackbar] = useState(false);
 
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setSelectedValue(event.target.value);
@@ -45,6 +46,9 @@ function App() {
             content
           </div>
         </BottomSheet>
+
+        <Button type='primary' size={54} onClick={() => setIsOpenSnackbar(true)}>Open Snackbar</Button>
+        <Snackbar open={isOpenSnackbar} anchorOrigin={{vertical: 'bottom', horizontal: 'left'}} onClose={() => setIsOpenSnackbar(false)} titleClassName={'color-status-success'} icon={<StatusChecked />} title={'Account successfully created'} content={'Please login to your email to verify your email.'}/>
     </div>
   );
 }

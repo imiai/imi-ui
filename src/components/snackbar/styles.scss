@@ -1,0 +1,53 @@
+.imiui-snackbar {
+    position: absolute;
+    display: flex;
+    align-items: center;
+
+    width: 618px;
+    max-width: calc(100vw - 48px);
+
+    padding: 12px;
+
+    background-color: var(--imiui-blue-900);
+    box-shadow: 4px 4px 12px rgba(20, 34, 69, 0.1);
+    border-radius: 8px;
+
+    transition: all 300ms;
+    opacity: 0;
+
+    svg {
+        min-width: 24px;
+        min-height: 24px;
+    }
+
+    .message {
+        margin-left: 8px;
+        color: var(--imiui-primary-white);
+    }
+
+    &.top {
+       top: 24px;
+    }
+    &.bottom {
+        bottom: 24px;
+    }
+    &.show {
+        opacity: 1;
+    }
+
+
+    &.center {
+        margin-left: auto;
+        margin-right: auto;
+        left: 0;
+        right: 0;
+    }
+
+    &.left {
+        left: 24px;
+    }
+
+    &.right {
+        right: 24px;
+    }
+}

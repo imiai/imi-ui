@@ -1,5 +1,5 @@
 import { Close } from "icons";
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 import './styles.scss';
 
 interface IBottomSheetProps {
@@ -41,6 +41,51 @@ const BottomSheet = (props: IBottomSheetProps) => {
         setOpacity(0.7)
     }, [openSheet])
 
+    const onCloseSheet = useCallback(() => {
+        setPositionTop(`${window.innerHeight + 12}px`);
+        setOpacity(0);
+        let timer = setTimeout(() => {
+            setOpenSheet(false);
+            clearTimeout(timer);
+            onClose();
+        }, 100)
+    }, [onClose]);
+
+    const startDrag = () => {
+        setIsStartDragging(true);
+    }
+
+    const stopStartDrag = useCallback((event: any) => {
+        let yPos = event.clientY;
+        if (event.type === 'touchstart' || event.type === 'touchmove' || event.type === 'touchend' || event.type === 'touchcancel') {
+            let touch = event.touches[0] || event.changedTouches[0];
+            yPos = touch.pageY;
+        }
+        if ((window.innerHeight - yPos) < 100) {
+            setPositionTop(`${window.innerHeight + 12}px`)
+            onCloseSheet();
+        } else {
+            setPositionTop(initTop)
+        }
+        setIsStartDragging(false);
+    }, [initTop, onCloseSheet])
+
+    const doStartDrag = useCallback((event: any) => {
+        if (!isStartDragging) {
+            return;
+        }
+        let yPos = event.clientY;
+        if (event.type === 'touchstart' || event.type === 'touchmove' || event.type === 'touchend' || event.type === 'touchcancel') {
+            let touch = event.touches[0] || event.changedTouches[0];
+            yPos = touch.pageY;
+        }
+        if (yPos < parseInt(initTop.slice(0, -2))) {
+            return;
+        }
+        setPositionTop(`${yPos}px`)
+    }, [initTop, isStartDragging]);
+
+
     useEffect(() => {
         if (isStartDragging) {
             document.documentElement.addEventListener('mousemove', doStartDrag);
@@ -56,50 +101,7 @@ const BottomSheet = (props: IBottomSheetProps) => {
                 document.documentElement.removeEventListener('touchend', stopStartDrag);
             }
         }
-    }, [isStartDragging]);
-
-    const startDrag = () => {
-        setIsStartDragging(true);
-    }
-    const stopStartDrag = (event: any) => {
-        let yPos = event.clientY;
-        if (event.type === 'touchstart' || event.type === 'touchmove' || event.type === 'touchend' || event.type === 'touchcancel') {
-            let touch = event.touches[0] || event.changedTouches[0];
-            yPos = touch.pageY;
-        }
-        if ((window.innerHeight - yPos) < 100) {
-            setPositionTop(`${window.innerHeight + 12}px`)
-            onCloseSheet();
-        } else {
-            setPositionTop(initTop)
-        }
-        setIsStartDragging(false);
-    }
-
-    const doStartDrag = (event: any) => {
-        if (!isStartDragging) {
-            return;
-        }
-        let yPos = event.clientY;
-        if (event.type === 'touchstart' || event.type === 'touchmove' || event.type === 'touchend' || event.type === 'touchcancel') {
-            let touch = event.touches[0] || event.changedTouches[0];
-            yPos = touch.pageY;
-        }
-        if (yPos < parseInt(initTop.slice(0, -2))) {
-            return;
-        }
-        setPositionTop(`${yPos}px`)
-    }
-
-    const onCloseSheet = () => {
-        setPositionTop(`${window.innerHeight + 12}px`);
-        setOpacity(0);
-        let timer = setTimeout(() => {
-            setOpenSheet(false);
-            clearTimeout(timer);
-            onClose();
-        }, 100)
-    }
+    }, [isStartDragging, doStartDrag, stopStartDrag]);
 
     if (!openSheet) {
         return <></>
@@ -108,7 +110,7 @@ const BottomSheet = (props: IBottomSheetProps) => {
     return (
         <div className="imiui-bottomsheet">
             <div className={`overlay`} style={{opacity: opacity}} onClick={clickOutsideToClose ? onCloseSheet : () => {}}></div>
-            <div id='imiui-bottomsheet-container' className="container" draggable onTouchStart={startDrag} onMouseDown={startDrag} style={{ top: positionTop }}>
+            <div id='imiui-bottomsheet-container' className="container" onTouchStart={startDrag} onMouseDown={startDrag} style={{ top: positionTop }}>
                 <div className="header" style={title ? {height: 44} : {}}>
                     <div className="indicator" />
                     <button className="icon" onClick={() => onIconClick()}>

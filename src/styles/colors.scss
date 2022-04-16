@@ -96,3 +96,13 @@
   --imiui-gray-300: #51677B;
   --imiui-gray-400: #303E4A;
 }
+
+.color-status-success {
+  color: var(--imiui-status-success);
+}
+.color-status-warning {
+  color: var(--imiui-status-warning);
+}
+.color-status-error {
+  color: var(--imiui-status-error);
+}

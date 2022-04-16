@@ -8,3 +8,4 @@ export {default as Radio} from './radio';
 export {default as Inform} from './inform';
 export {default as Popup} from './popup';
 export {default as BottomSheet} from './bottom-sheet';
+export {default as Snackbar} from './snackbar';
