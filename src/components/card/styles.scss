@@ -1,0 +1,13 @@
+.imiui-card {
+    background-color: var(--imiui-primary-white);
+    border-radius: 8px;
+    &.navi {
+        box-shadow: 3px 0px 7px rgba(20, 34, 69, 0.07);
+    }
+    &.card {
+        box-shadow: 3px 3px 7px rgba(20, 34, 69, 0.02);        
+    }
+    &.dialogue {
+        box-shadow: 4px 4px 12px rgba(20, 34, 69, 0.1);
+    }
+}

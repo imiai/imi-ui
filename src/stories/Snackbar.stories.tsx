@@ -27,7 +27,6 @@ export default {
                 control: { type: 'select' },
             }
         },
-
     },
 } as ComponentMeta<typeof Snackbar>;
 
@@ -37,7 +36,7 @@ const Template: ComponentStory<typeof Snackbar> = (args) => {
     return (
         <>
             <Button type='primary' size={54} onClick={() => setIsOpenSnackbar(true)}>Open Popup</Button>
-            <Snackbar {...args} open={isOpenSnackbar} anchorOrigin={{ vertical: args.anchorOrigin?.vertical || 'top', horizontal: args.anchorOrigin?.horizontal || 'center' }} onClose={() => setIsOpenSnackbar(false)} titleClassName={'color-status-success'} />
+            <Snackbar {...args} open={isOpenSnackbar} anchorOrigin={{ vertical: args.anchorOrigin?.vertical || 'top', horizontal: args.anchorOrigin?.horizontal || 'center' }} onClose={() => setIsOpenSnackbar(false)} titleClassName={'c-status-success'} />
         </>
     )
 }

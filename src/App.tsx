@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { BottomSheet, Button, Checkbox, Inform, Input, Popup, Radio, RadioGroup, Snackbar, TextArea } from './components';
+import { BottomSheet, Button, Card, Checkbox, Inform, Input, Popup, Radio, RadioGroup, Snackbar, TextArea } from './components';
 import { EyeOpen, StatusChecked } from './icons';
 
 function App() {
@@ -15,7 +15,7 @@ function App() {
   }
 
   return (
-    <div>
+    <div style={{background: '#E5E5E5', height: '100vh'}}>
         {/* <Button size={54} type='primary' startIcon={<EyeOpen />} href='https://www.google.com/'>asd</Button> */}
 
         {/* INPUT */}
@@ -48,7 +48,10 @@ function App() {
         </BottomSheet>
 
         <Button type='primary' size={54} onClick={() => setIsOpenSnackbar(true)}>Open Snackbar</Button>
-        <Snackbar open={isOpenSnackbar} anchorOrigin={{vertical: 'bottom', horizontal: 'left'}} onClose={() => setIsOpenSnackbar(false)} titleClassName={'color-status-success'} icon={<StatusChecked />} title={'Account successfully created'} content={'Please login to your email to verify your email.'}/>
+        <Snackbar open={isOpenSnackbar} anchorOrigin={{vertical: 'bottom', horizontal: 'left'}} onClose={() => setIsOpenSnackbar(false)} titleClassName={'c-status-success'} icon={<StatusChecked />} title={'Account successfully created'} content={'Please login to your email to verify your email.'}/>
+        <Card>
+          Card Content
+        </Card>
     </div>
   );
 }

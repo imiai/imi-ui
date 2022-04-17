@@ -97,12 +97,106 @@
   --imiui-gray-400: #303E4A;
 }
 
-.color-status-success {
-  color: var(--imiui-status-success);
+$primary-colors: ('blue', 'orange', 'dark', 'background', 'white' );
+@each $colors in $primary-colors {
+  .c-primary-#{$colors} {
+    color: var(--imiui-primary-#{$colors})
+  }
+  .bg-primary-#{$colors} {
+    background-color: var(--imiui-primary-#{$colors})
+  }
 }
-.color-status-warning {
-  color: var(--imiui-status-warning);
+
+$secondary-colors: ('red', 'green' );
+@each $colors in $secondary-colors {
+  .c-secondary-#{$colors} {
+    color: var(--imiui-secondary-#{$colors})
+  }
+  .bg-secondary-#{$colors} {
+    background-color: var(--imiui-secondary-#{$colors})
+  }
 }
-.color-status-error {
-  color: var(--imiui-status-error);
+
+$status-colors: ('success', 'warning', 'error' );
+@each $colors in $status-colors {
+  .c-status-#{$colors} {
+    color: var(--imiui-status-#{$colors})
+  }
+  .bg-status-#{$colors} {
+    background-color: var(--imiui-status-#{$colors})
+  }
 }
+
+$blue-colors: ('50', '100', '200', '300', '400', '500', '600', '700', '800', '900');
+@each $colors in $blue-colors {
+  .c-blue-#{$colors} {
+    color: var(--imiui-blue-#{$colors})
+  }
+  .bg-blue-#{$colors} {
+    background-color: var(--imiui-blue-#{$colors})
+  }
+}
+
+$navy-colors: ('50', '100', '200', '300', '400', '500', '600', '700', '800', '900');
+@each $colors in $navy-colors {
+  .c-navy-#{$colors} {
+    color: var(--imiui-navy-#{$colors})
+  }
+  .bg-navy-#{$colors} {
+    background-color: var(--imiui-navy-#{$colors})
+  }
+}
+
+$orange-colors: ('50', '100', '200', '300', '400', '500', '600', '700', '800', '900');
+@each $colors in $orange-colors {
+  .c-orange-#{$colors} {
+    color: var(--imiui-orange-#{$colors})
+  }
+  .bg-orange-#{$colors} {
+    background-color: var(--imiui-orange-#{$colors})
+  }
+}
+
+$green-colors: ('50', '100', '200', '300', '400', '500', '600', '700', '800', '900');
+@each $colors in $green-colors {
+  .c-green-#{$colors} {
+    color: var(--imiui-green-#{$colors})
+  }
+  .bg-green-#{$colors} {
+    background-color: var(--imiui-green-#{$colors})
+  }
+}
+
+$red-colors: ('25', '50', '100', '200', '300', '400', '500', '600', '700', '800', '900');
+@each $colors in $green-colors {
+  .c-red-#{$colors} {
+    color: var(--imiui-red-#{$colors})
+  }
+  .bg-red-#{$colors} {
+    background-color: var(--imiui-red-#{$colors})
+  }
+}
+
+$dark-colors: ('25', '50', '100', '200', '300', '400', '500', '600', '700', '800', '900');
+@each $colors in $green-colors {
+  .c-dark-#{$colors} {
+    color: var(--imiui-dark-#{$colors})
+  }
+  .bg-dark-#{$colors} {
+    background-color: var(--imiui-dark-#{$colors})
+  }
+}
+
+$gray-colors: ('25', '50', '100', '200', '300', '400');
+@each $colors in $green-colors {
+  .c-gray-#{$colors} {
+    color: var(--imiui-gray-#{$colors})
+  }
+  .bg-gray-#{$colors} {
+    background-color: var(--imiui-gray-#{$colors})
+  }
+}
+
+.bg-gradient {
+  background-image: linear-gradient(90deg, #2263CB 0%, #2F80ED 96.31%);
+} 
