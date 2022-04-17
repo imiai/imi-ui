@@ -1,7 +1,6 @@
 import React from "react";
 import { CheckboxChecked, CheckboxUnchecked } from "icons";
 import './styles.scss';
-import { useState } from "react";
 
 interface ICheckboxProps extends React.HTMLProps<HTMLInputElement> {
 

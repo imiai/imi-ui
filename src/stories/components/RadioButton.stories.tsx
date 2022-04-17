@@ -19,5 +19,6 @@ export const Base = Template.bind({});
 Base.args = {
     label: 'Male',
     value: 'Male',
-    name: 'Gender'
+    name: 'Gender',
+    disabled: false
 };
