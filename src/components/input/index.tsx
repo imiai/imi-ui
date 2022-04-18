@@ -31,7 +31,7 @@ const Input = (props: IInputProps) => {
         <Fragment>
             <div className={`imiui-input${isError ? ' error' : ''}${rest.disabled ? ' disabled' : ''}${withLabel ? ' label' : ''}`}>
                 <input {...rest} className={`t-label-regular-tiny${className ? ` ${className}` : ''}`} placeholder={placeholder} style={{ width: `calc(100% - ${getInputWidth()}px` }} />
-                {withLabel && <label className="t-label-semibold-supertiny">{placeholder}</label>}
+                {withLabel && <label>{placeholder}</label>}
                 <div className="icon-container">
                     {onClear && !rest.disabled &&
                         <button className="icon close">

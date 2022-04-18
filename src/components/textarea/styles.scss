@@ -39,6 +39,7 @@
 
     // if label exist
     &.label {
+        @include font(400, 16px, 18px);
         textarea:not(:placeholder-shown) {
            margin-top: 16px;
         }
@@ -47,6 +48,7 @@
             color: var(--imiui-primary-blue);
             top: 12px;
             cursor: pointer;
+            @include font(600, 12px, 16px);
         }
         textarea {
             &::placeholder {

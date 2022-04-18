@@ -22,7 +22,7 @@ const TextArea = (props: ITextAreaProps) => {
         <Fragment>
             <div className={`imiui-textarea${isError ? ' error' : ''}${rest.disabled ? ' disabled' : ''}${label ? ' label' : ''}`}>
                 <textarea {...rest} className={`t-body-regular-small ${className ? ` ${className}` :''}`} maxLength={maxLength} placeholder={placeholder} onChange={handleKeyDown}/>
-                {label && <label className="t-label-semibold-supertiny">{label}</label>}
+                {label && <label>{label}</label>}
                 {showLengthCounter && <span className="length-counter t-label-regular-supertiny">{rest.value ? rest.value.toString().length : 0}/{maxLength}</span>}
             </div>
             {!error && hint && <p className="imiui-textarea-note hint t-label-regular-supertiny">{hint}</p>}

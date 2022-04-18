@@ -40,6 +40,7 @@
     // if label exist
     &.label {
         height: 54px;
+        @include font(400, 16px, 18px);
         input:not(:placeholder-shown) {
             position: absolute;
             top: 26px;
@@ -49,6 +50,7 @@
             color: var(--imiui-primary-blue);
             top: 8px;
             cursor: pointer;
+            @include font(600, 12px, 16px);
         }
         input {
             &:focus {
