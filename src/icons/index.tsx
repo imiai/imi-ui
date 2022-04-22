@@ -90,6 +90,17 @@ export {ReactComponent as MoreLine} from './more-line.svg';
 // LINE 6
 export {ReactComponent as CloseT2} from './close-t2.svg';
 export {ReactComponent as CloseT2Line} from './close-t2-line.svg';
+export {ReactComponent as Warning} from './warning.svg';
+export {ReactComponent as WarningLine} from './warning-line.svg';
+export {ReactComponent as Info} from './info.svg';
+export {ReactComponent as InfoLine} from './info-line.svg';
+export {ReactComponent as UserT2} from './user-t2.svg';
+export {ReactComponent as UserT2Line} from './user-t2-line.svg';
+export {ReactComponent as Logout} from './logout.svg';
+export {ReactComponent as LogoutLine} from './logout-line.svg';
+export {ReactComponent as Reset} from './reset.svg';
+export {ReactComponent as ResetLine} from './reset-line.svg';
+
 
 // LINE 9
 export {ReactComponent as CheckboxSquareChecked} from './checkbox-square-checked.svg';
