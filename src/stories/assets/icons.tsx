@@ -1,4 +1,4 @@
-import { AddT2, AddT2Line, AddUser, AddUserLine, Bell, BellLine, BellRinging, BellRingingLine, Camera, CameraLine, Check, CheckLine, Close, CloseLine, Copy, CopyLine, Edit, EditLine, EyeClose, EyeOpen, Filter, FilterActive, Home, HomeLine, Link, LinkLine, Location, LocationLine, LockNormal, LockNormalLine, Mail, MailLine, Megaphone, MegaphoneLine, Menu, MenuClose, Message, MessageLine, Minus, MinusLine, More, MoreLine, Notice, NoticeLine, Notify, NotifyLine, Phone, PhoneLine, Plus, PlusLine, Protect, ProtectHealthHigh, ProtectHealthLine, ProtectHealthLow, ProtectHealthNormal, ProtectLine, Question, QuestionLine, RadioChecked, RadioUnchecked, Search, SearchLine, StatusFailed, StatusProgress, StatusSuccess, Support, SupportLine, SwitchOff, SwitchOn, Time, TimeLine, TouchId, TouchIdLine, UserT1, UserT1Line, Wifi, WifiLine } from "icons";
+import { AddT2, AddT2Line, AddUser, AddUserLine, Bell, BellLine, BellRinging, BellRingingLine, Camera, CameraLine, Check, CheckLine, Close, CloseLine, CloseT2, CloseT2Line, Copy, CopyLine, Delete, DeleteLine, Edit, EditLine, EyeClose, EyeOpen, Filter, FilterActive, Home, HomeLine, Info, InfoLine, Link, LinkLine, Location, LocationLine, LockNormal, LockNormalLine, LockReset, LockResetLine, Logout, LogoutLine, Mail, MailLine, Megaphone, MegaphoneLine, Menu, MenuClose, Message, MessageLine, Minus, MinusLine, More, MoreLine, Notice, NoticeLine, Notify, NotifyLine, PaperPlane, PaperPlaneLine, Phone, PhoneLine, Plus, PlusLine, Protect, ProtectHealthHigh, ProtectHealthLine, ProtectHealthLow, ProtectHealthNormal, ProtectLine, Question, QuestionLine, RadioChecked, RadioUnchecked, Reset, ResetLine, Search, SearchLine, Star, StarLine, StatusFailed, StatusProgress, StatusSuccess, Support, SupportLine, SwitchOff, SwitchOn, Thunder, ThunderAuto, ThunderLine, Time, TimeLine, TouchId, TouchIdLine, UserT1, UserT1Line, UserT2, UserT2Line, Warning, WarningLine, Wifi, WifiLine } from "icons";
 
 
 export default
@@ -390,118 +390,118 @@ export default
     },
     {
         "name": "close-t2",
-        "component": "",
-        "demo": ""
+        "component": "<CloseT2/>",
+        "demo": <CloseT2/>
     },
     {
         "name": "close-t2-line",
-        "component": "",
-        "demo": ""
+        "component": "<CloseT2Line/>",
+        "demo": <CloseT2Line/>
     },
     {
         "name": "warning",
-        "component": "",
-        "demo": ""
+        "component": "<Warning/>",
+        "demo": <Warning/>
     },
     {
         "name": "warning-line",
-        "component": "",
-        "demo": ""
+        "component": "<WarningLine/>",
+        "demo": <WarningLine/>
     },
     {
         "name": "info",
-        "component": "",
-        "demo": ""
+        "component": "<Info/>",
+        "demo": <Info/>
     },
     {
         "name": "info-line",
-        "component": "",
-        "demo": ""
+        "component": "<InfoLine/>",
+        "demo": <InfoLine/>
     },
     {
         "name": "user-t2",
-        "component": "",
-        "demo": ""
+        "component": "<UserT2/>",
+        "demo": <UserT2/>
     },
     {
         "name": "user-t2-line",
-        "component": "",
-        "demo": ""
+        "component": "<UserT2Line/>",
+        "demo": <UserT2Line/>
     },
     {
         "name": "logout",
-        "component": "",
-        "demo": ""
+        "component": "<Logout/>",
+        "demo": <Logout/>
     },
     {
         "name": "logout-line",
-        "component": "",
-        "demo": ""
+        "component": "<LogoutLine/>",
+        "demo": <LogoutLine/>
     },
     {
         "name": "reset",
-        "component": "",
-        "demo": ""
+        "component": "<Reset/>",
+        "demo": <Reset/>
     },
     {
         "name": "reset-line",
-        "component": "",
-        "demo": ""
+        "component": "<ResetLine/>",
+        "demo": <ResetLine/>
     },
     {
         "name": "paper-plane",
-        "component": "",
-        "demo": ""
+        "component": "<PaperPlane/>",
+        "demo": <PaperPlane/>
     },
     {
         "name": "paper-plane-line",
-        "component": "",
-        "demo": ""
+        "component": "<PaperPlaneLine/>",
+        "demo": <PaperPlaneLine/>
     },
     {
         "name": "lock-reset",
-        "component": "",
-        "demo": ""
+        "component": "<LockReset/>",
+        "demo": <LockReset/>
     },
     {
         "name": "lock-reset-line",
-        "component": "",
-        "demo": ""
+        "component": "<LockResetLine/>",
+        "demo": <LockResetLine/>
     },
     {
         "name": "star",
-        "component": "",
-        "demo": ""
+        "component": "<Star/>",
+        "demo": <Star/>
     },
     {
         "name": "star-line",
-        "component": "",
-        "demo": ""
+        "component": "<StarLine/>",
+        "demo": <StarLine/>
     },
     {
         "name": "delete",
-        "component": "",
-        "demo": ""
+        "component": "<Delete/>",
+        "demo": <Delete/>
     },
     {
         "name": "delete-line",
-        "component": "",
-        "demo": ""
+        "component": "<DeleteLine/>",
+        "demo": <DeleteLine/>
     },
     {
         "name": "thunder",
-        "component": "",
-        "demo": ""
+        "component": "<Thunder/>",
+        "demo": <Thunder/>
     },
     {
         "name": "thunder-line",
-        "component": "",
-        "demo": ""
+        "component": "<ThunderLine/>",
+        "demo": <ThunderLine/>
     },
     {
         "name": "thunder-auto",
-        "component": "",
-        "demo": ""
+        "component": "<ThunderAuto/>",
+        "demo": <ThunderAuto/>
     },
     {
         "name": "note",

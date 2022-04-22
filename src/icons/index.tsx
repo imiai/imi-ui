@@ -101,6 +101,19 @@ export {ReactComponent as LogoutLine} from './logout-line.svg';
 export {ReactComponent as Reset} from './reset.svg';
 export {ReactComponent as ResetLine} from './reset-line.svg';
 
+// LINE 7
+export {ReactComponent as PaperPlane} from './paper-plane.svg';
+export {ReactComponent as PaperPlaneLine} from './paper-plane-line.svg';
+export {ReactComponent as LockReset} from './lock-reset.svg';
+export {ReactComponent as LockResetLine} from './lock-reset-line.svg';
+export {ReactComponent as Star} from './star.svg';
+export {ReactComponent as StarLine} from './star-line.svg';
+export {ReactComponent as Delete} from './delete.svg';
+export {ReactComponent as DeleteLine} from './delete-line.svg';
+export {ReactComponent as Thunder} from './thunder.svg';
+export {ReactComponent as ThunderLine} from './thunder-line.svg';
+export {ReactComponent as ThunderAuto} from './thunder-auto.svg';
+
 
 // LINE 9
 export {ReactComponent as CheckboxSquareChecked} from './checkbox-square-checked.svg';
