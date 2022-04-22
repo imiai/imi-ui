@@ -71,6 +71,22 @@ export {ReactComponent as Filter} from './filter.svg';
 export {ReactComponent as FilterActive} from './filter-active.svg';
 
 // LINE 5
+export {ReactComponent as Copy} from './copy.svg';
+export {ReactComponent as CopyLine} from './copy-line.svg';
+export {ReactComponent as AddT2} from './add-t2.svg';
+export {ReactComponent as AddT2Line} from './add-t2-line.svg';
+export {ReactComponent as Question} from './question.svg';
+export {ReactComponent as QuestionLine} from './question-line.svg';
+export {ReactComponent as Search} from './search.svg';
+export {ReactComponent as SearchLine} from './search-line.svg';
+export {ReactComponent as Edit} from './edit.svg';
+export {ReactComponent as EditLine} from './edit-line.svg';
+export {ReactComponent as Message} from './message.svg';
+export {ReactComponent as MessageLine} from './message-line.svg';
+export {ReactComponent as More} from './more.svg';
+export {ReactComponent as MoreLine} from './more-line.svg';
+
+
 // LINE 6
 export {ReactComponent as CloseT2} from './close-t2.svg';
 export {ReactComponent as CloseT2Line} from './close-t2-line.svg';

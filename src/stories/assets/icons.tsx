@@ -1,4 +1,4 @@
-import { AddUser, AddUserLine, Bell, BellLine, BellRinging, BellRingingLine, Camera, CameraLine, Check, CheckLine, Close, CloseLine, EyeClose, EyeOpen, Filter, FilterActive, Home, HomeLine, Link, LinkLine, Location, LocationLine, LockNormal, LockNormalLine, Mail, MailLine, Megaphone, MegaphoneLine, Menu, MenuClose, Minus, MinusLine, Notice, NoticeLine, Notify, NotifyLine, Phone, PhoneLine, Plus, PlusLine, Protect, ProtectHealthHigh, ProtectHealthLine, ProtectHealthLow, ProtectHealthNormal, ProtectLine, RadioChecked, RadioUnchecked, StatusFailed, StatusProgress, StatusSuccess, Support, SupportLine, SwitchOff, SwitchOn, Time, TimeLine, TouchId, TouchIdLine, UserT1, UserT1Line, Wifi, WifiLine } from "icons";
+import { AddT2, AddT2Line, AddUser, AddUserLine, Bell, BellLine, BellRinging, BellRingingLine, Camera, CameraLine, Check, CheckLine, Close, CloseLine, Copy, CopyLine, Edit, EditLine, EyeClose, EyeOpen, Filter, FilterActive, Home, HomeLine, Link, LinkLine, Location, LocationLine, LockNormal, LockNormalLine, Mail, MailLine, Megaphone, MegaphoneLine, Menu, MenuClose, Message, MessageLine, Minus, MinusLine, More, MoreLine, Notice, NoticeLine, Notify, NotifyLine, Phone, PhoneLine, Plus, PlusLine, Protect, ProtectHealthHigh, ProtectHealthLine, ProtectHealthLow, ProtectHealthNormal, ProtectLine, Question, QuestionLine, RadioChecked, RadioUnchecked, Search, SearchLine, StatusFailed, StatusProgress, StatusSuccess, Support, SupportLine, SwitchOff, SwitchOn, Time, TimeLine, TouchId, TouchIdLine, UserT1, UserT1Line, Wifi, WifiLine } from "icons";
 
 
 export default
@@ -320,73 +320,73 @@ export default
     },
     {
         "name": "copy",
-        "component": "",
-        "demo": ""
+        "component": "<Copy/>",
+        "demo": <Copy/>
     },
     {
         "name": "copy-line",
-        "component": "",
-        "demo": ""
+        "component": "<CopyLine/>",
+        "demo": <CopyLine/>
     },
     {
         "name": "add-t2",
-        "component": "",
-        "demo": ""
+        "component": "<AddT2/>",
+        "demo": <AddT2/>
     },
     {
         "name": "add-t2-line",
-        "component": "",
-        "demo": ""
+        "component": "<AddT2Line/>",
+        "demo": <AddT2Line/>
     },
     {
         "name": "question",
-        "component": "",
-        "demo": ""
+        "component": "<Question/>",
+        "demo": <Question/>
     },
     {
         "name": "question-line",
-        "component": "",
-        "demo": ""
+        "component": "<QuestionLine/>",
+        "demo": <QuestionLine/>
     },
     {
         "name": "search",
-        "component": "",
-        "demo": ""
+        "component": "<Search/>",
+        "demo": <Search/>
     },
     {
         "name": "search-line",
-        "component": "",
-        "demo": ""
+        "component": "<SearchLine/>",
+        "demo": <SearchLine/>
     },
     {
         "name": "edit",
-        "component": "",
-        "demo": ""
+        "component": "<Edit/>",
+        "demo": <Edit/>
     },
     {
         "name": "edit-line",
-        "component": "",
-        "demo": ""
+        "component": "<EditLine/>",
+        "demo": <EditLine/>
     },
     {
         "name": "message",
-        "component": "",
-        "demo": ""
+        "component": "<Message/>",
+        "demo": <Message/>
     },
     {
         "name": "message-line",
-        "component": "",
-        "demo": ""
+        "component": "<MessageLine/>",
+        "demo": <MessageLine/>
     },
     {
         "name": "more",
-        "component": "",
-        "demo": ""
+        "component": "<More/>",
+        "demo": <More/>
     },
     {
         "name": "more-line",
-        "component": "",
-        "demo": ""
+        "component": "<MoreLine/>",
+        "demo": <MoreLine/>
     },
     {
         "name": "close-t2",
