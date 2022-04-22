@@ -160,5 +160,16 @@ export {ReactComponent as Patient} from './patient.svg';
 export {ReactComponent as Request} from './request.svg';
 export {ReactComponent as Blood} from './blood.svg';
 export {ReactComponent as Save} from './save.svg';
-
-export {ReactComponent as ImagePlaceholder} from './img-placeholder.svg';
+export {ReactComponent as Scissors} from './scissors.svg';
+export {ReactComponent as CoverImage} from './cover-image.svg';
+export {ReactComponent as MoreT2} from './more-t2.svg';
+export {ReactComponent as Setting} from './setting.svg';
+export {ReactComponent as Sort} from './sort.svg';
+export {ReactComponent as Attachment} from './attachment.svg';
+export {ReactComponent as Upload} from './upload.svg';
+export {ReactComponent as CloseRight} from './close-right.svg';
+export {ReactComponent as CameraReverse} from './camera-reverse.svg';
+export {ReactComponent as LogoutT2} from './logout-t2.svg';
+export {ReactComponent as Authentication} from './authentication.svg';
+export {ReactComponent as ListRequest} from './list-request.svg';
+export {ReactComponent as ImagePlaceholder} from './image-placeholder.svg';

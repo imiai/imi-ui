@@ -1,4 +1,4 @@
-import { AddT2, AddT2Line, AddUser, AddUserLine, ArrowDown, ArrowDownSpecial, ArrowLeft, ArrowLeftSpecial, ArrowRight, ArrowRightSpecial, ArrowSortDown, ArrowSortUp, ArrowUp, ArrowUpSpecial, Bell, BellLine, BellRinging, BellRingingLine, Blood, Camera, CameraLine, Check, CheckboxCircleChecked, CheckboxCircleUnchecked, CheckboxSquareChecked, CheckboxSquareUnchecked, CheckLine, Close, CloseLine, CloseT2, CloseT2Line, Copy, CopyLine, Delete, DeleteLine, Edit, EditLine, EyeClose, EyeOpen, FaceId, FaceIdLine, File, FileLine, Filter, FilterActive, History, HistoryLine, Home, HomeLine, Image, ImageLine, Info, InfoLine, Link, LinkLine, Location, LocationLine, LockNormal, LockNormalLine, LockReset, LockResetLine, Logout, LogoutLine, Mail, MailLine, Megaphone, MegaphoneLine, Menu, MenuClose, Message, MessageLine, Minus, MinusLine, More, MoreLine, Note, NoteLine, Notice, NoticeLine, Notify, NotifyLine, PaperPlane, PaperPlaneLine, Patient, Pause, Phone, PhoneLine, Play, PlayBack, PlayNext, Plus, PlusLine, Protect, ProtectHealthHigh, ProtectHealthLine, ProtectHealthLow, ProtectHealthNormal, ProtectLine, Question, QuestionLine, RadioChecked, RadioUnchecked, Request, Reset, ResetLine, Rotate, Save, Search, SearchLine, Star, StarLine, StatusFailed, StatusProgress, StatusSuccess, Support, SupportLine, SwitchOff, SwitchOn, Thunder, ThunderAuto, ThunderLine, Time, TimeLine, TouchId, TouchIdLine, UserT1, UserT1Line, UserT2, UserT2Line, Video, VideoLine, ViewPhoto, ViewPhotoLine, Warning, WarningLine, Wifi, WifiLine } from "icons";
+import { AddT2, AddT2Line, AddUser, AddUserLine, ArrowDown, ArrowDownSpecial, ArrowLeft, ArrowLeftSpecial, ArrowRight, ArrowRightSpecial, ArrowSortDown, ArrowSortUp, ArrowUp, ArrowUpSpecial, Attachment, Authentication, Bell, BellLine, BellRinging, BellRingingLine, Blood, Camera, CameraLine, CameraReverse, Check, CheckboxCircleChecked, CheckboxCircleUnchecked, CheckboxSquareChecked, CheckboxSquareUnchecked, CheckLine, Close, CloseLine, CloseRight, CloseT2, CloseT2Line, Copy, CopyLine, CoverImage, Delete, DeleteLine, Edit, EditLine, EyeClose, EyeOpen, FaceId, FaceIdLine, File, FileLine, Filter, FilterActive, History, HistoryLine, Home, HomeLine, Image, ImageLine, ImagePlaceholder, Info, InfoLine, Link, LinkLine, ListRequest, Location, LocationLine, LockNormal, LockNormalLine, LockReset, LockResetLine, Logout, LogoutLine, LogoutT2, Mail, MailLine, Megaphone, MegaphoneLine, Menu, MenuClose, Message, MessageLine, Minus, MinusLine, More, MoreLine, MoreT2, Note, NoteLine, Notice, NoticeLine, Notify, NotifyLine, PaperPlane, PaperPlaneLine, Patient, Pause, Phone, PhoneLine, Play, PlayBack, PlayNext, Plus, PlusLine, Protect, ProtectHealthHigh, ProtectHealthLine, ProtectHealthLow, ProtectHealthNormal, ProtectLine, Question, QuestionLine, RadioChecked, RadioUnchecked, Request, Reset, ResetLine, Rotate, Save, Scissors, Search, SearchLine, Setting, Sort, Star, StarLine, StatusFailed, StatusProgress, StatusSuccess, Support, SupportLine, SwitchOff, SwitchOn, Thunder, ThunderAuto, ThunderLine, Time, TimeLine, TouchId, TouchIdLine, Upload, UserT1, UserT1Line, UserT2, UserT2Line, Video, VideoLine, ViewPhoto, ViewPhotoLine, Warning, WarningLine, Wifi, WifiLine } from "icons";
 
 
 export default
@@ -690,62 +690,67 @@ export default
     },
     {
         "name": "scissors",
-        "component": "",
-        "demo": ""
+        "component": "<Scissors/>",
+        "demo": <Scissors/>
     },
     {
         "name": "cover-image",
-        "component": "",
-        "demo": ""
+        "component": "<CoverImage/>",
+        "demo": <CoverImage/>
     },
     {
         "name": "more-t2",
-        "component": "",
-        "demo": ""
+        "component": "<MoreT2/>",
+        "demo": <MoreT2/>
     },
     {
         "name": "setting",
-        "component": "",
-        "demo": ""
+        "component": "<Setting/>",
+        "demo": <Setting/>
     },
     {
         "name": "sort",
-        "component": "",
-        "demo": ""
+        "component": "<Sort/>",
+        "demo": <Sort/>
     },
     {
         "name": "attachment",
-        "component": "",
-        "demo": ""
+        "component": "<Attachment/>",
+        "demo": <Attachment/>
     },
     {
         "name": "upload",
-        "component": "",
-        "demo": ""
+        "component": "<Upload/>",
+        "demo": <Upload/>
     },
     {
         "name": "close-right",
-        "component": "",
-        "demo": ""
+        "component": "<CloseRight/>",
+        "demo": <CloseRight/>
     },
     {
         "name": "camera-reverse",
-        "component": "",
-        "demo": ""
+        "component": "<CameraReverse/>",
+        "demo": <CameraReverse/>
     },
     {
         "name": "logout-t2",
-        "component": "",
-        "demo": ""
+        "component": "<LogoutT2/>",
+        "demo": <LogoutT2/>
     },
     {
         "name": "authentication",
-        "component": "",
-        "demo": ""
+        "component": "<Authentication/>",
+        "demo": <Authentication/>
     },
     {
         "name": "list-request",
-        "component": "",
-        "demo": ""
+        "component": "<ListRequest/>",
+        "demo": <ListRequest/>
+    },
+    {
+        "name": "image-placeholder",
+        "component": "<ImagePlaceholder/>",
+        "demo": <ImagePlaceholder/>
     }
 ]
