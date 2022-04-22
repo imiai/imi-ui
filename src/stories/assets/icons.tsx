@@ -1,4 +1,4 @@
-import { AddT2, AddT2Line, AddUser, AddUserLine, Bell, BellLine, BellRinging, BellRingingLine, Camera, CameraLine, Check, CheckLine, Close, CloseLine, CloseT2, CloseT2Line, Copy, CopyLine, Delete, DeleteLine, Edit, EditLine, EyeClose, EyeOpen, File, FileLine, Filter, FilterActive, History, HistoryLine, Home, HomeLine, Image, ImageLine, Info, InfoLine, Link, LinkLine, Location, LocationLine, LockNormal, LockNormalLine, LockReset, LockResetLine, Logout, LogoutLine, Mail, MailLine, Megaphone, MegaphoneLine, Menu, MenuClose, Message, MessageLine, Minus, MinusLine, More, MoreLine, Note, NoteLine, Notice, NoticeLine, Notify, NotifyLine, PaperPlane, PaperPlaneLine, Phone, PhoneLine, Plus, PlusLine, Protect, ProtectHealthHigh, ProtectHealthLine, ProtectHealthLow, ProtectHealthNormal, ProtectLine, Question, QuestionLine, RadioChecked, RadioUnchecked, Reset, ResetLine, Rotate, Search, SearchLine, Star, StarLine, StatusFailed, StatusProgress, StatusSuccess, Support, SupportLine, SwitchOff, SwitchOn, Thunder, ThunderAuto, ThunderLine, Time, TimeLine, TouchId, TouchIdLine, UserT1, UserT1Line, UserT2, UserT2Line, Video, VideoLine, ViewPhoto, ViewPhotoLine, Warning, WarningLine, Wifi, WifiLine } from "icons";
+import { AddT2, AddT2Line, AddUser, AddUserLine, ArrowDown, ArrowDownSpecial, ArrowLeft, ArrowLeftSpecial, ArrowRight, ArrowRightSpecial, ArrowUp, ArrowUpSpecial, Bell, BellLine, BellRinging, BellRingingLine, Camera, CameraLine, Check, CheckboxCircleChecked, CheckboxCircleUnchecked, CheckboxSquareChecked, CheckboxSquareUnchecked, CheckLine, Close, CloseLine, CloseT2, CloseT2Line, Copy, CopyLine, Delete, DeleteLine, Edit, EditLine, EyeClose, EyeOpen, FaceId, FaceIdLine, File, FileLine, Filter, FilterActive, History, HistoryLine, Home, HomeLine, Image, ImageLine, Info, InfoLine, Link, LinkLine, Location, LocationLine, LockNormal, LockNormalLine, LockReset, LockResetLine, Logout, LogoutLine, Mail, MailLine, Megaphone, MegaphoneLine, Menu, MenuClose, Message, MessageLine, Minus, MinusLine, More, MoreLine, Note, NoteLine, Notice, NoticeLine, Notify, NotifyLine, PaperPlane, PaperPlaneLine, Pause, Phone, PhoneLine, Play, PlayBack, PlayNext, Plus, PlusLine, Protect, ProtectHealthHigh, ProtectHealthLine, ProtectHealthLow, ProtectHealthNormal, ProtectLine, Question, QuestionLine, RadioChecked, RadioUnchecked, Reset, ResetLine, Rotate, Search, SearchLine, Star, StarLine, StatusFailed, StatusProgress, StatusSuccess, Support, SupportLine, SwitchOff, SwitchOn, Thunder, ThunderAuto, ThunderLine, Time, TimeLine, TouchId, TouchIdLine, UserT1, UserT1Line, UserT2, UserT2Line, Video, VideoLine, ViewPhoto, ViewPhotoLine, Warning, WarningLine, Wifi, WifiLine } from "icons";
 
 
 export default
@@ -570,43 +570,93 @@ export default
     },
     {
         "name": "arrow-up",
-        "component": "",
-        "demo": ""
+        "component": "<ArrowUp/>",
+        "demo": <ArrowUp/>
     },
     {
         "name": "arrow-up-special",
-        "component": "",
-        "demo": ""
+        "component": "<ArrowUpSpecial/>",
+        "demo": <ArrowUpSpecial/>
     },
     {
         "name": "arrow-down",
-        "component": "",
-        "demo": ""
+        "component": "<ArrowDown/>",
+        "demo": <ArrowDown/>
     },
     {
         "name": "arrow-down-special",
-        "component": "",
-        "demo": ""
+        "component": "<ArrowDownSpecial/>",
+        "demo": <ArrowDownSpecial/>
     },
     {
         "name": "arrow-left",
-        "component": "",
-        "demo": ""
+        "component": "<ArrowLeft/>",
+        "demo": <ArrowLeft/>
     },
     {
         "name": "arrow-left-special",
-        "component": "",
-        "demo": ""
+        "component": "<ArrowLeftSpecial/>",
+        "demo": <ArrowLeftSpecial/>
     },
     {
         "name": "arrow-right",
-        "component": "",
-        "demo": ""
+        "component": "<ArrowRight/>",
+        "demo": <ArrowRight/>
     },
     {
         "name": "arrow-right-special",
-        "component": "",
-        "demo": ""
+        "component": "<ArrowRightSpecial/>",
+        "demo": <ArrowRightSpecial/>
+    },
+    {
+        "name": "face-id",
+        "component": "<FaceId/>",
+        "demo": <FaceId/>
+    },
+    {
+        "name": "face-id-line",
+        "component": "<FaceIdLine/>",
+        "demo": <FaceIdLine/>
+    },
+    {
+        "name": "play",
+        "component": "<Play/>",
+        "demo": <Play/>
+    },
+    {
+        "name": "pause",
+        "component": "<Pause/>",
+        "demo": <Pause/>
+    },
+    {
+        "name": "play-back",
+        "component": "<PlayBack/>",
+        "demo": <PlayBack/>
+    },
+    {
+        "name": "play-next",
+        "component": "<PlayNext/>",
+        "demo": <PlayNext/>
+    },
+    {
+        "name": "checkbox-square-checked",
+        "component": "<CheckboxSquareChecked/>",
+        "demo": <CheckboxSquareChecked/>
+    },
+    {
+        "name": "checkbox-square-unchecked",
+        "component": "<CheckboxSquareUnchecked/>",
+        "demo": <CheckboxSquareUnchecked/>
+    },
+    {
+        "name": "checkbox-circle-checked",
+        "component": "<CheckboxCircleChecked/>",
+        "demo": <CheckboxCircleChecked/>
+    },
+    {
+        "name": "checkbox-circle-unchecked",
+        "component": "<CheckboxCircleUnchecked/>",
+        "demo": <CheckboxCircleUnchecked/>
     },
     {
         "name": "arrow-sort-up",
@@ -615,46 +665,6 @@ export default
     },
     {
         "name": "arrow-sort-down",
-        "component": "",
-        "demo": ""
-    },
-    {
-        "name": "face-id",
-        "component": "",
-        "demo": ""
-    },
-    {
-        "name": "face-id-line",
-        "component": "",
-        "demo": ""
-    },
-    {
-        "name": "play",
-        "component": "",
-        "demo": ""
-    },
-    {
-        "name": "pause",
-        "component": "",
-        "demo": ""
-    },
-    {
-        "name": "checkbox-square-checked",
-        "component": "",
-        "demo": ""
-    },
-    {
-        "name": "checkbox-square-unchecked",
-        "component": "",
-        "demo": ""
-    },
-    {
-        "name": "checkbox-circle-checked",
-        "component": "",
-        "demo": ""
-    },
-    {
-        "name": "checkbox-circle-unchecked",
         "component": "",
         "demo": ""
     },

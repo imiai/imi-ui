@@ -130,6 +130,20 @@ export {ReactComponent as VideoLine} from './video-line.svg';
 export {ReactComponent as Rotate} from './rotate.svg';
 
 // LINE 9
+export {ReactComponent as ArrowUp} from './arrow-up.svg';
+export {ReactComponent as ArrowUpSpecial} from './arrow-up-special.svg';
+export {ReactComponent as ArrowDown} from './arrow-down.svg';
+export {ReactComponent as ArrowDownSpecial} from './arrow-down-special.svg';
+export {ReactComponent as ArrowLeft} from './arrow-left.svg';
+export {ReactComponent as ArrowLeftSpecial} from './arrow-left-special.svg';
+export {ReactComponent as ArrowRight} from './arrow-right.svg';
+export {ReactComponent as ArrowRightSpecial} from './arrow-right-special.svg';
+export {ReactComponent as FaceId} from './face-id.svg';
+export {ReactComponent as FaceIdLine} from './face-id-line.svg';
+export {ReactComponent as Play} from './play.svg';
+export {ReactComponent as Pause} from './pause.svg';
+export {ReactComponent as PlayBack} from './play-back.svg';
+export {ReactComponent as PlayNext} from './play-next.svg';
 export {ReactComponent as CheckboxSquareChecked} from './checkbox-square-checked.svg';
 export {ReactComponent as CheckboxSquareUnchecked} from './checkbox-square-unchecked.svg';
 export {ReactComponent as CheckboxCircleChecked} from './checkbox-circle-checked.svg';
