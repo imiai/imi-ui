@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { BottomSheet, Button, Card, Checkbox, Inform, Input, Popup, Radio, RadioGroup, Snackbar, TextArea } from './components';
-import { EyeOpen, StatusChecked } from './icons';
+import { EyeOpen, Check } from './icons';
 
 function App() {
   const [value, setValue] = useState('');
@@ -48,7 +48,7 @@ function App() {
         </BottomSheet>
 
         <Button type='primary' size={54} onClick={() => setIsOpenSnackbar(true)}>Open Snackbar</Button>
-        <Snackbar open={isOpenSnackbar} anchorOrigin={{vertical: 'bottom', horizontal: 'left'}} onClose={() => setIsOpenSnackbar(false)} titleClassName={'c-status-success'} icon={<StatusChecked />} title={'Account successfully created'} content={'Please login to your email to verify your email.'}/>
+        <Snackbar open={isOpenSnackbar} anchorOrigin={{vertical: 'bottom', horizontal: 'left'}} onClose={() => setIsOpenSnackbar(false)} titleClassName={'c-status-success'} icon={<Check />} title={'Account successfully created'} content={'Please login to your email to verify your email.'}/>
         <Card>
           Card Content
         </Card>

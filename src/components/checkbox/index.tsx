@@ -1,5 +1,5 @@
 import React from "react";
-import { CheckboxChecked, CheckboxUnchecked } from "icons";
+import { CheckboxCircleChecked, CheckboxCircleUnchecked } from "icons";
 import './styles.scss';
 
 interface ICheckboxProps extends React.HTMLProps<HTMLInputElement> {
@@ -14,8 +14,8 @@ const Checkbox = (props: ICheckboxProps) => {
             <input {...rest} type="checkbox" />
             <span className="t-label-regular-tiny">{label}</span>
             <span className="checkmark ripple">
-                <CheckboxChecked className="svg-checked" />
-                <CheckboxUnchecked className="svg-unchecked" />
+                <CheckboxCircleChecked className="svg-checked" />
+                <CheckboxCircleUnchecked className="svg-unchecked" />
             </span>
         </label>
     )

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 import { Button, Snackbar } from 'components';
-import { StatusChecked } from 'icons';
+import { Check } from 'icons';
 
 export default {
     title: 'Components/Snackbar',
@@ -11,7 +11,7 @@ export default {
             options: ['None', 'Icon'],
             mapping: {
                 None: undefined,
-                Icon: <StatusChecked />,
+                Icon: <Check />,
             },
             control: { type: 'select' },
             defaultValue: 'Icon'
