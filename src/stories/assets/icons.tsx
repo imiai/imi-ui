@@ -1,4 +1,4 @@
-import { AddT2, AddT2Line, AddUser, AddUserLine, Bell, BellLine, BellRinging, BellRingingLine, Camera, CameraLine, Check, CheckLine, Close, CloseLine, CloseT2, CloseT2Line, Copy, CopyLine, Delete, DeleteLine, Edit, EditLine, EyeClose, EyeOpen, Filter, FilterActive, Home, HomeLine, Info, InfoLine, Link, LinkLine, Location, LocationLine, LockNormal, LockNormalLine, LockReset, LockResetLine, Logout, LogoutLine, Mail, MailLine, Megaphone, MegaphoneLine, Menu, MenuClose, Message, MessageLine, Minus, MinusLine, More, MoreLine, Notice, NoticeLine, Notify, NotifyLine, PaperPlane, PaperPlaneLine, Phone, PhoneLine, Plus, PlusLine, Protect, ProtectHealthHigh, ProtectHealthLine, ProtectHealthLow, ProtectHealthNormal, ProtectLine, Question, QuestionLine, RadioChecked, RadioUnchecked, Reset, ResetLine, Search, SearchLine, Star, StarLine, StatusFailed, StatusProgress, StatusSuccess, Support, SupportLine, SwitchOff, SwitchOn, Thunder, ThunderAuto, ThunderLine, Time, TimeLine, TouchId, TouchIdLine, UserT1, UserT1Line, UserT2, UserT2Line, Warning, WarningLine, Wifi, WifiLine } from "icons";
+import { AddT2, AddT2Line, AddUser, AddUserLine, Bell, BellLine, BellRinging, BellRingingLine, Camera, CameraLine, Check, CheckLine, Close, CloseLine, CloseT2, CloseT2Line, Copy, CopyLine, Delete, DeleteLine, Edit, EditLine, EyeClose, EyeOpen, File, FileLine, Filter, FilterActive, History, HistoryLine, Home, HomeLine, Image, ImageLine, Info, InfoLine, Link, LinkLine, Location, LocationLine, LockNormal, LockNormalLine, LockReset, LockResetLine, Logout, LogoutLine, Mail, MailLine, Megaphone, MegaphoneLine, Menu, MenuClose, Message, MessageLine, Minus, MinusLine, More, MoreLine, Note, NoteLine, Notice, NoticeLine, Notify, NotifyLine, PaperPlane, PaperPlaneLine, Phone, PhoneLine, Plus, PlusLine, Protect, ProtectHealthHigh, ProtectHealthLine, ProtectHealthLow, ProtectHealthNormal, ProtectLine, Question, QuestionLine, RadioChecked, RadioUnchecked, Reset, ResetLine, Rotate, Search, SearchLine, Star, StarLine, StatusFailed, StatusProgress, StatusSuccess, Support, SupportLine, SwitchOff, SwitchOn, Thunder, ThunderAuto, ThunderLine, Time, TimeLine, TouchId, TouchIdLine, UserT1, UserT1Line, UserT2, UserT2Line, Video, VideoLine, ViewPhoto, ViewPhotoLine, Warning, WarningLine, Wifi, WifiLine } from "icons";
 
 
 export default
@@ -505,68 +505,68 @@ export default
     },
     {
         "name": "note",
-        "component": "",
-        "demo": ""
+        "component": "<Note/>",
+        "demo": <Note/>
     },
     {
         "name": "note-line",
-        "component": "",
-        "demo": ""
+        "component": "<NoteLine/>",
+        "demo": <NoteLine/>
     },
     {
         "name": "history",
-        "component": "",
-        "demo": ""
+        "component": "<History/>",
+        "demo": <History/>
     },
     {
         "name": "history-line",
-        "component": "",
-        "demo": ""
+        "component": "<HistoryLine/>",
+        "demo": <HistoryLine/>
     },
     {
         "name": "image",
-        "component": "",
-        "demo": ""
+        "component": "<Image/>",
+        "demo": <Image/>
     },
     {
         "name": "image-line",
-        "component": "",
-        "demo": ""
+        "component": "<ImageLine/>",
+        "demo": <ImageLine/>
     },
     {
         "name": "view-photo",
-        "component": "",
-        "demo": ""
+        "component": "<ViewPhoto/>",
+        "demo": <ViewPhoto/>
     },
     {
         "name": "view-photo-line",
-        "component": "",
-        "demo": ""
+        "component": "<ViewPhotoLine/>",
+        "demo": <ViewPhotoLine/>
     },
     {
         "name": "file",
-        "component": "",
-        "demo": ""
+        "component": "<File/>",
+        "demo": <File/>
     },
     {
         "name": "file-line",
-        "component": "",
-        "demo": ""
+        "component": "<FileLine/>",
+        "demo": <FileLine/>
     },
     {
         "name": "video",
-        "component": "",
-        "demo": ""
+        "component": "<Video/>",
+        "demo": <Video/>
     },
     {
         "name": "video-line",
-        "component": "",
-        "demo": ""
+        "component": "<VideoLine/>",
+        "demo": <VideoLine/>
     },
     {
         "name": "rotate",
-        "component": "",
-        "demo": ""
+        "component": "<Rotate/>",
+        "demo": <Rotate/>
     },
     {
         "name": "arrow-up",

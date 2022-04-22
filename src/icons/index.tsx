@@ -114,6 +114,20 @@ export {ReactComponent as Thunder} from './thunder.svg';
 export {ReactComponent as ThunderLine} from './thunder-line.svg';
 export {ReactComponent as ThunderAuto} from './thunder-auto.svg';
 
+// LINE 8
+export {ReactComponent as Note} from './note.svg';
+export {ReactComponent as NoteLine} from './note-line.svg';
+export {ReactComponent as History} from './history.svg';
+export {ReactComponent as HistoryLine} from './history-line.svg';
+export {ReactComponent as Image} from './image.svg';
+export {ReactComponent as ImageLine} from './image-line.svg';
+export {ReactComponent as ViewPhoto} from './view-photo.svg';
+export {ReactComponent as ViewPhotoLine} from './view-photo-line.svg';
+export {ReactComponent as File} from './file.svg';
+export {ReactComponent as FileLine} from './file-line.svg';
+export {ReactComponent as Video} from './video.svg';
+export {ReactComponent as VideoLine} from './video-line.svg';
+export {ReactComponent as Rotate} from './rotate.svg';
 
 // LINE 9
 export {ReactComponent as CheckboxSquareChecked} from './checkbox-square-checked.svg';
