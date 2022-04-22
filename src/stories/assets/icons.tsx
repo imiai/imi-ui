@@ -1,4 +1,4 @@
-import { AddT2, AddT2Line, AddUser, AddUserLine, ArrowDown, ArrowDownSpecial, ArrowLeft, ArrowLeftSpecial, ArrowRight, ArrowRightSpecial, ArrowUp, ArrowUpSpecial, Bell, BellLine, BellRinging, BellRingingLine, Camera, CameraLine, Check, CheckboxCircleChecked, CheckboxCircleUnchecked, CheckboxSquareChecked, CheckboxSquareUnchecked, CheckLine, Close, CloseLine, CloseT2, CloseT2Line, Copy, CopyLine, Delete, DeleteLine, Edit, EditLine, EyeClose, EyeOpen, FaceId, FaceIdLine, File, FileLine, Filter, FilterActive, History, HistoryLine, Home, HomeLine, Image, ImageLine, Info, InfoLine, Link, LinkLine, Location, LocationLine, LockNormal, LockNormalLine, LockReset, LockResetLine, Logout, LogoutLine, Mail, MailLine, Megaphone, MegaphoneLine, Menu, MenuClose, Message, MessageLine, Minus, MinusLine, More, MoreLine, Note, NoteLine, Notice, NoticeLine, Notify, NotifyLine, PaperPlane, PaperPlaneLine, Pause, Phone, PhoneLine, Play, PlayBack, PlayNext, Plus, PlusLine, Protect, ProtectHealthHigh, ProtectHealthLine, ProtectHealthLow, ProtectHealthNormal, ProtectLine, Question, QuestionLine, RadioChecked, RadioUnchecked, Reset, ResetLine, Rotate, Search, SearchLine, Star, StarLine, StatusFailed, StatusProgress, StatusSuccess, Support, SupportLine, SwitchOff, SwitchOn, Thunder, ThunderAuto, ThunderLine, Time, TimeLine, TouchId, TouchIdLine, UserT1, UserT1Line, UserT2, UserT2Line, Video, VideoLine, ViewPhoto, ViewPhotoLine, Warning, WarningLine, Wifi, WifiLine } from "icons";
+import { AddT2, AddT2Line, AddUser, AddUserLine, ArrowDown, ArrowDownSpecial, ArrowLeft, ArrowLeftSpecial, ArrowRight, ArrowRightSpecial, ArrowSortDown, ArrowSortUp, ArrowUp, ArrowUpSpecial, Bell, BellLine, BellRinging, BellRingingLine, Blood, Camera, CameraLine, Check, CheckboxCircleChecked, CheckboxCircleUnchecked, CheckboxSquareChecked, CheckboxSquareUnchecked, CheckLine, Close, CloseLine, CloseT2, CloseT2Line, Copy, CopyLine, Delete, DeleteLine, Edit, EditLine, EyeClose, EyeOpen, FaceId, FaceIdLine, File, FileLine, Filter, FilterActive, History, HistoryLine, Home, HomeLine, Image, ImageLine, Info, InfoLine, Link, LinkLine, Location, LocationLine, LockNormal, LockNormalLine, LockReset, LockResetLine, Logout, LogoutLine, Mail, MailLine, Megaphone, MegaphoneLine, Menu, MenuClose, Message, MessageLine, Minus, MinusLine, More, MoreLine, Note, NoteLine, Notice, NoticeLine, Notify, NotifyLine, PaperPlane, PaperPlaneLine, Patient, Pause, Phone, PhoneLine, Play, PlayBack, PlayNext, Plus, PlusLine, Protect, ProtectHealthHigh, ProtectHealthLine, ProtectHealthLow, ProtectHealthNormal, ProtectLine, Question, QuestionLine, RadioChecked, RadioUnchecked, Request, Reset, ResetLine, Rotate, Save, Search, SearchLine, Star, StarLine, StatusFailed, StatusProgress, StatusSuccess, Support, SupportLine, SwitchOff, SwitchOn, Thunder, ThunderAuto, ThunderLine, Time, TimeLine, TouchId, TouchIdLine, UserT1, UserT1Line, UserT2, UserT2Line, Video, VideoLine, ViewPhoto, ViewPhotoLine, Warning, WarningLine, Wifi, WifiLine } from "icons";
 
 
 export default
@@ -660,33 +660,33 @@ export default
     },
     {
         "name": "arrow-sort-up",
-        "component": "",
-        "demo": ""
+        "component": "<ArrowSortUp/>",
+        "demo": <ArrowSortUp/>
     },
     {
         "name": "arrow-sort-down",
-        "component": "",
-        "demo": ""
+        "component": "<ArrowSortDown/>",
+        "demo": <ArrowSortDown/>
     },
     {
         "name": "patient",
-        "component": "",
-        "demo": ""
+        "component": "<Patient/>",
+        "demo": <Patient/>
     },
     {
         "name": "request",
-        "component": "",
-        "demo": ""
+        "component": "<Request/>",
+        "demo": <Request/>
     },
     {
         "name": "blood",
-        "component": "",
-        "demo": ""
+        "component": "<Blood/>",
+        "demo": <Blood/>
     },
     {
         "name": "save",
-        "component": "",
-        "demo": ""
+        "component": "<Save/>",
+        "demo": <Save/>
     },
     {
         "name": "scissors",

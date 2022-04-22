@@ -149,5 +149,16 @@ export {ReactComponent as CheckboxSquareUnchecked} from './checkbox-square-unche
 export {ReactComponent as CheckboxCircleChecked} from './checkbox-circle-checked.svg';
 export {ReactComponent as CheckboxCircleUnchecked} from './checkbox-circle-unchecked.svg';
 
+// LINE 10
+export {ReactComponent as ArrowSortUp} from './arrow-sort-up.svg';
+export {ReactComponent as ArrowSortDown} from './arrow-sort-down.svg';
+export {ReactComponent as ZoomIn} from './zoom-in.svg';
+export {ReactComponent as ZoomOut} from './zoom-out.svg';
+
 // OTHER
+export {ReactComponent as Patient} from './patient.svg';
+export {ReactComponent as Request} from './request.svg';
+export {ReactComponent as Blood} from './blood.svg';
+export {ReactComponent as Save} from './save.svg';
+
 export {ReactComponent as ImagePlaceholder} from './img-placeholder.svg';
