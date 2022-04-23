@@ -1,4 +1,4 @@
-import { EyeOpen } from 'icons';
+import { EyeOpenIcon } from 'icons';
 import ICONS_DATA from '../assets/icons';
 export default {
     title: 'Components/Icons',
@@ -39,6 +39,6 @@ export const List = () => {
 
 export const Base = (args: any) => {
     return (
-        <EyeOpen width={args.width} height={args.height} fill={args.fill}/>
+        <EyeOpenIcon width={args.width} height={args.height} fill={args.fill}/>
     )
 }

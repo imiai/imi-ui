@@ -1,756 +1,756 @@
-import { AddT2, AddT2Line, AddUser, AddUserLine, ArrowDown, ArrowDownSpecial, ArrowLeft, ArrowLeftSpecial, ArrowRight, ArrowRightSpecial, ArrowSortDown, ArrowSortUp, ArrowUp, ArrowUpSpecial, Attachment, Authentication, Bell, BellLine, BellRinging, BellRingingLine, Blood, Camera, CameraLine, CameraReverse, Check, CheckboxCircleChecked, CheckboxCircleUnchecked, CheckboxSquareChecked, CheckboxSquareUnchecked, CheckLine, Close, CloseLine, CloseRight, CloseT2, CloseT2Line, Copy, CopyLine, CoverImage, Delete, DeleteLine, Edit, EditLine, EyeClose, EyeOpen, FaceId, FaceIdLine, File, FileLine, Filter, FilterActive, History, HistoryLine, Home, HomeLine, Image, ImageLine, ImagePlaceholder, Info, InfoLine, Link, LinkLine, ListRequest, Location, LocationLine, LockNormal, LockNormalLine, LockReset, LockResetLine, Logout, LogoutLine, LogoutT2, Mail, MailLine, Megaphone, MegaphoneLine, Menu, MenuClose, Message, MessageLine, Minus, MinusLine, More, MoreLine, MoreT2, Note, NoteLine, Notice, NoticeLine, Notify, NotifyLine, PaperPlane, PaperPlaneLine, Patient, Pause, Phone, PhoneLine, Play, PlayBack, PlayNext, Plus, PlusLine, Protect, ProtectHealthHigh, ProtectHealthLine, ProtectHealthLow, ProtectHealthNormal, ProtectLine, Question, QuestionLine, RadioChecked, RadioUnchecked, Request, Reset, ResetLine, Rotate, Save, Scissors, Search, SearchLine, Setting, Sort, Star, StarLine, StatusFailed, StatusProgress, StatusSuccess, Support, SupportLine, SwitchOff, SwitchOn, Thunder, ThunderAuto, ThunderLine, Time, TimeLine, TouchId, TouchIdLine, Upload, UserT1, UserT1Line, UserT2, UserT2Line, Video, VideoLine, ViewPhoto, ViewPhotoLine, Warning, WarningLine, Wifi, WifiLine } from "icons";
+import { AddT2Icon, AddT2LineIcon, AddUserIcon, AddUserLineIcon, ArrowDownIcon, ArrowDownSpecialIcon, ArrowLeftIcon, ArrowLeftSpecialIcon, ArrowRightIcon, ArrowRightSpecialIcon, ArrowSortDownIcon, ArrowSortUpIcon, ArrowUpIcon, ArrowUpSpecialIcon, AttachmentIcon, AuthenticationIcon, BellIcon, BellLineIcon, BellRingingIcon, BellRingingLineIcon, BloodIcon, CameraIcon, CameraLineIcon, CameraReverseIcon, CheckIcon, CheckboxCircleCheckedIcon, CheckboxCircleUncheckedIcon, CheckboxSquareCheckedIcon, CheckboxSquareUncheckedIcon, CheckLineIcon, CloseIcon, CloseLineIcon, CloseRightIcon, CloseT2Icon, CloseT2LineIcon, CopyIcon, CopyLineIcon, CoverImageIcon, DeleteIcon, DeleteLineIcon, EditIcon, EditLineIcon, EyeCloseIcon, EyeOpenIcon, FaceIdIcon, FaceIdLineIcon, FileIcon, FileLineIcon, FilterIcon, FilterActiveIcon, HistoryIcon, HistoryLineIcon, HomeIcon, HomeLineIcon, ImageIcon, ImageLineIcon, ImagePlaceholderIcon, InfoIcon, InfoLineIcon, LinkIcon, LinkLineIcon, ListRequestIcon, LocationIcon, LocationLineIcon, LockNormalIcon, LockNormalLineIcon, LockResetIcon, LockResetLineIcon, LogoutIcon, LogoutLineIcon, LogoutT2Icon, MailIcon, MailLineIcon, MegaphoneIcon, MegaphoneLineIcon, MenuIcon, MenuCloseIcon, MessageIcon, MessageLineIcon, MinusIcon, MinusLineIcon, MoreIcon, MoreLineIcon, MoreT2Icon, NoteIcon, NoteLineIcon, NoticeIcon, NoticeLineIcon, NotifyIcon, NotifyLineIcon, PaperPlaneIcon, PaperPlaneLineIcon, PatientIcon, PauseIcon, PhoneIcon, PhoneLineIcon, PlayIcon, PlayBackIcon, PlayNextIcon, PlusIcon, PlusLineIcon, ProtectIcon, ProtectHealthHighIcon, ProtectHealthLineIcon, ProtectHealthLowIcon, ProtectHealthNormalIcon, ProtectLineIcon, QuestionIcon, QuestionLineIcon, RadioCheckedIcon, RadioUncheckedIcon, RequestIcon, ResetIcon, ResetLineIcon, RotateIcon, SaveIcon, ScissorsIcon, SearchIcon, SearchLineIcon, SettingIcon, SortIcon, StarIcon, StarLineIcon, StatusFailedIcon, StatusProgressIcon, StatusSuccessIcon, SupportIcon, SupportLineIcon, SwitchOffIcon, SwitchOnIcon, ThunderIcon, ThunderAutoIcon, ThunderLineIcon, TimeIcon, TimeLineIcon, TouchIdIcon, TouchIdLineIcon, UploadIcon, UserT1Icon, UserT1LineIcon, UserT2Icon, UserT2LineIcon, VideoIcon, VideoLineIcon, ViewPhotoIcon, ViewPhotoLineIcon, WarningIcon, WarningLineIcon, WifiIcon, WifiLineIcon } from "icons";
 
 
 export default
 [
     {
         "name": "eye-open",
-        "component": "<EyeOpen />",
-        "demo": <EyeOpen />
+        "component": "<EyeOpenIcon/>",
+        "demo": <EyeOpenIcon/>
     },
     {
         "name": "eye-close",
-        "component": "<EyeClose/>",
-        "demo": <EyeClose/>
+        "component": "<EyeCloseIcon/>",
+        "demo": <EyeCloseIcon/>
     },
     {
         "name": "check",
-        "component": "<Check/>",
-        "demo": <Check/>
+        "component": "<CheckIcon/>",
+        "demo": <CheckIcon/>
     },
     {
         "name": "check-line",
-        "component": "<CheckLine/>",
-        "demo": <CheckLine/>
+        "component": "<CheckLineIcon/>",
+        "demo": <CheckLineIcon/>
     },
     {
         "name": "mail",
-        "component": "<Mail/>",
-        "demo": <Mail/>
+        "component": "<MailIcon/>",
+        "demo": <MailIcon/>
     },
     {
         "name": "mail-line",
-        "component": "<MailLine/>",
-        "demo": <MailLine/>
+        "component": "<MailLineIcon/>",
+        "demo": <MailLineIcon/>
     },
     {
         "name": "location",
-        "component": "<Location/>",
-        "demo": <Location/>
+        "component": "<LocationIcon/>",
+        "demo": <LocationIcon/>
     },
     {
         "name": "location-line",
-        "component": "<LocationLine/>",
-        "demo": <LocationLine/>
+        "component": "<LocationLineIcon/>",
+        "demo": <LocationLineIcon/>
     },
     {
         "name": "megaphone",
-        "component": "<Megaphone/>",
-        "demo": <Megaphone/>
+        "component": "<MegaphoneIcon/>",
+        "demo": <MegaphoneIcon/>
     },
     {
         "name": "megaphone-line",
-        "component": "<MegaphoneLine/>",
-        "demo": <MegaphoneLine/>
+        "component": "<MegaphoneLineIcon/>",
+        "demo": <MegaphoneLineIcon/>
     },
     {
         "name": "radio-checked",
-        "component": "<RadioChecked/>",
-        "demo": <RadioChecked/>
+        "component": "<RadioCheckedIcon/>",
+        "demo": <RadioCheckedIcon/>
     },
     {
         "name": "radio-unchecked",
-        "component": "<RadioUnchecked/>",
-        "demo": <RadioUnchecked/>
+        "component": "<RadioUncheckedIcon/>",
+        "demo": <RadioUncheckedIcon/>
     },
     {
         "name": "plus",
-        "component": "<Plus/>",
-        "demo": <Plus/>
+        "component": "<PlusIcon/>",
+        "demo": <PlusIcon/>
     },
     {
         "name": "plus-line",
-        "component": "<PlusLine/>",
-        "demo": <PlusLine/>
+        "component": "<PlusLineIcon/>",
+        "demo": <PlusLineIcon/>
     },
     {
         "name": "minus",
-        "component": "<Minus/>",
-        "demo": <Minus/>
+        "component": "<MinusIcon/>",
+        "demo": <MinusIcon/>
     },
     {
         "name": "minus-line",
-        "component": "<MinusLine/>",
-        "demo": <MinusLine/>
+        "component": "<MinusLineIcon/>",
+        "demo": <MinusLineIcon/>
     },
     {
         "name": "protect",
-        "component": "<Protect/>",
-        "demo": <Protect/>
+        "component": "<ProtectIcon/>",
+        "demo": <ProtectIcon/>
     },
     {
         "name": "protect-line",
-        "component": "<ProtectLine/>",
-        "demo": <ProtectLine/>
+        "component": "<ProtectLineIcon/>",
+        "demo": <ProtectLineIcon/>
     },
     {
         "name": "status-success",
-        "component": "<StatusSuccess/>",
-        "demo": <StatusSuccess/>
+        "component": "<StatusSuccessIcon/>",
+        "demo": <StatusSuccessIcon/>
     },
     {
         "name": "status-failed",
-        "component": "<StatusFailed/>",
-        "demo": <StatusFailed/>
+        "component": "<StatusFailedIcon/>",
+        "demo": <StatusFailedIcon/>
     },
     {
         "name": "status-progress",
-        "component": "<StatusProgress/>",
-        "demo": <StatusProgress/>
+        "component": "<StatusProgressIcon/>",
+        "demo": <StatusProgressIcon/>
     },
     {
         "name": "close",
-        "component": "<Close/>",
-        "demo": <Close/>
+        "component": "<CloseIcon/>",
+        "demo": <CloseIcon/>
     },
     {
         "name": "close-line",
-        "component": "<CloseLine/>",
-        "demo": <CloseLine/>
+        "component": "<CloseLineIcon/>",
+        "demo": <CloseLineIcon/>
     },
     {
         "name": "phone",
-        "component": "<Phone/>",
-        "demo": <Phone/>
+        "component": "<PhoneIcon/>",
+        "demo": <PhoneIcon/>
     },
     {
         "name": "phone-line",
-        "component": "<PhoneLine/>",
-        "demo": <PhoneLine/>
+        "component": "<PhoneLineIcon/>",
+        "demo": <PhoneLineIcon/>
     },
     {
         "name": "bell",
-        "component": "<Bell/>",
-        "demo": <Bell/>
+        "component": "<BellIcon/>",
+        "demo": <BellIcon/>
     },
     {
         "name": "bell-line",
-        "component": "<BellLine/>",
-        "demo": <BellLine/>
+        "component": "<BellLineIcon/>",
+        "demo": <BellLineIcon/>
     },
     {
         "name": "bell-ringing",
-        "component": "<BellRinging/>",
-        "demo": <BellRinging/>
+        "component": "<BellRingingIcon/>",
+        "demo": <BellRingingIcon/>
     },
     {
         "name": "bell-ringing-line",
-        "component": "<BellRingingLine/>",
-        "demo": <BellRingingLine/>
+        "component": "<BellRingingLineIcon/>",
+        "demo": <BellRingingLineIcon/>
     },
     {
         "name": "menu",
-        "component": "<Menu/>",
-        "demo": <Menu/>
+        "component": "<MenuIcon/>",
+        "demo": <MenuIcon/>
     },
     {
         "name": "menu-close",
-        "component": "<MenuClose/>",
-        "demo": <MenuClose/>
+        "component": "<MenuCloseIcon/>",
+        "demo": <MenuCloseIcon/>
     },
     {
         "name": "touch-id",
-        "component": "<TouchId/>",
-        "demo": <TouchId/>
+        "component": "<TouchIdIcon/>",
+        "demo": <TouchIdIcon/>
     },
     {
         "name": "touch-id-line",
-        "component": "<TouchIdLine/>",
-        "demo": <TouchIdLine/>
+        "component": "<TouchIdLineIcon/>",
+        "demo": <TouchIdLineIcon/>
     },
     {
         "name": "protect-health-normal",
-        "component": "<ProtectHealthNormal/>",
-        "demo": <ProtectHealthNormal/>
+        "component": "<ProtectHealthNormalIcon/>",
+        "demo": <ProtectHealthNormalIcon/>
     },
     {
         "name": "protect-health-line",
-        "component": "<ProtectHealthLine/>",
-        "demo": <ProtectHealthLine/>
+        "component": "<ProtectHealthLineIcon/>",
+        "demo": <ProtectHealthLineIcon/>
     },
     {
         "name": "protect-health-high",
-        "component": "<ProtectHealthHigh/>",
-        "demo": <ProtectHealthHigh/>
+        "component": "<ProtectHealthHighIcon/>",
+        "demo": <ProtectHealthHighIcon/>
     },
     {
         "name": "protect-health-low",
-        "component": "<ProtectHealthLow/>",
-        "demo": <ProtectHealthLow/>
+        "component": "<ProtectHealthLowIcon/>",
+        "demo": <ProtectHealthLowIcon/>
     },
     {
         "name": "time",
-        "component": "<Time/>",
-        "demo": <Time/>
+        "component": "<TimeIcon/>",
+        "demo": <TimeIcon/>
     },
     {
         "name": "time-line",
-        "component": "<TimeLine/>",
-        "demo": <TimeLine/>
+        "component": "<TimeLineIcon/>",
+        "demo": <TimeLineIcon/>
     },
     {
         "name": "link",
-        "component": "<Link/>",
-        "demo": <Link/>
+        "component": "<LinkIcon/>",
+        "demo": <LinkIcon/>
     },
     {
         "name": "link-line",
-        "component": "<LinkLine/>",
-        "demo": <LinkLine/>
+        "component": "<LinkLineIcon/>",
+        "demo": <LinkLineIcon/>
     },
     {
         "name": "notice",
-        "component": "<Notice/>",
-        "demo": <Notice/>
+        "component": "<NoticeIcon/>",
+        "demo": <NoticeIcon/>
     },
     {
         "name": "notice-line",
-        "component": "<NoticeLine/>",
-        "demo": <NoticeLine/>
+        "component": "<NoticeLineIcon/>",
+        "demo": <NoticeLineIcon/>
     },
     {
         "name": "wifi",
-        "component": "<Wifi/>",
-        "demo": <Wifi/>
+        "component": "<WifiIcon/>",
+        "demo": <WifiIcon/>
     },
     {
         "name": "wifi-line",
-        "component": "<WifiLine />",
-        "demo": <WifiLine />
+        "component": "<WifiLineIcon/>",
+        "demo": <WifiLineIcon/>
     },
     {
         "name": "add-user",
-        "component": "<AddUser/>",
-        "demo": <AddUser/>
+        "component": "<AddUserIcon/>",
+        "demo": <AddUserIcon/>
     },
     {
         "name": "add-user-line",
-        "component": "<AddUserLine/>",
-        "demo": <AddUserLine/>
+        "component": "<AddUserLineIcon/>",
+        "demo": <AddUserLineIcon/>
     },
     {
         "name": "switch-on",
-        "component": "<SwitchOn/>",
-        "demo": <SwitchOn/>
+        "component": "<SwitchOnIcon/>",
+        "demo": <SwitchOnIcon/>
     },
     {
         "name": "switch-off",
-        "component": "<SwitchOff/>",
-        "demo": <SwitchOff/>
+        "component": "<SwitchOffIcon/>",
+        "demo": <SwitchOffIcon/>
     },
     {
         "name": "support",
-        "component": "<Support/>",
-        "demo": <Support/>
+        "component": "<SupportIcon/>",
+        "demo": <SupportIcon/>
     },
     {
         "name": "support-line",
-        "component": "<SupportLine/>",
-        "demo": <SupportLine/>
+        "component": "<SupportLineIcon/>",
+        "demo": <SupportLineIcon/>
     },
     {
         "name": "notify",
-        "component": "<Notify/>",
-        "demo": <Notify/>
+        "component": "<NotifyIcon/>",
+        "demo": <NotifyIcon/>
     },
     {
         "name": "notice-line",
-        "component": "<NotifyLine/>",
-        "demo": <NotifyLine/>
+        "component": "<NotifyLineIcon/>",
+        "demo": <NotifyLineIcon/>
     },
     {
         "name": "camera",
-        "component": "<Camera/>",
-        "demo": <Camera/>
+        "component": "<CameraIcon/>",
+        "demo": <CameraIcon/>
     },
     {
         "name": "camera-line",
-        "component": "<CameraLine/>",
-        "demo": <CameraLine/>
+        "component": "<CameraLineIcon/>",
+        "demo": <CameraLineIcon/>
     },
     {
         "name": "user-t1",
-        "component": "<UserT1/>",
-        "demo": <UserT1/>
+        "component": "<UserT1Icon/>",
+        "demo": <UserT1Icon/>
     },
     {
         "name": "user-t1-line",
-        "component": "<UserT1Line/>",
-        "demo": <UserT1Line/>
+        "component": "<UserT1LineIcon/>",
+        "demo": <UserT1LineIcon/>
     },
     {
         "name": "lock-normal",
-        "component": "<LockNormal/>",
-        "demo": <LockNormal/>
+        "component": "<LockNormalIcon/>",
+        "demo": <LockNormalIcon/>
     },
     {
         "name": "lock-normal-line",
-        "component": "<LockNormalLine/>",
-        "demo": <LockNormalLine/>
+        "component": "<LockNormalLineIcon/>",
+        "demo": <LockNormalLineIcon/>
     },
     {
         "name": "home",
-        "component": "<Home/>",
-        "demo": <Home/>
+        "component": "<HomeIcon/>",
+        "demo": <HomeIcon/>
     },
     {
         "name": "home-line",
-        "component": "<HomeLine/>",
-        "demo": <HomeLine/>
+        "component": "<HomeLineIcon/>",
+        "demo": <HomeLineIcon/>
     },
     {
         "name": "filter",
-        "component": "<Filter/>",
-        "demo": <Filter/>
+        "component": "<FilterIcon/>",
+        "demo": <FilterIcon/>
     },
     {
         "name": "filter-active",
-        "component": "<FilterActive/>",
-        "demo": <FilterActive/>
+        "component": "<FilterActiveIcon/>",
+        "demo": <FilterActiveIcon/>
     },
     {
         "name": "copy",
-        "component": "<Copy/>",
-        "demo": <Copy/>
+        "component": "<CopyIcon/>",
+        "demo": <CopyIcon/>
     },
     {
         "name": "copy-line",
-        "component": "<CopyLine/>",
-        "demo": <CopyLine/>
+        "component": "<CopyLineIcon/>",
+        "demo": <CopyLineIcon/>
     },
     {
         "name": "add-t2",
-        "component": "<AddT2/>",
-        "demo": <AddT2/>
+        "component": "<AddT2Icon/>",
+        "demo": <AddT2Icon/>
     },
     {
         "name": "add-t2-line",
-        "component": "<AddT2Line/>",
-        "demo": <AddT2Line/>
+        "component": "<AddT2LineIcon/>",
+        "demo": <AddT2LineIcon/>
     },
     {
         "name": "question",
-        "component": "<Question/>",
-        "demo": <Question/>
+        "component": "<QuestionIcon/>",
+        "demo": <QuestionIcon/>
     },
     {
         "name": "question-line",
-        "component": "<QuestionLine/>",
-        "demo": <QuestionLine/>
+        "component": "<QuestionLineIcon/>",
+        "demo": <QuestionLineIcon/>
     },
     {
         "name": "search",
-        "component": "<Search/>",
-        "demo": <Search/>
+        "component": "<SearchIcon/>",
+        "demo": <SearchIcon/>
     },
     {
         "name": "search-line",
-        "component": "<SearchLine/>",
-        "demo": <SearchLine/>
+        "component": "<SearchLineIcon/>",
+        "demo": <SearchLineIcon/>
     },
     {
         "name": "edit",
-        "component": "<Edit/>",
-        "demo": <Edit/>
+        "component": "<EditIcon/>",
+        "demo": <EditIcon/>
     },
     {
         "name": "edit-line",
-        "component": "<EditLine/>",
-        "demo": <EditLine/>
+        "component": "<EditLineIcon/>",
+        "demo": <EditLineIcon/>
     },
     {
         "name": "message",
-        "component": "<Message/>",
-        "demo": <Message/>
+        "component": "<MessageIcon/>",
+        "demo": <MessageIcon/>
     },
     {
         "name": "message-line",
-        "component": "<MessageLine/>",
-        "demo": <MessageLine/>
+        "component": "<MessageLineIcon/>",
+        "demo": <MessageLineIcon/>
     },
     {
         "name": "more",
-        "component": "<More/>",
-        "demo": <More/>
+        "component": "<MoreIcon/>",
+        "demo": <MoreIcon/>
     },
     {
         "name": "more-line",
-        "component": "<MoreLine/>",
-        "demo": <MoreLine/>
+        "component": "<MoreLineIcon/>",
+        "demo": <MoreLineIcon/>
     },
     {
         "name": "close-t2",
-        "component": "<CloseT2/>",
-        "demo": <CloseT2/>
+        "component": "<CloseT2Icon/>",
+        "demo": <CloseT2Icon/>
     },
     {
         "name": "close-t2-line",
-        "component": "<CloseT2Line/>",
-        "demo": <CloseT2Line/>
+        "component": "<CloseT2LineIcon/>",
+        "demo": <CloseT2LineIcon/>
     },
     {
         "name": "warning",
-        "component": "<Warning/>",
-        "demo": <Warning/>
+        "component": "<WarningIcon/>",
+        "demo": <WarningIcon/>
     },
     {
         "name": "warning-line",
-        "component": "<WarningLine/>",
-        "demo": <WarningLine/>
+        "component": "<WarningLineIcon/>",
+        "demo": <WarningLineIcon/>
     },
     {
         "name": "info",
-        "component": "<Info/>",
-        "demo": <Info/>
+        "component": "<InfoIcon/>",
+        "demo": <InfoIcon/>
     },
     {
         "name": "info-line",
-        "component": "<InfoLine/>",
-        "demo": <InfoLine/>
+        "component": "<InfoLineIcon/>",
+        "demo": <InfoLineIcon/>
     },
     {
         "name": "user-t2",
-        "component": "<UserT2/>",
-        "demo": <UserT2/>
+        "component": "<UserT2Icon/>",
+        "demo": <UserT2Icon/>
     },
     {
         "name": "user-t2-line",
-        "component": "<UserT2Line/>",
-        "demo": <UserT2Line/>
+        "component": "<UserT2LineIcon/>",
+        "demo": <UserT2LineIcon/>
     },
     {
         "name": "logout",
-        "component": "<Logout/>",
-        "demo": <Logout/>
+        "component": "<LogoutIcon/>",
+        "demo": <LogoutIcon/>
     },
     {
         "name": "logout-line",
-        "component": "<LogoutLine/>",
-        "demo": <LogoutLine/>
+        "component": "<LogoutLineIcon/>",
+        "demo": <LogoutLineIcon/>
     },
     {
         "name": "reset",
-        "component": "<Reset/>",
-        "demo": <Reset/>
+        "component": "<ResetIcon/>",
+        "demo": <ResetIcon/>
     },
     {
         "name": "reset-line",
-        "component": "<ResetLine/>",
-        "demo": <ResetLine/>
+        "component": "<ResetLineIcon/>",
+        "demo": <ResetLineIcon/>
     },
     {
         "name": "paper-plane",
-        "component": "<PaperPlane/>",
-        "demo": <PaperPlane/>
+        "component": "<PaperPlaneIcon/>",
+        "demo": <PaperPlaneIcon/>
     },
     {
         "name": "paper-plane-line",
-        "component": "<PaperPlaneLine/>",
-        "demo": <PaperPlaneLine/>
+        "component": "<PaperPlaneLineIcon/>",
+        "demo": <PaperPlaneLineIcon/>
     },
     {
         "name": "lock-reset",
-        "component": "<LockReset/>",
-        "demo": <LockReset/>
+        "component": "<LockResetIcon/>",
+        "demo": <LockResetIcon/>
     },
     {
         "name": "lock-reset-line",
-        "component": "<LockResetLine/>",
-        "demo": <LockResetLine/>
+        "component": "<LockResetLineIcon/>",
+        "demo": <LockResetLineIcon/>
     },
     {
         "name": "star",
-        "component": "<Star/>",
-        "demo": <Star/>
+        "component": "<StarIcon/>",
+        "demo": <StarIcon/>
     },
     {
         "name": "star-line",
-        "component": "<StarLine/>",
-        "demo": <StarLine/>
+        "component": "<StarLineIcon/>",
+        "demo": <StarLineIcon/>
     },
     {
         "name": "delete",
-        "component": "<Delete/>",
-        "demo": <Delete/>
+        "component": "<DeleteIcon/>",
+        "demo": <DeleteIcon/>
     },
     {
         "name": "delete-line",
-        "component": "<DeleteLine/>",
-        "demo": <DeleteLine/>
+        "component": "<DeleteLineIcon/>",
+        "demo": <DeleteLineIcon/>
     },
     {
         "name": "thunder",
-        "component": "<Thunder/>",
-        "demo": <Thunder/>
+        "component": "<ThunderIcon/>",
+        "demo": <ThunderIcon/>
     },
     {
         "name": "thunder-line",
-        "component": "<ThunderLine/>",
-        "demo": <ThunderLine/>
+        "component": "<ThunderLineIcon/>",
+        "demo": <ThunderLineIcon/>
     },
     {
         "name": "thunder-auto",
-        "component": "<ThunderAuto/>",
-        "demo": <ThunderAuto/>
+        "component": "<ThunderAutoIcon/>",
+        "demo": <ThunderAutoIcon/>
     },
     {
         "name": "note",
-        "component": "<Note/>",
-        "demo": <Note/>
+        "component": "<NoteIcon/>",
+        "demo": <NoteIcon/>
     },
     {
         "name": "note-line",
-        "component": "<NoteLine/>",
-        "demo": <NoteLine/>
+        "component": "<NoteLineIcon/>",
+        "demo": <NoteLineIcon/>
     },
     {
         "name": "history",
-        "component": "<History/>",
-        "demo": <History/>
+        "component": "<HistoryIcon/>",
+        "demo": <HistoryIcon/>
     },
     {
         "name": "history-line",
-        "component": "<HistoryLine/>",
-        "demo": <HistoryLine/>
+        "component": "<HistoryLineIcon/>",
+        "demo": <HistoryLineIcon/>
     },
     {
         "name": "image",
-        "component": "<Image/>",
-        "demo": <Image/>
+        "component": "<ImageIcon/>",
+        "demo": <ImageIcon/>
     },
     {
         "name": "image-line",
-        "component": "<ImageLine/>",
-        "demo": <ImageLine/>
+        "component": "<ImageLineIcon/>",
+        "demo": <ImageLineIcon/>
     },
     {
         "name": "view-photo",
-        "component": "<ViewPhoto/>",
-        "demo": <ViewPhoto/>
+        "component": "<ViewPhotoIcon/>",
+        "demo": <ViewPhotoIcon/>
     },
     {
         "name": "view-photo-line",
-        "component": "<ViewPhotoLine/>",
-        "demo": <ViewPhotoLine/>
+        "component": "<ViewPhotoLineIcon/>",
+        "demo": <ViewPhotoLineIcon/>
     },
     {
         "name": "file",
-        "component": "<File/>",
-        "demo": <File/>
+        "component": "<FileIcon/>",
+        "demo": <FileIcon/>
     },
     {
         "name": "file-line",
-        "component": "<FileLine/>",
-        "demo": <FileLine/>
+        "component": "<FileLineIcon/>",
+        "demo": <FileLineIcon/>
     },
     {
         "name": "video",
-        "component": "<Video/>",
-        "demo": <Video/>
+        "component": "<VideoIcon/>",
+        "demo": <VideoIcon/>
     },
     {
         "name": "video-line",
-        "component": "<VideoLine/>",
-        "demo": <VideoLine/>
+        "component": "<VideoLineIcon/>",
+        "demo": <VideoLineIcon/>
     },
     {
         "name": "rotate",
-        "component": "<Rotate/>",
-        "demo": <Rotate/>
+        "component": "<RotateIcon/>",
+        "demo": <RotateIcon/>
     },
     {
         "name": "arrow-up",
-        "component": "<ArrowUp/>",
-        "demo": <ArrowUp/>
+        "component": "<ArrowUpIcon/>",
+        "demo": <ArrowUpIcon/>
     },
     {
         "name": "arrow-up-special",
-        "component": "<ArrowUpSpecial/>",
-        "demo": <ArrowUpSpecial/>
+        "component": "<ArrowUpSpecialIcon/>",
+        "demo": <ArrowUpSpecialIcon/>
     },
     {
         "name": "arrow-down",
-        "component": "<ArrowDown/>",
-        "demo": <ArrowDown/>
+        "component": "<ArrowDownIcon/>",
+        "demo": <ArrowDownIcon/>
     },
     {
         "name": "arrow-down-special",
-        "component": "<ArrowDownSpecial/>",
-        "demo": <ArrowDownSpecial/>
+        "component": "<ArrowDownSpecialIcon/>",
+        "demo": <ArrowDownSpecialIcon/>
     },
     {
         "name": "arrow-left",
-        "component": "<ArrowLeft/>",
-        "demo": <ArrowLeft/>
+        "component": "<ArrowLeftIcon/>",
+        "demo": <ArrowLeftIcon/>
     },
     {
         "name": "arrow-left-special",
-        "component": "<ArrowLeftSpecial/>",
-        "demo": <ArrowLeftSpecial/>
+        "component": "<ArrowLeftSpecialIcon/>",
+        "demo": <ArrowLeftSpecialIcon/>
     },
     {
         "name": "arrow-right",
-        "component": "<ArrowRight/>",
-        "demo": <ArrowRight/>
+        "component": "<ArrowRightIcon/>",
+        "demo": <ArrowRightIcon/>
     },
     {
         "name": "arrow-right-special",
-        "component": "<ArrowRightSpecial/>",
-        "demo": <ArrowRightSpecial/>
+        "component": "<ArrowRightSpecialIcon/>",
+        "demo": <ArrowRightSpecialIcon/>
     },
     {
         "name": "face-id",
-        "component": "<FaceId/>",
-        "demo": <FaceId/>
+        "component": "<FaceIdIcon/>",
+        "demo": <FaceIdIcon/>
     },
     {
         "name": "face-id-line",
-        "component": "<FaceIdLine/>",
-        "demo": <FaceIdLine/>
+        "component": "<FaceIdLineIcon/>",
+        "demo": <FaceIdLineIcon/>
     },
     {
         "name": "play",
-        "component": "<Play/>",
-        "demo": <Play/>
+        "component": "<PlayIcon/>",
+        "demo": <PlayIcon/>
     },
     {
         "name": "pause",
-        "component": "<Pause/>",
-        "demo": <Pause/>
+        "component": "<PauseIcon/>",
+        "demo": <PauseIcon/>
     },
     {
         "name": "play-back",
-        "component": "<PlayBack/>",
-        "demo": <PlayBack/>
+        "component": "<PlayBackIcon/>",
+        "demo": <PlayBackIcon/>
     },
     {
         "name": "play-next",
-        "component": "<PlayNext/>",
-        "demo": <PlayNext/>
+        "component": "<PlayNextIcon/>",
+        "demo": <PlayNextIcon/>
     },
     {
         "name": "checkbox-square-checked",
-        "component": "<CheckboxSquareChecked/>",
-        "demo": <CheckboxSquareChecked/>
+        "component": "<CheckboxSquareCheckedIcon/>",
+        "demo": <CheckboxSquareCheckedIcon/>
     },
     {
         "name": "checkbox-square-unchecked",
-        "component": "<CheckboxSquareUnchecked/>",
-        "demo": <CheckboxSquareUnchecked/>
+        "component": "<CheckboxSquareUncheckedIcon/>",
+        "demo": <CheckboxSquareUncheckedIcon/>
     },
     {
         "name": "checkbox-circle-checked",
-        "component": "<CheckboxCircleChecked/>",
-        "demo": <CheckboxCircleChecked/>
+        "component": "<CheckboxCircleCheckedIcon/>",
+        "demo": <CheckboxCircleCheckedIcon/>
     },
     {
         "name": "checkbox-circle-unchecked",
-        "component": "<CheckboxCircleUnchecked/>",
-        "demo": <CheckboxCircleUnchecked/>
+        "component": "<CheckboxCircleUncheckedIcon/>",
+        "demo": <CheckboxCircleUncheckedIcon/>
     },
     {
         "name": "arrow-sort-up",
-        "component": "<ArrowSortUp/>",
-        "demo": <ArrowSortUp/>
+        "component": "<ArrowSortUpIcon/>",
+        "demo": <ArrowSortUpIcon/>
     },
     {
         "name": "arrow-sort-down",
-        "component": "<ArrowSortDown/>",
-        "demo": <ArrowSortDown/>
+        "component": "<ArrowSortDownIcon/>",
+        "demo": <ArrowSortDownIcon/>
     },
     {
         "name": "patient",
-        "component": "<Patient/>",
-        "demo": <Patient/>
+        "component": "<PatientIcon/>",
+        "demo": <PatientIcon/>
     },
     {
         "name": "request",
-        "component": "<Request/>",
-        "demo": <Request/>
+        "component": "<RequestIcon/>",
+        "demo": <RequestIcon/>
     },
     {
         "name": "blood",
-        "component": "<Blood/>",
-        "demo": <Blood/>
+        "component": "<BloodIcon/>",
+        "demo": <BloodIcon/>
     },
     {
         "name": "save",
-        "component": "<Save/>",
-        "demo": <Save/>
+        "component": "<SaveIcon/>",
+        "demo": <SaveIcon/>
     },
     {
         "name": "scissors",
-        "component": "<Scissors/>",
-        "demo": <Scissors/>
+        "component": "<ScissorsIcon/>",
+        "demo": <ScissorsIcon/>
     },
     {
         "name": "cover-image",
-        "component": "<CoverImage/>",
-        "demo": <CoverImage/>
+        "component": "<CoverImageIcon/>",
+        "demo": <CoverImageIcon/>
     },
     {
         "name": "more-t2",
-        "component": "<MoreT2/>",
-        "demo": <MoreT2/>
+        "component": "<MoreT2Icon/>",
+        "demo": <MoreT2Icon/>
     },
     {
         "name": "setting",
-        "component": "<Setting/>",
-        "demo": <Setting/>
+        "component": "<SettingIcon/>",
+        "demo": <SettingIcon/>
     },
     {
         "name": "sort",
-        "component": "<Sort/>",
-        "demo": <Sort/>
+        "component": "<SortIcon/>",
+        "demo": <SortIcon/>
     },
     {
         "name": "attachment",
-        "component": "<Attachment/>",
-        "demo": <Attachment/>
+        "component": "<AttachmentIcon/>",
+        "demo": <AttachmentIcon/>
     },
     {
         "name": "upload",
-        "component": "<Upload/>",
-        "demo": <Upload/>
+        "component": "<UploadIcon/>",
+        "demo": <UploadIcon/>
     },
     {
         "name": "close-right",
-        "component": "<CloseRight/>",
-        "demo": <CloseRight/>
+        "component": "<CloseRightIcon/>",
+        "demo": <CloseRightIcon/>
     },
     {
         "name": "camera-reverse",
-        "component": "<CameraReverse/>",
-        "demo": <CameraReverse/>
+        "component": "<CameraReverseIcon/>",
+        "demo": <CameraReverseIcon/>
     },
     {
         "name": "logout-t2",
-        "component": "<LogoutT2/>",
-        "demo": <LogoutT2/>
+        "component": "<LogoutT2Icon/>",
+        "demo": <LogoutT2Icon/>
     },
     {
         "name": "authentication",
-        "component": "<Authentication/>",
-        "demo": <Authentication/>
+        "component": "<AuthenticationIcon/>",
+        "demo": <AuthenticationIcon/>
     },
     {
         "name": "list-request",
-        "component": "<ListRequest/>",
-        "demo": <ListRequest/>
+        "component": "<ListRequestIcon/>",
+        "demo": <ListRequestIcon/>
     },
     {
         "name": "image-placeholder",
-        "component": "<ImagePlaceholder/>",
-        "demo": <ImagePlaceholder/>
+        "component": "<ImagePlaceholderIcon/>",
+        "demo": <ImagePlaceholderIcon/>
     }
 ]
