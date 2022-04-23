@@ -1,6 +1,6 @@
 import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
-import { EyeClose, EyeOpen } from 'icons';
+import { EyeCloseIcon, EyeOpenIcon } from 'icons';
 import { ButtonFix } from 'components';
 
 
@@ -16,7 +16,7 @@ export default {
       options: ['None', 'Icon'],
       mapping: {
         None: undefined,
-        Icon: <EyeClose/>,
+        Icon: <EyeCloseIcon/>,
       },
       control: { type: 'select' },
     },
@@ -24,7 +24,7 @@ export default {
       options: ['None', 'Icon'],
       mapping: {
         None: undefined,
-        Icon: <EyeClose/>,
+        Icon: <EyeCloseIcon/>,
       },
       control: { type: 'select' },
     }

@@ -1,4 +1,4 @@
-import { CloseT2 } from "icons";
+import { CloseT2Icon } from "icons";
 import React, { Fragment } from "react";
 import './styles.scss';
 
@@ -35,7 +35,7 @@ const Input = (props: IInputProps) => {
                 <div className="icon-container">
                     {onClear && !rest.disabled &&
                         <button className="icon close">
-                            <CloseT2 />
+                            <CloseT2Icon />
                         </button>}
                     {onClear && endIcon && <hr />}
                     {endIcon &&
@@ -45,8 +45,8 @@ const Input = (props: IInputProps) => {
                     }
                 </div>
             </div>
-            {!error && hint && <p className="imiui-input-note hint t-label-regular-supertiny">{hint}</p>}
-            {error && <p className="imiui-input-note error t-label-regular-supertiny">{error}</p>}
+            {!error && hint && <span className="imiui-input-note hint t-label-regular-supertiny">{hint}</span>}
+            {error && <span className="imiui-input-note error t-label-regular-supertiny">{error}</span>}
         </Fragment>
     )
 }

@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { BottomSheet, Button, Card, Checkbox, Inform, Input, Popup, Radio, RadioGroup, Snackbar, TextArea } from './components';
-import { EyeOpen, Check } from './icons';
+import { EyeOpenIcon, CheckIcon } from './icons';
 
 function App() {
   const [value, setValue] = useState('');
@@ -35,7 +35,7 @@ function App() {
           <Radio label='Female' name='Gender' value='Female'/>
         </RadioGroup> 
 
-        <Inform severity='info' icon={<EyeOpen />} content='Informative inform with dismiss button'/>
+        <Inform severity='info' icon={<EyeOpenIcon />} content='Informative inform with dismiss button'/>
 
         <Button type='primary' size={54} onClick={() => setIsOpenPopup(true)}>Open Popup</Button>
         <Popup open={isOpenPopup} onClose={() => setIsOpenPopup(false)} imageSize='large' title='Large Popup' subTitle='This message of the popup is wrapped by the container.' mainButton='Main button' subButton='Sub button'/>
@@ -48,7 +48,7 @@ function App() {
         </BottomSheet>
 
         <Button type='primary' size={54} onClick={() => setIsOpenSnackbar(true)}>Open Snackbar</Button>
-        <Snackbar open={isOpenSnackbar} anchorOrigin={{vertical: 'bottom', horizontal: 'left'}} onClose={() => setIsOpenSnackbar(false)} titleClassName={'c-status-success'} icon={<Check />} title={'Account successfully created'} content={'Please login to your email to verify your email.'}/>
+        <Snackbar open={isOpenSnackbar} anchorOrigin={{vertical: 'bottom', horizontal: 'left'}} onClose={() => setIsOpenSnackbar(false)} titleClassName={'c-status-success'} icon={<CheckIcon />} title={'Account successfully created'} content={'Please login to your email to verify your email.'}/>
         <Card>
           Card Content
         </Card>

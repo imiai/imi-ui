@@ -1,4 +1,4 @@
-import { Close } from "icons";
+import { CloseIcon } from "icons";
 import React, { useState, useEffect, useCallback } from "react";
 import './styles.scss';
 
@@ -118,7 +118,7 @@ const BottomSheet = (props: IBottomSheetProps) => {
                     </button>
                     <span className="title t-label-bold-small">{title}</span>
                     <button className="close" onClick={onCloseSheet}>
-                        <Close />
+                        <CloseIcon />
                     </button>
                 </div>
                 <div className="content">

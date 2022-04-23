@@ -1,7 +1,7 @@
 import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 import { Button } from 'components';
-import { EyeClose, EyeOpen } from 'icons';
+import { EyeCloseIcon } from 'icons';
 
 
 // More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
@@ -22,7 +22,7 @@ export default {
       options: ['None', 'Icon'],
       mapping: {
         None: undefined,
-        Icon: <EyeClose/>,
+        Icon: <EyeCloseIcon/>,
       },
       control: { type: 'select' },
     },
@@ -30,7 +30,7 @@ export default {
       options: ['None', 'Icon'],
       mapping: {
         None: undefined,
-        Icon: <EyeClose/>,
+        Icon: <EyeCloseIcon/>,
       },
       control: { type: 'select' },
     }

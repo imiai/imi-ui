@@ -1,4 +1,4 @@
-import { RadioChecked, RadioUnchecked } from 'icons';
+import { RadioCheckedIcon, RadioUncheckedIcon } from 'icons';
 import React from 'react';
 import './styles.scss';
 
@@ -14,8 +14,8 @@ const Radio = (props: IRadioProps) => {
             <input {...rest} type="radio" />
             <span className='t-label-regular-tiny'>{label}</span>
             <span className="checkmark ripple">
-                <RadioChecked className="svg-checked" />
-                <RadioUnchecked className="svg-unchecked" />
+                <RadioCheckedIcon className="svg-checked" />
+                <RadioUncheckedIcon className="svg-unchecked" />
             </span>
         </label>
     )

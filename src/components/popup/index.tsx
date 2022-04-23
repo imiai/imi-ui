@@ -1,6 +1,6 @@
 import Button from "components/button/button";
 import Image from "components/image";
-import { Close, CloseT2 } from "icons";
+import { CloseIcon, CloseT2Icon } from "icons";
 import React, { useEffect, useState } from "react";
 import './styles.scss';
 
@@ -39,12 +39,12 @@ const Popup = (props: IPopupProps) => {
     return (
         <div {...rest} className='imiui-popup'>
             <div className={`content ${imageSize} ${showContent ? ` popup-with-anim` : ''} `}>
-                <button className="close" onClick={onClose}>{imageSize === 'large' ? <CloseT2 /> : <Close /> }</button>
+                <button className="close" onClick={onClose}>{imageSize === 'large' ? <CloseT2Icon /> : <CloseIcon /> }</button>
                 {imageSize === 'large' && <Image alt='popup-img' src={image} className={`image`} />}
                 <div className="wrapper">
                     {imageSize === 'small' && <Image alt='popup-img' src={image} className={`image`} />}
-                    <p className="title t-label-bold-small">{title}</p>
-                    <p className="sub-title t-label-regular-tiny">{subTitle}</p>
+                    <span className="title t-label-bold-small">{title}</span>
+                    <span className="sub-title t-label-regular-tiny">{subTitle}</span>
                     <div className={`button-container`}>
                         <Button type='primary' size={40} className='main-button'>Main button</Button>
                         <Button type={imageSize !== 'none' ? 'tertiary' : 'secondary'} size={40} className='sub-button'>Sub button</Button>

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 import { BottomSheet, Button } from 'components';
-import { EyeClose } from 'icons';
+import { EyeCloseIcon } from 'icons';
 
 export default {
     title: 'Components/BottomSheet',
@@ -11,7 +11,7 @@ export default {
             options: ['None', 'Icon'],
             mapping: {
               None: undefined,
-              Icon: <EyeClose/>,
+              Icon: <EyeCloseIcon/>,
             },
             control: { type: 'select' },
         },

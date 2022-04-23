@@ -1,7 +1,7 @@
 import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 import { Inform } from 'components';
-import { StatusSuccess } from 'icons';
+import { StatusSuccessIcon } from 'icons';
 
 export default {
   title: 'Components/Inform',
@@ -16,7 +16,7 @@ export default {
       options: ['None', 'Icon'],
       mapping: {
         None: undefined,
-        Icon: <StatusSuccess />,
+        Icon: <StatusSuccessIcon />,
       },
       control: { type: 'select' },
       defaultValue: 'Icon'
@@ -28,7 +28,7 @@ const Template: ComponentStory<typeof Inform> = (args) => <Inform {...args} />
 export const Base = Template.bind({});
 Base.args = {
   severity: 'info',
-  icon: <StatusSuccess />,
+  icon: <StatusSuccessIcon />,
   content: 'Informative inform with dismiss button',
   closeable: true,
 };

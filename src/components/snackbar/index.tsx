@@ -59,7 +59,7 @@ const Snackbar = (props: ISnackbarProps) => {
     return (
         <div className={`imiui-snackbar ${anchorOrigin.horizontal} ${openSnackbar ? 'show' : ''} ${anchorOrigin.vertical}`}>
             {icon}
-            <p className="message t-label-regular-tiny"><span className={`title ${titleClassName}`}>{title}</span> <span>{content}</span></p>
+            <p className="message t-label-regular-tiny m-0"><span className={`title ${titleClassName}`}>{title}</span> <span>{content}</span></p>
         </div>
     )
 }

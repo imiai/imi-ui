@@ -1,7 +1,7 @@
 import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 import { Input } from 'components';
-import { EyeClose } from 'icons';
+import { EyeCloseIcon } from 'icons';
 
 export default {
     title: 'Components/Input',
@@ -41,7 +41,7 @@ IconAndClear.argTypes = {
         options: ['None', 'Icon'],
         mapping: {
             None: undefined,
-            Icon: <EyeClose />,
+            Icon: <EyeCloseIcon />,
         },
         control: { type: 'select' },
         defaultValue: 'None'

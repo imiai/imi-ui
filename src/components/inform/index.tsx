@@ -1,4 +1,4 @@
-import { Close } from "icons";
+import { CloseIcon } from "icons";
 import React, { useEffect, useState } from "react";
 import './styles.scss';
 
@@ -32,9 +32,9 @@ const Inform = (props: IInformProps) => {
     return (
         <div id='imiui-inform' {...rest} className={`imiui-inform ${severity}${className ? ` ${className}` : ''}${iconAlignTop ? ` icon-align-top` : ''}`}>
             {iconClone}
-            <p className="content t-label-regular-supertiny">{content}</p>
+            <p className="content t-label-regular-supertiny m-0">{content}</p>
             {closeable && <button onClick={() => setVisible(false)} className='close-button'>
-                <Close className="close-icon"/>
+                <CloseIcon className="close-icon"/>
             </button>}
         </div>
     )

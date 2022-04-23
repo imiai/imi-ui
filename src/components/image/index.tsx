@@ -1,4 +1,4 @@
-import { ImagePlaceholder } from "icons";
+import { ImagePlaceholderIcon } from "icons";
 import React, { useState } from "react";
 import './styles.scss';
 
@@ -17,7 +17,7 @@ const Image = (props: IImageProps) => {
     if (isError) {
         return (
             <div className={`imiui-image placeholder${className ? ` ${className}` : ''}`}>
-                <ImagePlaceholder />
+                <ImagePlaceholderIcon />
             </div>
         )
     }
