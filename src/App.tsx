@@ -52,9 +52,11 @@ function App() {
         <Card>
           Card Content
         </Card>
-        <Tooltip title='tooltip'>
-          <span>Tooltip content</span>
-        </Tooltip>
+        <div style={{display: 'flex', width: '100vw', justifyContent: 'flex-end'}}>
+          <Tooltip title='tooltip' placement="top">
+            <span>Tooltip content</span>
+          </Tooltip>
+        </div>
     </div>
   );
 }

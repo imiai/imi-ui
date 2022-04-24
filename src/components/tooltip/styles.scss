@@ -3,7 +3,8 @@
     display: inline-block;
     .tooltip {
         position: absolute;
-        display: none;
+        opacity: 0;
+        transition: all 200ms;
 
         background: var(--imiui-primary-dark);
         border-radius: 8px;
@@ -12,16 +13,57 @@
 
         color: var(--imiui-primary-white);
         &.top {
-            top: -42px;
-            // left: 0;
-            // right: 0;
-            margin-left: auto;
-            margin-right: auto;
+            top: calc(-42px - 6px);
+            left: 50%;
+            transform: translate(-50%, 0);
+            &::after {
+                top: calc(100% - 6px);
+                left: 50%;
+                transform: translate(-50%, 0%);
+    
+                border-right: 12px solid transparent;
+                border-left: 12px solid transparent;
+                border-top: 12px solid var(--imiui-primary-dark);
+                // border-top: 12px solid red;
+            }
+        }
+        &.left {
+            left: calc(-100% - 6px);
+            top: 50%;
+            transform: translate(50%, -50%);
+            &::after {
+                top: 50%;
+                right: -6px;
+                transform: translate(0, -50%);
+    
+                border-top: 12px solid transparent;
+                border-bottom: 12px solid transparent;
+                border-left: 12px solid var(--imiui-primary-dark);
+            }
+        }
+        &.right {
+            right: calc(-100% - 6px);
+            top: 50%;
+            transform: translate(-50%, -50%);
+            &::after {
+                top: 50%;
+                left: -6px;
+                transform: translate(0, -50%);
+    
+                border-top: 12px solid transparent;
+                border-bottom: 12px solid transparent;
+                border-right: 12px solid var(--imiui-primary-dark);
+            }
+           
+        }
+        &::after {
+            content: " ";
+            position: absolute;
         }
     }
     &:hover {
         .tooltip {
-            display: block;
+            opacity: 1;
         }
     }
 }

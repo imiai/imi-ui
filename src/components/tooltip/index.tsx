@@ -3,7 +3,7 @@ import './styles.scss';
 
 interface ITooltipProps {
     title: string;
-    placement?: 'top | left | right',
+    placement?: 'top' | 'left' | 'right',
     children: React.ReactNode;
 }
 
