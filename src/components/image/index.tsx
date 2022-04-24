@@ -23,7 +23,7 @@ const Image = (props: IImageProps) => {
     }
 
     return (
-        <img {...rest} src={src || ''} className={`imiui-image${className ? ` ${className}` : ''}`} onError={onError}/>
+        <img alt='' {...rest} src={src || ''} className={`imiui-image${className ? ` ${className}` : ''}`} onError={onError}/>
     )
 }
 

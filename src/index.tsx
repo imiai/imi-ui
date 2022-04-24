@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import './styles/colors.scss';
 import './styles/typography.scss';
 import './styles/common.scss';
+import './styles/spacing.scss';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 

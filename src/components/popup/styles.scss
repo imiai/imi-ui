@@ -10,6 +10,8 @@
     width: 100vw;
     height: 100vh;
     .close {
+        @extend %button-default;
+
         position: absolute;
         top: 12px;
         right: 16px;

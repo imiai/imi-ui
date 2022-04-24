@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { BottomSheet, Button, Card, Checkbox, Inform, Input, Popup, Radio, RadioGroup, Snackbar, TextArea } from './components';
+import { BottomSheet, Button, Card, Checkbox, Inform, Input, Popup, Radio, RadioGroup, Snackbar, TextArea, Tooltip } from './components';
 import { EyeOpenIcon, CheckIcon } from './icons';
 
 function App() {
@@ -52,6 +52,9 @@ function App() {
         <Card>
           Card Content
         </Card>
+        <Tooltip title='tooltip'>
+          <span>Tooltip content</span>
+        </Tooltip>
     </div>
   );
 }

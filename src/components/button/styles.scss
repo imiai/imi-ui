@@ -1,9 +1,10 @@
 @import 'styles/mixin.scss';
 
 .imiui-button {
+    @extend %button-default;
+    @extend %a-default;
+    
     border-radius: 28px;
-    outline: none;
-    border: none;
 
     transition: all 200ms;
 

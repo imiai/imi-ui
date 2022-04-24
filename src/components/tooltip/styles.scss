@@ -1,0 +1,27 @@
+.imiui-tooltip {
+    position: relative;
+    display: inline-block;
+    .tooltip {
+        position: absolute;
+        display: none;
+
+        background: var(--imiui-primary-dark);
+        border-radius: 8px;
+
+        padding: 12px 16px 14px;
+
+        color: var(--imiui-primary-white);
+        &.top {
+            top: -42px;
+            // left: 0;
+            // right: 0;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+    &:hover {
+        .tooltip {
+            display: block;
+        }
+    }
+}

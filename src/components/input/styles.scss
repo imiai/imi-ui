@@ -119,6 +119,8 @@
         display: flex;
     }
     .icon {
+        @extend %button-default;
+
         &.close {
             margin-left: 16px;
         }

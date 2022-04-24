@@ -10,7 +10,7 @@ interface IInformProps extends React.HTMLAttributes<HTMLDivElement> {
 }
 
 const Inform = (props: IInformProps) => {
-    const { closeable = false, icon, severity, content, className, ... rest} = props;
+    const { closeable = false, icon, severity, content, className, ...rest} = props;
     const [ visible, setVisible ] = useState(true);
     const [ iconAlignTop, setIconAlignTop ] = useState(false);
 

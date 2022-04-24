@@ -10,3 +10,4 @@ export {default as Popup} from './popup';
 export {default as BottomSheet} from './bottom-sheet';
 export {default as Snackbar} from './snackbar';
 export {default as Card} from './card';
+export {default as Tooltip} from './tooltip';

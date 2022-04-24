@@ -41,6 +41,8 @@
         margin-right: 8px;
     }
     .close-button {
+        @extend %button-default;
+
         width: 16px;
         height: 16px;
         margin-left: 12px;
