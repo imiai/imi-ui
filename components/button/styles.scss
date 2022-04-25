@@ -1,0 +1,218 @@
+@import '../../styles/mixin.scss';
+
+.imiui-button {
+    @extend %button-default;
+    @extend %a-default;
+    
+    border-radius: 28px;
+
+    transition: all 200ms;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: fit-content;
+    &.primary {
+        background: var(--imiui-primary-blue);
+        border: 1.5px solid  var(--imiui-primary-blue);
+
+        color: var(--imiui-primary-white);
+        svg {
+            fill: var(--imiui-primary-white);
+        }
+        @media (hover: hover) and (pointer: fine) {
+            &:hover {
+                background: var(--imiui-blue-600);
+                border: 1.5px solid var(--imiui-blue-300);
+            }
+        }
+       
+        &:active {
+            background: var(--imiui-blue-700);
+            border: 1.5px solid var(--imiui-blue-700);
+        }
+        &.disabled {
+            background: var(--imiui-gray-25);
+            border: 1.5px solid var(--imiui-gray-25);
+            color: var(--imiui-gray-200);
+            svg {
+                fill: var(--imiui-gray-200);
+            }
+        }
+    }
+    &.secondary {
+        background: var(--imiui-primary-white);
+        border: 1.5px solid  var(--imiui-primary-blue);
+
+        color: var(--imiui-primary-blue);
+
+        svg {
+            fill: var(--imiui-primary-blue);
+        }
+        @media (hover: hover) and (pointer: fine) {
+            &:hover {
+                background: var(--imiui-primary-background);
+                border: 1.5px solid var(--imiui-blue-600);
+                color: var(--imiui-blue-600);
+                svg {
+                    fill: var(--imiui-blue-600);
+                }
+            }
+        }
+        &:active {
+            background: var(--imiui-blue-50);
+            border: 1.5px solid var(--imiui-primary-blue);
+            color: var(--imiui-primary-blue);
+            svg {
+                fill: var(--imiui-primary-blue);
+            }
+        }
+        &.disabled {
+            background: var(--imiui-primary-white);
+            border: 1.5px solid var(--imiui-gray-100);
+            color: var(--imiui-gray-200);
+            svg {
+                fill: var(--imiui-gray-200);
+            }
+        }
+    }
+    &.tertiary {
+        background: var(--imiui-primary-white);
+        color: var(--imiui-primary-blue);
+        svg {
+            fill: var(--imiui-primary-blue);
+        }
+        @media (hover: hover) and (pointer: fine) {
+            &:hover {
+                background: var(--imiui-primary-background);
+                color: var(--imiui-blue-600);
+                svg {
+                    fill: var(--imiui-blue-600);
+                }
+            }
+        }
+        &:active {
+            background: var(--imiui-blue-50);
+            color: var(--imiui-primary-blue);
+            svg {
+                fill: var(--imiui-primary-blue);
+            }
+        }
+        &.disabled {
+            background: var(--imiui-primary-white);
+            color: var(--imiui-gray-200);
+            svg {
+                fill: var(--imiui-gray-200);
+            }
+        }
+    }
+    &.size-54 {
+        height: 54px;
+        padding: 0 24px;
+        @include font(700, 16px, 20px);
+
+        svg {
+            width: 24px;
+            height: 24px;
+        }
+        .start-icon {
+            margin-right: 10px;
+            width: 24px;
+            height: 24px;
+        }
+        .end-icon {
+            margin-left: 10px;
+            width: 24px;
+            height: 24px;
+        }
+    }
+    &.size-48 {
+        height: 48px;
+        padding: 0 20px;
+        @include font(700, 16px, 20px);
+
+        svg {
+            width: 24px;
+            height: 24px;
+        }
+        .start-icon {
+            margin-right: 8px;
+            width: 24px;
+            height: 24px;
+        }
+        .end-icon {
+            margin-left: 8px;
+            width: 24px;
+            height: 24px;
+        }
+    }
+    &.size-40 {
+        height: 40px;
+        padding: 0 16px;
+        @include font(700, 14px, 18px);
+
+        svg {
+            width: 16px;
+            height: 16px;
+        }
+        .start-icon {
+            margin-right: 4px;
+            width: 16px;
+            height: 16px;
+        }
+        .end-icon {
+            margin-left: 4px;
+            width: 16px;
+            height: 16px;
+        }
+    }
+    &.size-32 {
+        height: 32px;
+        padding: 0 12px;
+        @include font(700, 12px, 16px);
+
+        svg {
+            width: 16px;
+            height: 16px;
+        }
+        .start-icon {
+            margin-right: 4px;
+            width: 16px;
+            height: 16px;
+        }
+        .end-icon {
+            margin-left: 4px;
+            width: 16px;
+            height: 16px;
+        }
+    }
+}
+
+.imiui-button-fix {
+    width: 100%;
+    padding: 16px;
+    background: var(--imiui-primary-white);
+    position: fixed;
+    bottom: 0;
+    .imiui-button {
+        width: 100%;
+        height: 48px;
+        @include font(700, 16px, 20px);
+        svg {
+            width: 20px;
+            height: 20px;
+        }
+        .start-icon {
+            margin-right: 8px;
+            width: 20px;
+            height: 20px;
+        }
+        .end-icon {
+            margin-left: 8px;
+            width: 20px;
+            height: 20px;
+        }
+    }
+}
+  
