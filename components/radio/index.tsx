@@ -1,4 +1,4 @@
-import { RadioCheckedIcon, RadioUncheckedIcon } from 'icons';
+import { RadioCheckedIcon, RadioUncheckedIcon } from '../../icons';
 import React from 'react';
 import './styles.scss';
 

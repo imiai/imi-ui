@@ -1,5 +1,5 @@
 import React from "react";
-import { CheckboxCircleCheckedIcon, CheckboxCircleUncheckedIcon } from "icons";
+import { CheckboxCircleCheckedIcon, CheckboxCircleUncheckedIcon } from "../../icons";
 import './styles.scss';
 
 interface ICheckboxProps extends React.HTMLProps<HTMLInputElement> {

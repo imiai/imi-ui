@@ -1,4 +1,4 @@
-import { CloseT2Icon } from "icons";
+import { CloseT2Icon } from "../../icons";
 import React, { Fragment } from "react";
 import './styles.scss';
 

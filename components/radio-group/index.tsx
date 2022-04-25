@@ -1,4 +1,4 @@
-import Radio from "components/radio";
+import Radio from "../../components/radio";
 import React, { useEffect } from "react";
 
 interface IRadioGroupProps extends React.HTMLAttributes<HTMLDivElement> {

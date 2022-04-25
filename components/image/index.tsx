@@ -1,4 +1,4 @@
-import { ImagePlaceholderIcon } from "icons";
+import { ImagePlaceholderIcon } from "../../icons";
 import React, { useState } from "react";
 import './styles.scss';
 

@@ -1,4 +1,4 @@
-import { CloseIcon } from "icons";
+import { CloseIcon } from "../../icons";
 import React, { useEffect, useState } from "react";
 import './styles.scss';
 

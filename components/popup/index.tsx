@@ -1,6 +1,6 @@
-import Button from "components/button/button";
-import Image from "components/image";
-import { CloseIcon, CloseT2Icon } from "icons";
+import Button from "../../components/button/button";
+import Image from "../../components/image";
+import { CloseIcon, CloseT2Icon } from "../../icons";
 import React, { useEffect, useState } from "react";
 import './styles.scss';
 
