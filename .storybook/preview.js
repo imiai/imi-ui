@@ -1,6 +1,6 @@
 import 'styles/colors.scss';
 import 'styles/common.scss';
-import 'styles/mixin.scss';
+import '../../styles/mixin.scss';
 import 'styles/typography.scss';
 
 
