@@ -1,5 +1,5 @@
 import React from "react";
-import { CheckboxSquareCheckedIcon, CheckboxSquareUncheckedIcon } from "./../../icons";
+import { CheckboxSquareCheckedIcon, CheckboxSquareUncheckedIcon } from "../../icons";
 import './styles.scss';
 
 interface ICheckboxProps extends React.HTMLProps<HTMLInputElement> {
