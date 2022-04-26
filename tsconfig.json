@@ -16,6 +16,11 @@
   "exclude": [
     "node_modules",
     "build",
+    "src/stories",
+    "src/App.tsx",
+    "src/index.tsx",
+    "src/reportWebVitals.ts",
+    "src/setupTests.ts",
     "storybook-static",
     "src/**/*.stories.tsx",
     "src/**/*.test.tsx"

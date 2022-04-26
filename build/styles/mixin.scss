@@ -1,0 +1,17 @@
+@mixin font($weight, $fontSize, $lineHeight) {
+    font-weight: $weight;
+    font-size: $fontSize;
+    line-height: $lineHeight;
+}
+
+%button-default {
+    outline: none;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+}
+
+%a-default {
+    text-decoration: none;
+    cursor: pointer;
+}
