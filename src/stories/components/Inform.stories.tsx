@@ -1,7 +1,7 @@
 import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
-import { Inform } from 'components';
-import { StatusSuccessIcon } from 'icons';
+import { Inform } from '../../components';
+import { StatusSuccessIcon } from '../../icons';
 
 export default {
   title: 'Components/Inform',

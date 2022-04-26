@@ -1,7 +1,7 @@
-import 'styles/colors.scss';
-import 'styles/common.scss';
-import '../../styles/mixin.scss';
-import 'styles/typography.scss';
+import './../src/styles/colors.scss';
+import './../src/styles/common.scss';
+import './../src/styles/mixin.scss';
+import './../src/styles/typography.scss';
 
 
 export const parameters = {

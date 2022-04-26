@@ -1,7 +1,7 @@
 import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
-import { Button } from 'components';
-import { EyeCloseIcon } from 'icons';
+import { Button } from '../../components';
+import { EyeCloseIcon } from '../../icons';
 
 
 // More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export

@@ -1,7 +1,7 @@
 import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
-import { Input } from 'components';
-import { EyeCloseIcon } from 'icons';
+import { Input } from '../../components';
+import { EyeCloseIcon } from '../../icons';
 
 export default {
     title: 'Components/Input',

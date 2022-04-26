@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
-import { Button, Snackbar } from 'components';
-import { CheckIcon } from 'icons';
+import { Button, Snackbar } from '../../components';
+import { CheckIcon } from '../../icons';
 
 export default {
     title: 'Components/Snackbar',

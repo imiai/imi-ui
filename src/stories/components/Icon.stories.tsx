@@ -1,4 +1,4 @@
-import { EyeOpenIcon } from 'icons';
+import { EyeOpenIcon } from '../../icons';
 import ICONS_DATA from '../assets/icons';
 export default {
     title: 'Components/Icons',

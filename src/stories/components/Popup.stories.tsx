@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
-import { Button, Popup } from 'components';
+import { Button, Popup } from '../../components';
 
 export default {
     title: 'Components/Popup',

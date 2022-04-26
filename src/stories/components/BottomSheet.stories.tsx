@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
-import { BottomSheet, Button } from 'components';
-import { EyeCloseIcon } from 'icons';
+import { BottomSheet, Button } from '../../components';
+import { EyeCloseIcon } from '../../icons';
 
 export default {
     title: 'Components/BottomSheet',

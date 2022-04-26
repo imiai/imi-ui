@@ -1,7 +1,7 @@
 import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
-import { EyeCloseIcon, EyeOpenIcon } from 'icons';
-import { ButtonFix } from 'components';
+import { EyeCloseIcon, EyeOpenIcon } from '../../icons';
+import { ButtonFix } from '../../components';
 
 
 export default {

@@ -1,7 +1,6 @@
 import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
-import { Checkbox } from 'components';
-import Image from 'components/image';
+import Image from '../../components/image';
 
 export default {
     title: 'Components/Image',
