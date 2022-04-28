@@ -134,7 +134,9 @@ export { default as ArrowSortDownIcon } from './components/ArrowSortDownIcon.js'
 export { default as ZoomInIcon } from './components/ZoomInIcon.js';
 export { default as ZoomOutIcon } from './components/ZoomOutIcon.js';
 export { default as PatientIcon } from './components/PatientIcon.js';
+export { default as PatientT2Icon } from './components/PatientT2Icon.js';
 export { default as RequestIcon } from './components/RequestIcon.js';
+export { default as RequestT2Icon } from './components/RequestT2Icon.js';
 export { default as BloodIcon } from './components/BloodIcon.js';
 export { default as SaveIcon } from './components/SaveIcon.js';
 export { default as ScissorsIcon } from './components/ScissorsIcon.js';
