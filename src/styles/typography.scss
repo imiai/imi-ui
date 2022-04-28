@@ -22,22 +22,22 @@
 
 // Heading Bold ====================================
 .t-heading-bold-superlarge {
-    @include font($weight: 700, $fontSize: 48px, $lineHeight: 150%);
+    @include font($weight: 700, $fontSize: 48px, $lineHeight: 72px);
 }
 .t-heading-bold-large {
-    @include font($weight: 700, $fontSize: 40px, $lineHeight: 150%);
+    @include font($weight: 700, $fontSize: 40px, $lineHeight: 60px);
 }
 .t-heading-bold-medium {
-    @include font($weight: 700, $fontSize: 32px, $lineHeight: 150%);
+    @include font($weight: 700, $fontSize: 32px, $lineHeight: 48px);
 }
 .t-heading-bold-small {
-    @include font($weight: 700, $fontSize: 24px, $lineHeight: 150%);
+    @include font($weight: 700, $fontSize: 24px, $lineHeight: 36px);
 }
 .t-heading-bold-tiny {
-    @include font($weight: 700, $fontSize: 20px, $lineHeight: 150%);
+    @include font($weight: 700, $fontSize: 20px, $lineHeight: 30px);
 }
 .t-heading-bold-supertiny {
-    @include font($weight: 700, $fontSize: 16px, $lineHeight: 150%);
+    @include font($weight: 700, $fontSize: 16px, $lineHeight: 20px);
 }
 
 
