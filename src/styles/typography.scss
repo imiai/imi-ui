@@ -2,22 +2,22 @@
 
 // Heading Regular ====================================
 .t-heading-regular-superlarge {
-    @include font($weight: 400, $fontSize: 48px, $lineHeight: 150%);
+    @include font($weight: 400, $fontSize: 48px, $lineHeight: 72px);
 }
 .t-heading-regular-large {
-    @include font($weight: 400, $fontSize: 40px, $lineHeight: 150%);
+    @include font($weight: 400, $fontSize: 40px, $lineHeight: 60px);
 }
 .t-heading-regular-medium {
-    @include font($weight: 400, $fontSize: 32px, $lineHeight: 150%);
+    @include font($weight: 400, $fontSize: 32px, $lineHeight: 48px);
 }
 .t-heading-regular-small {
-    @include font($weight: 400, $fontSize: 24px, $lineHeight: 150%);
+    @include font($weight: 400, $fontSize: 24px, $lineHeight: 36px);
 }
 .t-heading-regular-tiny {
-    @include font($weight: 400, $fontSize: 20px, $lineHeight: 150%);
+    @include font($weight: 400, $fontSize: 20px, $lineHeight: 30px);
 }
 .t-heading-regular-supertiny {
-    @include font($weight: 400, $fontSize: 16px, $lineHeight: 150%);
+    @include font($weight: 400, $fontSize: 16px, $lineHeight: 20px);
 }
 
 // Heading Bold ====================================

@@ -14,6 +14,8 @@
   },
   "include": ["src/**/*"],
   "exclude": [
+    "node_modules",
+    "build",
     "src/stories",
     "src/App.tsx",
     "src/index.tsx",
