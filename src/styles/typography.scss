@@ -95,34 +95,34 @@
 
 // Body Regular ====================================
 .t-body-regular-large {
-    @include font($weight: 400, $fontSize: 18px, $lineHeight: 160%);
+    @include font($weight: 400, $fontSize: 18px, $lineHeight: 28.8px);
 }
 .t-body-regular-medium {
-    @include font($weight: 400, $fontSize: 16px, $lineHeight: 160%);
+    @include font($weight: 400, $fontSize: 16px, $lineHeight: 25.6px);
 }
 .t-body-regular-small {
-    @include font($weight: 400, $fontSize: 14px, $lineHeight: 160%);
+    @include font($weight: 400, $fontSize: 14px, $lineHeight: 22.4px);
 }
 .t-body-regular-tiny {
-    @include font($weight: 400, $fontSize: 12px, $lineHeight: 160%);
+    @include font($weight: 400, $fontSize: 12px, $lineHeight: 19.2px);
 }
 .t-body-regular-supertiny {
-    @include font($weight: 400, $fontSize: 10px, $lineHeight: 160%);
+    @include font($weight: 400, $fontSize: 10px, $lineHeight: 16px);
 }
 
 // Body Bold ====================================
 .t-body-bold-large {
-    @include font($weight: 700, $fontSize: 18px, $lineHeight: 160%);
+    @include font($weight: 700, $fontSize: 18px, $lineHeight: 28.8px);
 }
 .t-body-bold-medium {
-    @include font($weight: 700, $fontSize: 16px, $lineHeight: 160%);
+    @include font($weight: 700, $fontSize: 16px, $lineHeight: 25.6px);
 }
 .t-body-bold-small {
-    @include font($weight: 700, $fontSize: 14px, $lineHeight: 160%);
+    @include font($weight: 700, $fontSize: 14px, $lineHeight: 22.4px);
 }
 .t-body-bold-tiny {
-    @include font($weight: 700, $fontSize: 12px, $lineHeight: 160%);
+    @include font($weight: 700, $fontSize: 12px, $lineHeight: 19.2px);
 }
 .t-body-bold-supertiny {
-    @include font($weight: 700, $fontSize: 10px, $lineHeight: 160%);
+    @include font($weight: 700, $fontSize: 10px, $lineHeight: 16px);
 }
