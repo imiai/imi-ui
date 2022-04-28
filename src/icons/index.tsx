@@ -157,7 +157,9 @@ export {default as ZoomOutIcon} from './components/ZoomOutIcon';
 
 // OTHER
 export {default as PatientIcon} from './components/PatientIcon';
+export {default as PatientT2Icon} from './components/PatientT2Icon';
 export {default as RequestIcon} from './components/RequestIcon';
+export {default as RequestT2Icon} from './components/RequestT2Icon';
 export {default as BloodIcon} from './components/BloodIcon';
 export {default as SaveIcon} from './components/SaveIcon';
 export {default as ScissorsIcon} from './components/ScissorsIcon';
