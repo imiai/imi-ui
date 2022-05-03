@@ -1,0 +1,44 @@
+.imiui-tabs {
+    &__header {
+        position: relative;
+        border-bottom: solid 1px var(--imiui-gray-50);
+        display: flex;
+        gap: 16px;
+        .item {
+            display: flex;
+            color: var(--imiui-primary-dark);
+            padding-bottom: 18px;
+            &.active {
+                span {
+                    color: var(--imiui-primary-blue);
+                }
+            }
+            .count {
+                margin-left: 8px;
+                background: var(--imiui-gray-50);
+                border-radius: 10px;
+                height: 18px;
+                padding: 1px 9px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+        }
+        .active-line {
+            height: 2px;
+            background: var(--imiui-primary-blue);
+            position: absolute;
+            bottom: -1px;
+            transition: left linear 200ms, width linear 200ms;
+        }
+    }
+}
+
+
+@media only screen and (min-width: 768px) { 
+    .imiui-tabs {
+        &__header {
+            gap: 24px;
+        }
+    }
+}

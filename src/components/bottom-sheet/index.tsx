@@ -1,5 +1,6 @@
 import { CloseIcon } from "../../icons";
 import React, { useState, useEffect, useCallback } from "react";
+import ReactDOM from "react-dom";
 import './styles.scss';
 
 interface IBottomSheetProps {
@@ -10,10 +11,11 @@ interface IBottomSheetProps {
     open: Boolean;
     clickOutsideToClose?: Boolean;
     children?: React.ReactNode;
+    className?: string;
 }
 
-const BottomSheet = (props: IBottomSheetProps) => {
-    const { title, open = false, headrLeftIcon, clickOutsideToClose = false, onClose = () => { }, onIconClick = () => { }, children } = props;
+const BottomSheetJsx = (props: IBottomSheetProps) => {
+    const { title, open = false, headrLeftIcon, clickOutsideToClose = false, onClose = () => { }, onIconClick = () => { }, children, className } = props;
     const [isStartDragging, setIsStartDragging] = useState(false);
     const [positionTop, setPositionTop] = useState(`${window.innerHeight + 12}px`);
     const [initTop, setInitTop] = useState(`${window.innerHeight + 12}px`);
@@ -108,7 +110,7 @@ const BottomSheet = (props: IBottomSheetProps) => {
     }
 
     return (
-        <div className="imiui-bottomsheet">
+        <div id='imiui-bottom-sheet-wrapper' className={`imiui-bottomsheet${className ? ` ${className}` : ''}`}>
             <div className={`overlay`} style={{opacity: opacity}} onClick={clickOutsideToClose ? onCloseSheet : () => {}}></div>
             <div id='imiui-bottomsheet-container' className="container" onTouchStart={startDrag} onMouseDown={startDrag} style={{ top: positionTop }}>
                 <div className="header" style={title ? {height: 44} : {}}>
@@ -127,6 +129,10 @@ const BottomSheet = (props: IBottomSheetProps) => {
             </div>
         </div>
     )
+}
+
+const BottomSheet = (props: IBottomSheetProps) => {
+    return ReactDOM.createPortal(<BottomSheetJsx {...props}/>, document.querySelector('body'))
 }
 
 export default BottomSheet;

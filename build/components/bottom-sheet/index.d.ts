@@ -8,6 +8,7 @@ interface IBottomSheetProps {
     open: Boolean;
     clickOutsideToClose?: Boolean;
     children?: React.ReactNode;
+    className?: string;
 }
-declare const BottomSheet: (props: IBottomSheetProps) => JSX.Element;
+declare const BottomSheet: (props: IBottomSheetProps) => React.ReactPortal;
 export default BottomSheet;

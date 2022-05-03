@@ -13,5 +13,5 @@ interface IPopupProps extends React.HTMLAttributes<HTMLDivElement> {
     onClose?: React.MouseEventHandler;
     clickOutsideToClose?: Boolean;
 }
-declare const Popup: (props: IPopupProps) => JSX.Element;
+declare const Popup: (props: IPopupProps) => React.ReactPortal;
 export default Popup;

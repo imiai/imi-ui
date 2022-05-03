@@ -1,33 +1,33 @@
-$spacings: (0, 2, 4, 8, 12, 16, 24, 32, 48, 56, 64, 96, 128, 160);
+$spacings: (0, 1, 2, 4, 6, 8, 12, 16, 24, 28, 32, 48, 64, 80);
 
 .m-auto {
     margin: auto !important;
 }
 @each $spacing in $spacings {
     .m-#{$spacing} {
-        margin: #{$spacing}px !important;
+        margin: #{$spacing * 2}px !important;
     }
 
     .ml-#{$spacing} {
-        margin-left: #{$spacing}px !important;
+        margin-left: #{$spacing * 2}px !important;
     }
     .mr-#{$spacing} {
-        margin-right: #{$spacing}px !important;
+        margin-right: #{$spacing * 2}px !important;
     }
     .mx-#{$spacing} {
-        margin-left: #{$spacing}px !important;
-        margin-right: #{$spacing}px !important;
+        margin-left: #{$spacing * 2}px !important;
+        margin-right: #{$spacing * 2}px !important;
     }
 
     .mt-#{$spacing} {
-        margin-top: #{$spacing}px !important;
+        margin-top: #{$spacing * 2}px !important;
     }
     .mb-#{$spacing} {
-        margin-bottom: #{$spacing}px !important;
+        margin-bottom: #{$spacing * 2}px !important;
     }
     .my-#{$spacing} {
-        margin-top: #{$spacing}px !important;
-        margin-bottom: #{$spacing}px  !important;
+        margin-top: #{$spacing * 2}px !important;
+        margin-bottom: #{$spacing * 2}px  !important;
     }
 }
 
@@ -37,28 +37,28 @@ $spacings: (0, 2, 4, 8, 12, 16, 24, 32, 48, 56, 64, 96, 128, 160);
 }
 @each $spacing in $spacings {
     .p-#{$spacing} {
-        padding: #{$spacing}px !important;
+        padding: #{$spacing * 2}px !important;
     }
 
     .pl-#{$spacing} {
-        padding-left: #{$spacing}px !important;
+        padding-left: #{$spacing * 2}px !important;
     }
     .pr-#{$spacing} {
-        padding-right: #{$spacing}px !important;
+        padding-right: #{$spacing * 2}px !important;
     }
     .px-#{$spacing} {
-        padding-left: #{$spacing}px !important;
-        padding-right: #{$spacing}px !important;
+        padding-left: #{$spacing * 2}px !important;
+        padding-right: #{$spacing * 2}px !important;
     }
 
     .pt-#{$spacing} {
-        padding-top: #{$spacing}px !important;
+        padding-top: #{$spacing * 2}px !important;
     }
     .pb-#{$spacing} {
-        padding-bottom: #{$spacing}px !important;
+        padding-bottom: #{$spacing * 2}px !important;
     }
     .py-#{$spacing} {
-        padding-top: #{$spacing}px !important;
-        padding-bottom: #{$spacing}px !important;
+        padding-top: #{$spacing * 2}px !important;
+        padding-bottom: #{$spacing * 2}px !important;
     }
 }

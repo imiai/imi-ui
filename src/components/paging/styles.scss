@@ -1,0 +1,40 @@
+.imiui-paging {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 4px;
+    &__title {
+        text-align: center;
+        color: var(--imiui-primary-dark);
+    }
+    &__list {
+        display: flex;
+        gap: 4px;
+    }
+    &__button {
+        height: 32px;
+        width: 32px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--imiui-primary-dark);
+        border-radius: 5px;
+        &.arrow {
+            background-color: transparent !important;
+        }
+        &:hover {
+            background-color: transparent;
+        }
+        &:disabled {
+            background-color: var(--imiui-blue-50);
+            cursor: auto;
+        }
+    }
+    &__buttonSelecting {
+        background-color: var(--imiui-blue-50) !important;
+        color: var(--imiui-primary-dark);
+        &:hover {
+            background-color: #ef7b51;
+        }
+    }
+}

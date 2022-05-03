@@ -1,9 +1,11 @@
+import { __assign } from '../../node_modules/tslib/tslib.es6.js';
 import React, { useState, useEffect, useCallback } from 'react';
 import CloseIcon from '../../icons/components/CloseIcon.js';
+import ReactDOM from 'react-dom';
 import './styles.scss.js';
 
-var BottomSheet = function (props) {
-    var title = props.title, _a = props.open, open = _a === void 0 ? false : _a, headrLeftIcon = props.headrLeftIcon, _b = props.clickOutsideToClose, clickOutsideToClose = _b === void 0 ? false : _b, _c = props.onClose, onClose = _c === void 0 ? function () { } : _c, _d = props.onIconClick, onIconClick = _d === void 0 ? function () { } : _d, children = props.children;
+var BottomSheetJsx = function (props) {
+    var title = props.title, _a = props.open, open = _a === void 0 ? false : _a, headrLeftIcon = props.headrLeftIcon, _b = props.clickOutsideToClose, clickOutsideToClose = _b === void 0 ? false : _b, _c = props.onClose, onClose = _c === void 0 ? function () { } : _c, _d = props.onIconClick, onIconClick = _d === void 0 ? function () { } : _d, children = props.children, className = props.className;
     var _e = useState(false), isStartDragging = _e[0], setIsStartDragging = _e[1];
     var _f = useState("".concat(window.innerHeight + 12, "px")), positionTop = _f[0], setPositionTop = _f[1];
     var _g = useState("".concat(window.innerHeight + 12, "px")), initTop = _g[0], setInitTop = _g[1];
@@ -87,7 +89,7 @@ var BottomSheet = function (props) {
     if (!openSheet) {
         return React.createElement(React.Fragment, null);
     }
-    return (React.createElement("div", { className: "imiui-bottomsheet" },
+    return (React.createElement("div", { id: 'imiui-bottom-sheet-wrapper', className: "imiui-bottomsheet".concat(className ? " ".concat(className) : '') },
         React.createElement("div", { className: "overlay", style: { opacity: opacity }, onClick: clickOutsideToClose ? onCloseSheet : function () { } }),
         React.createElement("div", { id: 'imiui-bottomsheet-container', className: "container", onTouchStart: startDrag, onMouseDown: startDrag, style: { top: positionTop } },
             React.createElement("div", { className: "header", style: title ? { height: 44 } : {} },
@@ -97,6 +99,9 @@ var BottomSheet = function (props) {
                 React.createElement("button", { className: "close", onClick: onCloseSheet },
                     React.createElement(CloseIcon, null))),
             React.createElement("div", { className: "content" }, children))));
+};
+var BottomSheet = function (props) {
+    return ReactDOM.createPortal(React.createElement(BottomSheetJsx, __assign({}, props)), document.querySelector('body'));
 };
 
 export { BottomSheet as default };

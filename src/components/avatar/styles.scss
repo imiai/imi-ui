@@ -1,0 +1,32 @@
+@import './../../styles/mixin.scss';
+
+.imiui-avatar {
+    .img-20 {
+        width: 20px;
+        height: 20px;
+        @include font($weight: 600, $fontSize: 12px, $lineHeight: 16px);
+    }
+    .img-30 {
+        width: 30px;
+        height: 30px;
+        @include font($weight: 600, $fontSize: 16px, $lineHeight: 20px);
+    }
+    .img-46 {
+        width: 46px;
+        height: 46px;
+        @include font($weight: 600, $fontSize: 24px, $lineHeight: 32px);
+    }
+    img {
+        object-fit: cover;
+    }
+
+    .img {
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        span {
+            color: var(--imiui-primary-white);
+        }
+    }
+}

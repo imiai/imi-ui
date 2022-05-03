@@ -11,4 +11,12 @@ export { default as BottomSheet } from './bottom-sheet/index.js';
 export { default as Snackbar } from './snackbar/index.js';
 export { default as Card } from './card/index.js';
 export { default as Tooltip } from './tooltip/index.js';
+export { default as Table } from './table/index.js';
+export { default as TableHead } from './table-head/index.js';
+export { default as TableBody } from './table-body/index.js';
+export { default as TableRow } from './table-row/index.js';
+export { default as TableCell } from './table-cell/index.js';
+export { default as Avatar } from './avatar/index.js';
+export { default as Tabs } from './tabs/index.js';
+export { default as Paging } from './paging/index.js';
 //# sourceMappingURL=index.js.map
