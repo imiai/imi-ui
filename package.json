@@ -1,6 +1,6 @@
 {
   "name": "imi-ui",
-  "version": "0.0.29",
+  "version": "0.0.39",
   "main": "build/index.js",
   "module": "build/index.esm.js",
   "files": [
@@ -16,8 +16,8 @@
   "author": "IMI",
   "license": "MIT",
   "peerDependencies": {
-    "react": ">=16.8.0",
-    "react-dom": ">=16.8.0"
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1"
   },
   "eslintConfig": {
     "extends": [
@@ -58,6 +58,8 @@
     "babel-preset-react-app": "^10.0.0",
     "identity-obj-proxy": "^3.0.0",
     "jest": "^26.6.3",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
     "react-scripts": "^4.0.3",
     "rollup": "^2.56.3",
     "rollup-plugin-copy": "^3.4.0",
@@ -66,13 +68,11 @@
     "rollup-plugin-postcss-retain-sass-data": "^2.0.3",
     "rollup-plugin-scss": "^3.0.0",
     "rollup-plugin-typescript2": "^0.29.0",
+    "sass": "^1.50.1",
     "sass-loader": "^10.2.0",
     "style-inject": "^0.3.0",
     "ts-jest": "^26.5.6",
     "tslib": "^2.4.0",
     "typescript": "^4.4.2"
-  },
-  "dependencies": {
-    "sass": "^1.50.1"
   }
 }
