@@ -5,7 +5,7 @@ interface IAvatarProps {
     src?: string,
     name?: string,
     unitString?: string,
-    size?: 20 | 30 | 46;
+    size?: 24 | 36 | 48 | 60 | 72 | 96;
 }
 
 const arrBgColor = ['#039be5', '#dce775', '#43a047', '#689f38', '#f9a825', '#ff8f00', '#ef6c00', '#37474f', '#607d8b', '#8d6e63', '#8d6e63', '#bf360c'];

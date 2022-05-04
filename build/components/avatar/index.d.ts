@@ -3,7 +3,7 @@ interface IAvatarProps {
     src?: string;
     name?: string;
     unitString?: string;
-    size?: 20 | 30 | 46;
+    size?: 24 | 36 | 48 | 60 | 72 | 96;
 }
 declare const Avatar: (props: IAvatarProps) => JSX.Element;
 export default Avatar;

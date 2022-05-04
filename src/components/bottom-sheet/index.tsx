@@ -1,7 +1,8 @@
 import { CloseIcon } from "../../icons";
-import React, { useState, useEffect, useCallback } from "react";
+import React, { useState, useEffect, useCallback, useLayoutEffect, createRef } from "react";
 import ReactDOM from "react-dom";
 import './styles.scss';
+import { useResizeObserver } from "../../hooks";
 
 interface IBottomSheetProps {
     title?: string;
@@ -22,6 +23,8 @@ const BottomSheetJsx = (props: IBottomSheetProps) => {
     const [opacity, setOpacity] = useState(0);
     const [openSheet, setOpenSheet] = useState(open);
 
+    const { ref, width = 1, height = 1 } = useResizeObserver<HTMLDivElement>();
+
     useEffect(() => {
         let id = setTimeout(() => {
             setOpenSheet(open)
@@ -31,17 +34,26 @@ const BottomSheetJsx = (props: IBottomSheetProps) => {
 
     useEffect(() => {
         document.body.style.overflow = 'hidden';
-        return () => {document.body.style.overflow = 'unset';}
+        return () => { document.body.style.overflow = 'unset'; }
     }, [])
 
     useEffect(() => {
         let el = document.getElementById('imiui-bottomsheet-container')
+        let headerHeight = title ? 48 : 40;
+        let contentHeight = height;
+        let bottomSheetHeight = headerHeight + contentHeight;
+        let maxTop = window.innerHeight * 0.1 - headerHeight;
         if (el && openSheet) {
-            setPositionTop(`${window.innerHeight - el.scrollHeight}px`)
-            setInitTop(`${window.innerHeight - el.scrollHeight}px`)
+            if (window.innerHeight - bottomSheetHeight > maxTop) {
+                setPositionTop(`${window.innerHeight - bottomSheetHeight}px`)
+                setInitTop(`${window.innerHeight - bottomSheetHeight}px`)
+            } else {
+                setPositionTop(`${maxTop}px`);
+                setInitTop(`${maxTop}px`);
+            }
         }
         setOpacity(0.7)
-    }, [openSheet])
+    }, [openSheet, height])
 
     const onCloseSheet = useCallback(() => {
         setPositionTop(`${window.innerHeight + 12}px`);
@@ -111,9 +123,9 @@ const BottomSheetJsx = (props: IBottomSheetProps) => {
 
     return (
         <div id='imiui-bottom-sheet-wrapper' className={`imiui-bottomsheet${className ? ` ${className}` : ''}`}>
-            <div className={`overlay`} style={{opacity: opacity}} onClick={clickOutsideToClose ? onCloseSheet : () => {}}></div>
-            <div id='imiui-bottomsheet-container' className="container" onTouchStart={startDrag} onMouseDown={startDrag} style={{ top: positionTop }}>
-                <div className="header" style={title ? {height: 44} : {}}>
+            <div className={`overlay`} style={{ opacity: opacity }} onClick={clickOutsideToClose ? onCloseSheet : () => { }}></div>
+            <div id='imiui-bottomsheet-container' className="container" style={{ top: positionTop }}>
+                <div className="header" style={title ? { height: 48 } : {}} onTouchStart={startDrag} onMouseDown={startDrag}>
                     <div className="indicator" />
                     <button className="icon" onClick={() => onIconClick()}>
                         {headrLeftIcon}
@@ -123,7 +135,7 @@ const BottomSheetJsx = (props: IBottomSheetProps) => {
                         <CloseIcon />
                     </button>
                 </div>
-                <div className="content">
+                <div ref={ref} className="content">
                     {children}
                 </div>
             </div>
@@ -132,7 +144,7 @@ const BottomSheetJsx = (props: IBottomSheetProps) => {
 }
 
 const BottomSheet = (props: IBottomSheetProps) => {
-    return ReactDOM.createPortal(<BottomSheetJsx {...props}/>, document.querySelector('body'))
+    return ReactDOM.createPortal(<BottomSheetJsx {...props} />, document.querySelector('body'))
 }
 
 export default BottomSheet;

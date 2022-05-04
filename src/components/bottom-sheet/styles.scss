@@ -13,18 +13,20 @@
         transition: all 100ms;
     }
     .container {
+        background-color: var(--imiui-primary-white);
         z-index: 1301;
         width: 100%;
         position: absolute;
         bottom: 0;
         left: 0;
-        transition: all 100ms;
+        border-radius: 8px 8px 0px 0px;
+        transition: all 200ms;
         .header {
             display: flex;
             align-items: center;
 
             background-color: var(--imiui-primary-white);
-            padding: 8px 16px;
+            // padding: 8px 16px;
             border-radius: 8px 8px 0px 0px;
             position: relative;
             min-height: 40px;
@@ -82,7 +84,8 @@
         .content {
             background-color: var(--imiui-primary-white);
             min-height: 300px;
-            max-height: calc(100vh - 60px);
+            max-height: calc(90vh - 60px);
+            overflow: scroll;
         }
     }
 }
