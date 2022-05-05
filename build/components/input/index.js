@@ -1,4 +1,4 @@
-import { __rest, __assign } from '../../node_modules/tslib/tslib.es6.js';
+import { __rest, __assign } from '../../opt/homebrew/Cellar/node/17.3.0/lib/node_modules/tslib/tslib.es6.js';
 import React, { Fragment } from 'react';
 import CloseT2Icon from '../../icons/components/CloseT2Icon.js';
 import './styles.scss.js';

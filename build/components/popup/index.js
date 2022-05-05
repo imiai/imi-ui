@@ -1,4 +1,4 @@
-import { __assign, __rest } from '../../node_modules/tslib/tslib.es6.js';
+import { __assign, __rest } from '../../opt/homebrew/Cellar/node/17.3.0/lib/node_modules/tslib/tslib.es6.js';
 import { Button } from '../button/button.js';
 import Image from '../image/index.js';
 import React, { useState, useEffect } from 'react';
@@ -8,9 +8,9 @@ import ReactDOM from 'react-dom';
 import './styles.scss.js';
 
 var PopupJsx = function (props) {
-    var _a = props.open, open = _a === void 0 ? false : _a, _b = props.clickOutsideToClose, clickOutsideToClose = _b === void 0 ? true : _b, _c = props.onClose, onClose = _c === void 0 ? function () { } : _c, title = props.title, subTitle = props.subTitle, image = props.image, imageSize = props.imageSize, mainButton = props.mainButton; props.onMainButtonClick; var subButton = props.subButton; props.onSubButtonClick; var children = props.children, className = props.className, rest = __rest(props, ["open", "clickOutsideToClose", "onClose", "title", "subTitle", "image", "imageSize", "mainButton", "onMainButtonClick", "subButton", "onSubButtonClick", "children", "className"]);
-    var _d = useState(open), openPopup = _d[0], setOpenPopup = _d[1];
-    var _e = useState(false), showContent = _e[0], setShowContent = _e[1];
+    var _a = props.open, open = _a === void 0 ? false : _a, _b = props.clickOutsideToClose, clickOutsideToClose = _b === void 0 ? true : _b, _c = props.onClose, onClose = _c === void 0 ? function () { } : _c, title = props.title, subTitle = props.subTitle, image = props.image, imageSize = props.imageSize, mainButton = props.mainButton, _d = props.onMainButtonClick, onMainButtonClick = _d === void 0 ? function () { } : _d, subButton = props.subButton, _e = props.onSubButtonClick, onSubButtonClick = _e === void 0 ? function () { } : _e, children = props.children, className = props.className, rest = __rest(props, ["open", "clickOutsideToClose", "onClose", "title", "subTitle", "image", "imageSize", "mainButton", "onMainButtonClick", "subButton", "onSubButtonClick", "children", "className"]);
+    var _f = useState(open), openPopup = _f[0], setOpenPopup = _f[1];
+    var _g = useState(false), showContent = _g[0], setShowContent = _g[1];
     useEffect(function () {
         setOpenPopup(open);
         var id = setTimeout(function () { return setShowContent(open); }, 50);
@@ -31,8 +31,8 @@ var PopupJsx = function (props) {
                         React.createElement("span", { className: "title t-label-bold-small" }, title),
                         React.createElement("span", { className: "sub-title t-label-regular-tiny" }, subTitle),
                         React.createElement("div", { className: "button-container" },
-                            React.createElement(Button, { type: 'primary', size: 40, className: 'main-button' }, mainButton),
-                            subButton && React.createElement(Button, { type: imageSize !== 'none' ? 'tertiary' : 'secondary', size: 40, className: 'sub-button' }, subButton))))),
+                            React.createElement(Button, { type: 'primary', size: 40, className: 'main-button', onClick: onMainButtonClick }, mainButton),
+                            subButton && React.createElement(Button, { type: imageSize !== 'none' ? 'tertiary' : 'secondary', size: 40, className: 'sub-button', onClick: onSubButtonClick }, subButton))))),
         open && React.createElement("div", { className: "overlay", onClick: clickOutsideToClose ? onClose : function () { } })));
 };
 var Popup = function (props) {

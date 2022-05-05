@@ -6,9 +6,9 @@ interface IPopupProps extends React.HTMLAttributes<HTMLDivElement> {
     image?: string;
     imageSize: 'large' | 'small' | 'none';
     mainButton?: string;
-    onMainButtonClick?: Function;
+    onMainButtonClick?: React.MouseEventHandler;
     subButton?: string;
-    onSubButtonClick?: Function;
+    onSubButtonClick?: React.MouseEventHandler;
     open: Boolean;
     onClose?: React.MouseEventHandler;
     clickOutsideToClose?: Boolean;

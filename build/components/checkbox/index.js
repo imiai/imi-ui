@@ -1,4 +1,4 @@
-import { __rest, __assign } from '../../node_modules/tslib/tslib.es6.js';
+import { __rest, __assign } from '../../opt/homebrew/Cellar/node/17.3.0/lib/node_modules/tslib/tslib.es6.js';
 import React from 'react';
 import CheckboxSquareCheckedIcon from '../../icons/components/CheckboxSquareCheckedIcon.js';
 import CheckboxSquareUncheckedIcon from '../../icons/components/CheckboxSquareUncheckedIcon.js';
