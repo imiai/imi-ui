@@ -11,16 +11,16 @@ interface IPopupProps extends React.HTMLAttributes<HTMLDivElement> {
     image?: string;
     imageSize: 'large' | 'small' | 'none';
     mainButton?: string;
-    onMainButtonClick?: Function;
+    onMainButtonClick?: React.MouseEventHandler;
     subButton?: string;
-    onSubButtonClick?: Function;
+    onSubButtonClick?: React.MouseEventHandler;
     open: Boolean;
     onClose?: React.MouseEventHandler;
     clickOutsideToClose?: Boolean;
 }
 
 const PopupJsx = (props: IPopupProps) => {
-    const { open = false, clickOutsideToClose = true, onClose = () => {}, title, subTitle, image, imageSize, mainButton, onMainButtonClick, subButton, onSubButtonClick, children, className, ...rest } = props;
+    const { open = false, clickOutsideToClose = true, onClose = () => {}, title, subTitle, image, imageSize, mainButton, onMainButtonClick = () => {}, subButton, onSubButtonClick = () => {}, children, className, ...rest } = props;
     const [openPopup, setOpenPopup] = useState<Boolean>(open);
     const [showContent, setShowContent] = useState<Boolean>(false);
 
@@ -51,8 +51,8 @@ const PopupJsx = (props: IPopupProps) => {
                             <span className="title t-label-bold-small">{title}</span>
                             <span className="sub-title t-label-regular-tiny">{subTitle}</span>
                             <div className={`button-container`}>
-                                <Button type='primary' size={40} className='main-button' onClick={() => onMainButtonClick()}>{mainButton}</Button>
-                                {subButton && <Button type={imageSize !== 'none' ? 'tertiary' : 'secondary'} size={40} className='sub-button' onClick={() => onSubButtonClick()}>{subButton}</Button>}
+                                <Button type='primary' size={40} className='main-button' onClick={onMainButtonClick}>{mainButton}</Button>
+                                {subButton && <Button type={imageSize !== 'none' ? 'tertiary' : 'secondary'} size={40} className='sub-button' onClick={onSubButtonClick}>{subButton}</Button>}
                             </div>
                         </div>
                     </>
