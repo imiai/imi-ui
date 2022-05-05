@@ -51,8 +51,8 @@ const PopupJsx = (props: IPopupProps) => {
                             <span className="title t-label-bold-small">{title}</span>
                             <span className="sub-title t-label-regular-tiny">{subTitle}</span>
                             <div className={`button-container`}>
-                                <Button type='primary' size={40} className='main-button'>{mainButton}</Button>
-                                {subButton && <Button type={imageSize !== 'none' ? 'tertiary' : 'secondary'} size={40} className='sub-button'>{subButton}</Button>}
+                                <Button type='primary' size={40} className='main-button' onClick={() => onMainButtonClick()}>{mainButton}</Button>
+                                {subButton && <Button type={imageSize !== 'none' ? 'tertiary' : 'secondary'} size={40} className='sub-button' onClick={() => onSubButtonClick()}>{subButton}</Button>}
                             </div>
                         </div>
                     </>
