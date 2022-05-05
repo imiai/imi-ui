@@ -31,15 +31,7 @@ export default {
         {
           src: "src/styles/*",
           dest: "build/styles/",
-        },
-        {
-          src: "node_modules/style-inject/dist/style-inject.es.js",
-          dest: "build/node_modules/style-inject/dist/",
-        },
-        {
-          src: "node_modules/tslib/tslib.es6.js",
-          dest: "build/node_modules/tslib/",
-        },
+        }
       ]
     })
   ],

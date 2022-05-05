@@ -1,4 +1,4 @@
-import { __assign } from '../../opt/homebrew/Cellar/node/17.3.0/lib/node_modules/tslib/tslib.es6.js';
+import { __assign } from '../../node_modules/tslib/tslib.es6.js';
 import React, { useState, useEffect, useCallback } from 'react';
 import CloseIcon from '../../icons/components/CloseIcon.js';
 import ReactDOM from 'react-dom';

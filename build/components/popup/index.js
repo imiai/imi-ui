@@ -1,4 +1,4 @@
-import { __assign, __rest } from '../../opt/homebrew/Cellar/node/17.3.0/lib/node_modules/tslib/tslib.es6.js';
+import { __assign, __rest } from '../../node_modules/tslib/tslib.es6.js';
 import { Button } from '../button/button.js';
 import Image from '../image/index.js';
 import React, { useState, useEffect } from 'react';
