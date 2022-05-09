@@ -7,14 +7,14 @@ export default {
     component: Avatar,
     argTypes: {
         size: {
-            options: [20, 30, 46],
+            options: [24, 36, 48, 60, 72, 96],
             control: { type: 'radio' },
         },
         src: {
-            control: { type: 'text'}
+            control: { type: 'text' }
         },
         name: {
-            control: { type: 'text'}
+            control: { type: 'text' }
         }
     },
 } as ComponentMeta<typeof Avatar>;
@@ -23,11 +23,11 @@ const Template: ComponentStory<typeof Avatar> = (args) => {
 
     return (
         <>
-            <Avatar {...args}/>
+            <Avatar {...args} />
         </>
     )
 }
 export const Base = Template.bind({});
 Base.args = {
-    size: 20,
+    size: 24,
 };
