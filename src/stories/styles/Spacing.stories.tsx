@@ -23,7 +23,9 @@ export const spacing = () => {
                 <li className="my-2"><span style={{color: '#2F80ED'}}>y</span> - for classes that set both *-top and *-bottom</li>
                 <li className="my-2"><span style={{color: '#2F80ED'}}>blank</span> - for classes that set a margin or padding on all 4 sides of the element</li>
             </ul>
-            <p className="mt-16">Where size is one of: <span style={{color: '#2F80ED'}}>0, 2, 4, 8, 12, 16, 24, 32, 48, 56, 64, 96, 128, 160</span></p>
+            <p className="mt-16">Where size is one of: <span style={{color: '#2F80ED'}}>auto, 0, 1, 2, 4, 6, 8, 12, 16, 24, 28, 32, 48, 64, 80</span> (size * 2 = px)</p>
+
+            <p className="mt-16">Example: pt-2 = padding-top: 4px</p>
         </>
     )
 }
