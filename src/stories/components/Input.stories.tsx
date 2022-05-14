@@ -23,7 +23,14 @@ export default {
     },
 } as ComponentMeta<typeof Input>;
 
-const Template: ComponentStory<typeof Input> = (args) => <Input {...args} />
+const Template: ComponentStory<typeof Input> = (args) => {
+    const onChange = (event: any) => {
+        console.log(event.target.value)
+    }
+    return (
+        <Input {...args} onChange={onChange} renderOption={(option: any) => <div>{option.label}</div>}/>
+    )
+}
 export const Base = Template.bind({});
 Base.args = {
     placeholder: 'Placeholder',
@@ -52,4 +59,10 @@ IconAndClear.args = {
     endIcon: undefined,
     onEndIconClick: () => {},
     onClear: () => {},
+}
+
+export const AutoCompleta = Template.bind({});
+AutoCompleta.args = {
+    ...Base.args,
+    options: [{label:'asd', value: 'asd'}, {label:'dfg', value: 'dfg'}]
 }

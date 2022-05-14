@@ -7,25 +7,10 @@ export default {
     title: 'Components/Snackbar',
     component: Snackbar,
     argTypes: {
-        icon: {
-            options: ['None', 'Icon'],
-            mapping: {
-                None: undefined,
-                Icon: <CheckIcon />,
-            },
+        type: {
+            options: ['info', 'success', 'warning', 'error'],
             control: { type: 'select' },
-            defaultValue: 'Icon'
-        },
-        anchorOrigin: {
-            description: '{<br/>vertical: bottom | top; <br/>horizontal: left | center | right<br/>}',
-            vertical: {
-                options: ['bottom', 'top'],
-                control: { type: 'select' },
-            },
-            horizontal: {
-                options: ['left', 'center', 'right'],
-                control: { type: 'select' },
-            }
+            defaultValue: 'info'
         },
     },
 } as ComponentMeta<typeof Snackbar>;
@@ -36,18 +21,13 @@ const Template: ComponentStory<typeof Snackbar> = (args) => {
     return (
         <>
             <Button type='primary' size={54} onClick={() => setIsOpenSnackbar(true)}>Open Popup</Button>
-            <Snackbar {...args} open={isOpenSnackbar} anchorOrigin={{ vertical: args.anchorOrigin?.vertical || 'top', horizontal: args.anchorOrigin?.horizontal || 'center' }} onClose={() => setIsOpenSnackbar(false)} titleClassName={'c-status-success'} />
+            <Snackbar {...args} open={isOpenSnackbar} onClose={() => setIsOpenSnackbar(false)} />
         </>
     )
 }
 export const Base = Template.bind({});
 Base.args = {
-    title: 'Account successfully created',
     content: 'Please login to your email to verify your email.',
-    anchorOrigin: {
-        vertical: 'top',
-        horizontal: 'center'
-    },
-    titleClassName: '',
+    type: 'info',
     autoHideDuration: 6000,
 };

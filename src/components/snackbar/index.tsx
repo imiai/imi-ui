@@ -1,24 +1,18 @@
 import React, { useCallback, useEffect, useState } from "react";
+import ReactDOM from "react-dom";
+import { CheckIcon, CloseIcon, CloseT2Icon, InfoIcon, WarningIcon } from "../../icons";
 import './styles.scss';
 
-interface AnchorOriginProps {
-    vertical: 'bottom' | 'top';
-    horizontal: 'center' | 'left' | 'right';
-}
-
 interface ISnackbarProps {
-    icon?: React.ReactNode;
-    title?: string;
-    titleClassName?: string;
     content?: string;
     autoHideDuration?: number;
     onClose?: Function;
-    anchorOrigin?: AnchorOriginProps;
     open?: Boolean;
+    type?: string;
 }
 
-const Snackbar = (props: ISnackbarProps) => {
-    const { titleClassName = '', icon, title, content, autoHideDuration = 6000, onClose, open, anchorOrigin = { horizontal: 'center', vertical: 'top' } } = props;
+const SnackbarJsx = (props: ISnackbarProps) => {
+    const { content, autoHideDuration = 6000, onClose, open, type = 'info' } = props;
     const [openSnackbar, setOpenSnackbar] = useState(open);
 
     useEffect(() => {
@@ -57,11 +51,22 @@ const Snackbar = (props: ISnackbarProps) => {
     }
 
     return (
-        <div className={`imiui-snackbar ${anchorOrigin.horizontal} ${openSnackbar ? 'show' : ''} ${anchorOrigin.vertical}`}>
-            {icon}
-            <p className="message t-label-regular-tiny m-0"><span className={`title ${titleClassName}`}>{title}</span> <span>{content}</span></p>
+        <div className={`imiui-snackbar ${type} ${openSnackbar ? 'show' : ''}`}>
+            {type === 'info' && <InfoIcon fill="var(--imiui-primary-white)" />}
+            {type === 'success' && <CheckIcon fill="var(--imiui-primary-white)"/>}
+            {type === 'warning' && <WarningIcon fill="var(--imiui-primary-white)"/>}
+            {type === 'error' && <CloseT2Icon fill="var(--imiui-primary-white)"/>}
+            <span className="message t-label-regular-tiny m-0">{content}</span>
+            <button onClick={() => onClose()} className={'close-button'}>
+                <CloseIcon fill="var(--imiui-primary-white)"/>
+            </button>
         </div>
     )
+}
+
+
+const Snackbar = (props: ISnackbarProps) => {
+    return ReactDOM.createPortal(<SnackbarJsx {...props} />, document.querySelector('body'))
 }
 
 export default Snackbar;

@@ -1,5 +1,5 @@
 import { CloseIcon } from "../../icons";
-import React, { useState, useEffect, useCallback, useLayoutEffect, createRef } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 import ReactDOM from "react-dom";
 import './styles.scss';
 import { useResizeObserver } from "../../hooks";
