@@ -8,6 +8,8 @@ interface IInputProps extends React.HTMLProps<HTMLInputElement> {
     withLabel?: Boolean;
     hint?: string;
     error?: string;
+    options?: Array<any>;
+    renderOption?: Function;
 }
 declare const Input: (props: IInputProps) => JSX.Element;
 export default Input;
