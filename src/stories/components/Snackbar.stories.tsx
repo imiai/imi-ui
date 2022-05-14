@@ -30,4 +30,5 @@ Base.args = {
     content: 'Please login to your email to verify your email.',
     type: 'info',
     autoHideDuration: 6000,
+    showCloseButton: false,
 };

@@ -9,10 +9,11 @@ interface ISnackbarProps {
     onClose?: Function;
     open?: Boolean;
     type?: string;
+    showCloseButton?: Boolean;
 }
 
 const SnackbarJsx = (props: ISnackbarProps) => {
-    const { content, autoHideDuration = 6000, onClose, open, type = 'info' } = props;
+    const { showCloseButton = false, content, autoHideDuration = 6000, onClose, open, type = 'info' } = props;
     const [openSnackbar, setOpenSnackbar] = useState(open);
 
     useEffect(() => {
@@ -56,10 +57,10 @@ const SnackbarJsx = (props: ISnackbarProps) => {
             {type === 'success' && <CheckIcon fill="var(--imiui-primary-white)"/>}
             {type === 'warning' && <WarningIcon fill="var(--imiui-primary-white)"/>}
             {type === 'error' && <CloseT2Icon fill="var(--imiui-primary-white)"/>}
-            <span className="message t-label-regular-tiny m-0">{content}</span>
-            <button onClick={() => onClose()} className={'close-button'}>
+            <span className="message t-label-regular-tiny ml-4">{content}</span>
+            {showCloseButton && <button onClick={() => onClose()} className={'close-button'}>
                 <CloseIcon fill="var(--imiui-primary-white)"/>
-            </button>
+            </button>}
         </div>
     )
 }
