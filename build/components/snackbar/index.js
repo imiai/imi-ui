@@ -9,8 +9,8 @@ import InfoIcon from '../../icons/components/InfoIcon.js';
 import './styles.scss.js';
 
 var SnackbarJsx = function (props) {
-    var content = props.content, _a = props.autoHideDuration, autoHideDuration = _a === void 0 ? 6000 : _a, onClose = props.onClose, open = props.open, _b = props.type, type = _b === void 0 ? 'info' : _b;
-    var _c = useState(open), openSnackbar = _c[0], setOpenSnackbar = _c[1];
+    var _a = props.showCloseButton, showCloseButton = _a === void 0 ? false : _a, content = props.content, _b = props.autoHideDuration, autoHideDuration = _b === void 0 ? 6000 : _b, onClose = props.onClose, open = props.open, _c = props.type, type = _c === void 0 ? 'info' : _c;
+    var _d = useState(open), openSnackbar = _d[0], setOpenSnackbar = _d[1];
     useEffect(function () {
         var id = setTimeout(function () {
             setOpenSnackbar(open);
@@ -46,8 +46,8 @@ var SnackbarJsx = function (props) {
         type === 'success' && React.createElement(CheckIcon, { fill: "var(--imiui-primary-white)" }),
         type === 'warning' && React.createElement(WarningIcon, { fill: "var(--imiui-primary-white)" }),
         type === 'error' && React.createElement(CloseT2Icon, { fill: "var(--imiui-primary-white)" }),
-        React.createElement("span", { className: "message t-label-regular-tiny m-0" }, content),
-        React.createElement("button", { onClick: function () { return onClose(); }, className: 'close-button' },
+        React.createElement("span", { className: "message t-label-regular-tiny ml-4" }, content),
+        showCloseButton && React.createElement("button", { onClick: function () { return onClose(); }, className: 'close-button' },
             React.createElement(CloseIcon, { fill: "var(--imiui-primary-white)" }))));
 };
 var Snackbar = function (props) {

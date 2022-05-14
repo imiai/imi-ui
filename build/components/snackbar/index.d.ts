@@ -6,6 +6,7 @@ interface ISnackbarProps {
     onClose?: Function;
     open?: Boolean;
     type?: string;
+    showCloseButton?: Boolean;
 }
 declare const Snackbar: (props: ISnackbarProps) => React.ReactPortal;
 export default Snackbar;
