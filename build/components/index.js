@@ -19,4 +19,5 @@ export { default as TableCell } from './table-cell/index.js';
 export { default as Avatar } from './avatar/index.js';
 export { default as Tabs } from './tabs/index.js';
 export { default as Paging } from './paging/index.js';
+export { default as Select } from './select/index.js';
 //# sourceMappingURL=index.js.map

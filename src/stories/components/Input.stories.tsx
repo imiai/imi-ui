@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 import { Input } from '../../components';
 import { EyeCloseIcon } from '../../icons';
@@ -15,6 +15,9 @@ export default {
             description: 'Up to 2 lines',
             control: { type: 'text' },
         },
+        options: {
+            description: 'Array options with format {label: string, value: any}',
+        },
         placeholder: {},
         withLabel: {
             description: 'Set placeholder as Label',
@@ -24,11 +27,15 @@ export default {
 } as ComponentMeta<typeof Input>;
 
 const Template: ComponentStory<typeof Input> = (args) => {
+    const [value, setValue] = useState('')
+
     const onChange = (event: any) => {
         console.log(event.target.value)
+        setValue(event.target.value)
     }
+
     return (
-        <Input {...args} onChange={onChange} renderOption={(option: any) => <div>{option.label}</div>}/>
+        <Input {...args} value={value} onChange={onChange} renderOption={(option: any) => <div>{option.label}</div>}/>
     )
 }
 export const Base = Template.bind({});

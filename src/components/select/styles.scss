@@ -1,0 +1,47 @@
+@import '../../styles/mixin.scss';
+
+.imiui-select {
+    position: relative;
+    cursor: pointer;
+    .imiui-input {
+        &.disabled {
+            input:not(:placeholder-shown) + label {
+                color: var(--imiui-primary-blue) !important;
+            }
+            background: var(--imiui-primary-white) !important;
+        }
+        label {
+            color: var(--imiui-gray-200) !important;
+        }
+        input {
+            color: var(--imiui-primary-dark);
+            cursor: pointer !important;
+        }
+        svg {
+            fill: var(--imiui-gray-200);
+        }
+    }
+    .options {
+        background-color: var(--imiui-primary-white);
+        position: absolute;
+        left: 0;
+        top: calc(100% + 1px);
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+
+        border-radius: 8px;
+
+        button {
+            @extend %button-default;
+
+            &:hover {
+                background-color: var(--imiui-blue-50);
+            }
+
+            padding: 0 12px;
+            height: 36px;
+            text-align: left;
+        }
+    }
+}

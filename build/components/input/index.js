@@ -27,7 +27,7 @@ var Input = function (props) {
     };
     var onInputChange = function (event, option) {
         if (option) {
-            event.target.value = option;
+            event.target.value = option.value;
             rest.onChange(event);
         }
         else {
@@ -44,7 +44,7 @@ var Input = function (props) {
                         React.createElement(CloseT2Icon, null)),
                 onClear && endIcon && React.createElement("hr", null),
                 endIcon &&
-                    React.createElement("button", { className: "icon", onClick: onEndIconClick ? onEndIconClick() : function () { } }, endIcon)),
+                    React.createElement("button", { className: "icon", onClick: onEndIconClick ? function () { return onEndIconClick(); } : function () { } }, endIcon)),
             focused && React.createElement(Card, { className: "autocomplete-options", variant: 'dialogue' }, options.map(function (option, index) {
                 return (React.createElement("button", { key: index, onClick: function (event) { return onInputChange(event, option); }, className: 't-label-regular-tiny' }, renderOption(option)));
             }))),

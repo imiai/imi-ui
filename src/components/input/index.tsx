@@ -3,6 +3,11 @@ import React, { Fragment } from "react";
 import './styles.scss';
 import Card from "../card";
 
+interface ISelectItem {
+    label: string;
+    value: any;
+}
+
 interface IInputProps extends React.HTMLProps<HTMLInputElement> {
     onClear?: Function;
     endIcon?: React.ReactNode;
@@ -11,7 +16,7 @@ interface IInputProps extends React.HTMLProps<HTMLInputElement> {
     withLabel?: Boolean;
     hint?: string;
     error?: string;
-    options?: Array<any>;
+    options?: Array<ISelectItem>;
     renderOption?: Function;
 }
 
@@ -41,7 +46,7 @@ const Input = (props: IInputProps) => {
 
     const onInputChange = (event: any, option: any) => {
         if (option) {
-            event.target.value = option;
+            event.target.value = option.value;
             rest.onChange(event)
         } else {
             rest.onChange(event)
@@ -60,7 +65,7 @@ const Input = (props: IInputProps) => {
                         </button>}
                     {onClear && endIcon && <hr />}
                     {endIcon &&
-                        <button className="icon" onClick={onEndIconClick ? onEndIconClick() : () => { }}>
+                        <button className="icon" onClick={onEndIconClick ? () => onEndIconClick() : () => { }}>
                             {endIcon}
                         </button>
                     }

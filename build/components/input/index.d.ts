@@ -1,5 +1,9 @@
 import React from "react";
 import './styles.scss';
+interface ISelectItem {
+    label: string;
+    value: any;
+}
 interface IInputProps extends React.HTMLProps<HTMLInputElement> {
     onClear?: Function;
     endIcon?: React.ReactNode;
@@ -8,7 +12,7 @@ interface IInputProps extends React.HTMLProps<HTMLInputElement> {
     withLabel?: Boolean;
     hint?: string;
     error?: string;
-    options?: Array<any>;
+    options?: Array<ISelectItem>;
     renderOption?: Function;
 }
 declare const Input: (props: IInputProps) => JSX.Element;
