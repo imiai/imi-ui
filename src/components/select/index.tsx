@@ -12,11 +12,10 @@ interface ISelectItem {
 
 interface ISelect extends React.HTMLProps<HTMLInputElement> {
     options?: Array<ISelectItem>;
-    renderOption?: Function;
 }
 
 const Select = (props: ISelect) => {
-    const {options, renderOption, ...rest} = props;
+    const {options, ...rest} = props;
     const [showOptions, setShowOptions] = useState(false);
     const ref = useRef(null)
 
@@ -48,7 +47,7 @@ const Select = (props: ISelect) => {
                 {options.map((option, index) => {
                     return (
                         <button key={index} onClick={(event) => onInputChange(event, option.value)} className={'t-label-regular-tiny'}>
-                            {renderOption(option)}
+                            <div>{option.label}</div>
                         </button>
                     )
                 })}

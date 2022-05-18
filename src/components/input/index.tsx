@@ -17,11 +17,10 @@ interface IInputProps extends React.HTMLProps<HTMLInputElement> {
     hint?: string;
     error?: string;
     options?: Array<ISelectItem>;
-    renderOption?: Function;
 }
 
 const Input = (props: IInputProps) => {
-    const { renderOption = () => {}, options = [], placeholder = '', className, withLabel = false, hint = '', error = '', isError = false, onClear, endIcon, onEndIconClick, ...rest } = props;
+    const { options = [], placeholder = '', className, withLabel = false, hint = '', error = '', isError = false, onClear, endIcon, onEndIconClick, ...rest } = props;
     const [focused, setFocused] = React.useState(false)
 
     const onFocus = () => setFocused(true)
@@ -74,7 +73,7 @@ const Input = (props: IInputProps) => {
                     {options.map((option, index) => {
                         return (
                             <button key={index} onClick={(event) => onInputChange(event, option)} className={'t-label-regular-tiny'}>
-                                {renderOption(option)}
+                               <div>{option.label}</div>
                             </button>
                         )
                     })}

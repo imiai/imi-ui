@@ -1,6 +1,8 @@
 # RUN STORYBOOK
-npm run storybook
+yarn storybook
+
+# BUILD LIB
+yarn build
 
 # DEPLOY STORYBOOK
-make build
 make deploy

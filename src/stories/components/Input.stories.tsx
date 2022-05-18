@@ -35,7 +35,7 @@ const Template: ComponentStory<typeof Input> = (args) => {
     }
 
     return (
-        <Input {...args} value={value} onChange={onChange} renderOption={(option: any) => <div>{option.label}</div>}/>
+        <Input {...args} value={value} onChange={onChange}/>
     )
 }
 export const Base = Template.bind({});

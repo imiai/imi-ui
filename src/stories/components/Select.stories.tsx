@@ -26,7 +26,7 @@ const Template: ComponentStory<typeof Select> = (args) => {
     }
 
     return (
-        <Select {...args} value={value} onChange={onChange} renderOption={(option: any) => <div>{option.label}</div>}/>
+        <Select {...args} value={value} onChange={onChange}/>
     )
 }
 export const Base = Template.bind({});

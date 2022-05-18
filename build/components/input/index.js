@@ -5,8 +5,8 @@ import './styles.scss.js';
 import Card from '../card/index.js';
 
 var Input = function (props) {
-    var _a = props.renderOption, renderOption = _a === void 0 ? function () { } : _a, _b = props.options, options = _b === void 0 ? [] : _b, _c = props.placeholder, placeholder = _c === void 0 ? '' : _c, className = props.className, _d = props.withLabel, withLabel = _d === void 0 ? false : _d, _e = props.hint, hint = _e === void 0 ? '' : _e, _f = props.error, error = _f === void 0 ? '' : _f, _g = props.isError, isError = _g === void 0 ? false : _g, onClear = props.onClear, endIcon = props.endIcon, onEndIconClick = props.onEndIconClick, rest = __rest(props, ["renderOption", "options", "placeholder", "className", "withLabel", "hint", "error", "isError", "onClear", "endIcon", "onEndIconClick"]);
-    var _h = React.useState(false), focused = _h[0], setFocused = _h[1];
+    var _a = props.options, options = _a === void 0 ? [] : _a, _b = props.placeholder, placeholder = _b === void 0 ? '' : _b, className = props.className, _c = props.withLabel, withLabel = _c === void 0 ? false : _c, _d = props.hint, hint = _d === void 0 ? '' : _d, _e = props.error, error = _e === void 0 ? '' : _e, _f = props.isError, isError = _f === void 0 ? false : _f, onClear = props.onClear, endIcon = props.endIcon, onEndIconClick = props.onEndIconClick, rest = __rest(props, ["options", "placeholder", "className", "withLabel", "hint", "error", "isError", "onClear", "endIcon", "onEndIconClick"]);
+    var _g = React.useState(false), focused = _g[0], setFocused = _g[1];
     var onFocus = function () { return setFocused(true); };
     var onBlur = function () {
         var timer = setTimeout(function () {
@@ -46,7 +46,8 @@ var Input = function (props) {
                 endIcon &&
                     React.createElement("button", { className: "icon", onClick: onEndIconClick ? function () { return onEndIconClick(); } : function () { } }, endIcon)),
             focused && React.createElement(Card, { className: "autocomplete-options", variant: 'dialogue' }, options.map(function (option, index) {
-                return (React.createElement("button", { key: index, onClick: function (event) { return onInputChange(event, option); }, className: 't-label-regular-tiny' }, renderOption(option)));
+                return (React.createElement("button", { key: index, onClick: function (event) { return onInputChange(event, option); }, className: 't-label-regular-tiny' },
+                    React.createElement("div", null, option.label)));
             }))),
         !error && hint && React.createElement("span", { className: "imiui-input-note hint t-label-regular-supertiny" }, hint),
         error && React.createElement("span", { className: "imiui-input-note error t-label-regular-supertiny" }, error)));
