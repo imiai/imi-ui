@@ -27,7 +27,7 @@ var Select = function (props) {
     return (React.createElement("div", { className: "imiui-select".concat(className ? " ".concat(className) : ''), ref: ref, onClick: function () { return setShowOptions(!showOptions); } },
         React.createElement(Input, __assign({}, rest, { disabled: true, readOnly: true, withLabel: true, endIcon: React.createElement(ArrowDownIcon, { fill: "var(--imiui-gray-200)", className: "arrow-icon".concat(showOptions ? ' rotate' : '') }) })),
         showOptions && React.createElement(Card, { className: "options", variant: 'dialogue' }, options.map(function (option, index) {
-            return (React.createElement("button", { key: index, onClick: function (event) { return onInputChange(event, option.value); }, className: 't-label-regular-tiny' },
+            return (React.createElement("button", { key: index, onClick: function (event) { return onInputChange(event, option); }, className: 't-label-regular-tiny' },
                 React.createElement("div", null, option.label)));
         }))));
 };

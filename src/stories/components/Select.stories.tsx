@@ -33,5 +33,5 @@ export const Base = Template.bind({});
 Base.args = {
     placeholder: 'Priority',
     withLabel: true,
-    options: [{label:'asd', value: 'asd'}, {label:'dfg', value: 'dfg'}]
+    options: [{label:'asd', value: 1}, {label:'dfg', value: 2}]
 };

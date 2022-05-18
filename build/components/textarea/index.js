@@ -10,8 +10,8 @@ var TextArea = function (props) {
         rest.onChange && rest.onChange(e);
     };
     return (React.createElement(Fragment, null,
-        React.createElement("div", { className: "imiui-textarea".concat(isError ? ' error' : '').concat(rest.disabled ? ' disabled' : '').concat(label ? ' label' : '') },
-            React.createElement("textarea", __assign({}, rest, { className: "t-body-regular-small ".concat(className ? " ".concat(className) : ''), maxLength: maxLength, placeholder: placeholder, onChange: handleKeyDown })),
+        React.createElement("div", { className: "imiui-textarea".concat(isError ? ' error' : '').concat(rest.disabled ? ' disabled' : '').concat(label ? ' label' : '').concat(className ? " ".concat(className) : '') },
+            React.createElement("textarea", __assign({}, rest, { className: "t-body-regular-small", maxLength: maxLength, placeholder: placeholder, onChange: handleKeyDown })),
             label && React.createElement("label", null, label),
             showLengthCounter && React.createElement("span", { className: "length-counter t-label-regular-supertiny" },
                 rest.value ? rest.value.toString().length : 0,

@@ -47,7 +47,7 @@ const Select = (props: ISelect) => {
             {showOptions && <Card className="options" variant='dialogue'>
                 {options.map((option, index) => {
                     return (
-                        <button key={index} onClick={(event) => onInputChange(event, option.value)} className={'t-label-regular-tiny'}>
+                        <button key={index} onClick={(event) => onInputChange(event, option)} className={'t-label-regular-tiny'}>
                             <div>{option.label}</div>
                         </button>
                     )

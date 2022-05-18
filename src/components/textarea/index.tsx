@@ -20,8 +20,8 @@ const TextArea = (props: ITextAreaProps) => {
 
     return (
         <Fragment>
-            <div className={`imiui-textarea${isError ? ' error' : ''}${rest.disabled ? ' disabled' : ''}${label ? ' label' : ''}`}>
-                <textarea {...rest} className={`t-body-regular-small ${className ? ` ${className}` :''}`} maxLength={maxLength} placeholder={placeholder} onChange={handleKeyDown}/>
+            <div className={`imiui-textarea${isError ? ' error' : ''}${rest.disabled ? ' disabled' : ''}${label ? ' label' : ''}${className ? ` ${className}` :''}`}>
+                <textarea {...rest} className={`t-body-regular-small`} maxLength={maxLength} placeholder={placeholder} onChange={handleKeyDown}/>
                 {label && <label>{label}</label>}
                 {showLengthCounter && <span className="length-counter t-label-regular-supertiny">{rest.value ? rest.value.toString().length : 0}/{maxLength}</span>}
             </div>
