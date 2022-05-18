@@ -6,6 +6,7 @@ interface ISelectItem {
 }
 interface ISelect extends React.HTMLProps<HTMLInputElement> {
     options?: Array<ISelectItem>;
+    className?: string;
 }
 declare const Select: (props: ISelect) => JSX.Element;
 export default Select;

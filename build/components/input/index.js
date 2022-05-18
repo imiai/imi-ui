@@ -35,8 +35,8 @@ var Input = function (props) {
         }
     };
     return (React.createElement(Fragment, null,
-        React.createElement("div", { className: "imiui-input".concat(isError ? ' error' : '').concat(rest.disabled ? ' disabled' : '').concat(withLabel ? ' label' : '') },
-            React.createElement("input", __assign({}, rest, { onFocus: onFocus, onBlur: onBlur, onChange: function (event) { return onInputChange(event, null); }, className: "t-label-regular-tiny".concat(className ? " ".concat(className) : ''), placeholder: placeholder, style: { width: "calc(100% - ".concat(getInputWidth(), "px") } })),
+        React.createElement("div", { className: "imiui-input".concat(isError ? ' error' : '').concat(rest.disabled ? ' disabled' : '').concat(withLabel ? ' label' : '').concat(className ? " ".concat(className) : '') },
+            React.createElement("input", __assign({}, rest, { onFocus: onFocus, onBlur: onBlur, onChange: function (event) { return onInputChange(event, null); }, className: "t-label-regular-tiny", placeholder: placeholder, style: { width: "calc(100% - ".concat(getInputWidth(), "px") } })),
             withLabel && React.createElement("label", null, placeholder),
             React.createElement("div", { className: "icon-container" },
                 onClear && !rest.disabled &&

@@ -1,6 +1,6 @@
 import React, { useRef, useState } from "react";
 import { useClickAnyWhere, useOnClickOutside } from "../../hooks";
-import { ArrowDownSpecialIcon } from "../../icons";
+import { ArrowDownIcon, ArrowDownSpecialIcon } from "../../icons";
 import Card from "../card";
 import Input from "../input";
 import './styles.scss';
@@ -12,10 +12,11 @@ interface ISelectItem {
 
 interface ISelect extends React.HTMLProps<HTMLInputElement> {
     options?: Array<ISelectItem>;
+    className?: string;
 }
 
 const Select = (props: ISelect) => {
-    const {options, ...rest} = props;
+    const {options, className, ...rest} = props;
     const [showOptions, setShowOptions] = useState(false);
     const ref = useRef(null)
 
@@ -35,13 +36,13 @@ const Select = (props: ISelect) => {
     }
 
     return (
-        <div className="imiui-select" ref={ref} onClick={() => setShowOptions(true)}>
+        <div className={`imiui-select${className ? ` ${className}` : ''}`} ref={ref} onClick={() => setShowOptions(!showOptions)}>
             <Input 
                 {...rest}
                 disabled
                 readOnly
                 withLabel={true}
-                endIcon={<ArrowDownSpecialIcon fill="var(--imiui-gray-200)"/>}
+                endIcon={<ArrowDownIcon fill="var(--imiui-gray-200)" className={`arrow-icon${showOptions ? ' rotate' : ''}`}/>}
             />
             {showOptions && <Card className="options" variant='dialogue'>
                 {options.map((option, index) => {

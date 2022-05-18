@@ -21,6 +21,13 @@
             fill: var(--imiui-gray-200);
         }
     }
+    .arrow-icon {
+        transform: rotate(0deg);
+        transition: all 200ms;
+        &.rotate {
+            transform: rotate(180deg);
+        }
+    }
     .options {
         background-color: var(--imiui-primary-white);
         position: absolute;
@@ -29,6 +36,7 @@
         display: flex;
         flex-direction: column;
         width: 100%;
+        z-index: 1;
 
         border-radius: 8px;
 
