@@ -20,9 +20,13 @@ var BottomSheetJsx = function (props) {
         return function () { return clearTimeout(id); };
     }, [open]);
     useEffect(function () {
-        document.body.style.overflow = 'hidden';
-        return function () { document.body.style.overflow = 'unset'; };
-    }, []);
+        if (open) {
+            document.body.style.overflow = 'hidden';
+        }
+        else {
+            document.body.style.overflow = 'unset';
+        }
+    }, [open]);
     useEffect(function () {
         var el = document.getElementById('imiui-bottomsheet-container');
         var headerHeight = title ? 48 : 40;

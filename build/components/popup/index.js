@@ -16,6 +16,14 @@ var PopupJsx = function (props) {
         var id = setTimeout(function () { return setShowContent(open); }, 50);
         return function () { return clearTimeout(id); };
     }, [open]);
+    useEffect(function () {
+        if (open) {
+            document.body.style.overflow = 'hidden';
+        }
+        else {
+            document.body.style.overflow = 'unset';
+        }
+    }, [open]);
     if (!openPopup) {
         return (React.createElement(React.Fragment, null));
     }
