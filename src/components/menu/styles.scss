@@ -27,6 +27,7 @@
         border-radius: 8px;
 
         .imiui-menu-item {
+            width: 100%;
             @extend %button-default;
             &:not(:last-child) {
                 border-bottom: 1px solid var(--imiui-gray-25);
