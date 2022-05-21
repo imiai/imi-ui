@@ -20,4 +20,6 @@ export { default as Avatar } from './avatar/index.js';
 export { default as Tabs } from './tabs/index.js';
 export { default as Paging } from './paging/index.js';
 export { default as Select } from './select/index.js';
+export { default as Menu } from './menu/index.js';
+export { default as Label } from './label/index.js';
 //# sourceMappingURL=index.js.map
