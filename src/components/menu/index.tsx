@@ -1,5 +1,5 @@
-import React, { useRef, useState } from "react"
-import { useOnClickOutside } from "../../hooks";
+import React, { useEffect, useLayoutEffect, useRef, useState } from "react"
+import { useClickAnyWhere, useOnClickOutside } from "../../hooks";
 import { MoreT2Icon } from "../../icons"
 import Card from "../card"
 import './styles.scss';
@@ -14,29 +14,34 @@ interface IMenuItem extends React.ButtonHTMLAttributes<HTMLButtonElement> {
 
 const Menu = (props: IMenu) => {
     const { children } = props;
-    const [showItem, setShowItem] = useState(false);
+    const [displayStyle, setDisplayStyle] = useState('none');
     const ref = useRef(null)
 
-    useOnClickOutside(ref, () => setShowItem(false))
+    useOnClickOutside(ref, () => setDisplayStyle('none'))
 
     return (
         <div className="imiui-button-menu" ref={ref}>
-            <button className="button" onClick={() => {setShowItem(!showItem)}}>
+            <button className="button" onClick={() => {setDisplayStyle(displayStyle === 'block' ? 'none' : 'block')}}>
                 <MoreT2Icon fill="var(--imiui-gray-300)" width={16} height={16} />
             </button>
-            {showItem &&
-                <Card variant='dialogue' className="menu-list">
-                    {children}
-                </Card>
-            }
+            <Card id='menu-list-id' variant='dialogue' className="menu-list" style={{display: displayStyle}}>
+                {children}
+            </Card>
         </div>
     )
 }
 
 export const MenuItem = (props: IMenuItem) => {
-    const { children, className, ...rest } = props;
+    const { children, className, onClick = () => {}, ...rest } = props;
+
+    const onItemClick = (e: any) => {
+        onClick(e)
+        let el = document.getElementById('menu-list-id')
+        el.style.display = 'none'
+    }
+
     return (
-        <button className={`imiui-menu-item${className ? ` ${className}` : ''}`} {...rest}>
+        <button className={`imiui-menu-item${className ? ` ${className}` : ''}`} {...rest} onClick={onItemClick}>
             {children}
         </button>
     )

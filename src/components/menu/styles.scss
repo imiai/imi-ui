@@ -15,6 +15,7 @@
         height: 24px;
     }
     .menu-list {
+        overflow: hidden;
         background-color: var(--imiui-primary-white);
         position: absolute;
         right: 0;
@@ -34,6 +35,9 @@
             height: 40px;
             display: flex;
             align-items: center;
+            &:hover {
+                background-color: var(--imiui-blue-50);
+            }
         }
     }
 }
