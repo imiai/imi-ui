@@ -1,0 +1,39 @@
+@import '../../styles/mixin.scss';
+
+.imiui-button-menu {
+    position: relative;
+    width: 24px;
+    height: 24px;
+    .button {
+        @extend %button-default;
+
+        background-color: var(--imiui-blue-50);
+        padding: 4px;
+        border-radius: 4px;
+
+        width: 24px;
+        height: 24px;
+    }
+    .menu-list {
+        background-color: var(--imiui-primary-white);
+        position: absolute;
+        right: 0;
+        top: calc(100% + 1px);
+        display: flex;
+        flex-direction: column;
+        z-index: 1;
+
+        border-radius: 8px;
+
+        .imiui-menu-item {
+            @extend %button-default;
+            &:not(:last-child) {
+                border-bottom: 1px solid var(--imiui-gray-25);
+            }
+            padding: 0px 16px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+        }
+    }
+}

@@ -2,6 +2,7 @@ import './../src/styles/colors.scss';
 import './../src/styles/common.scss';
 import './../src/styles/mixin.scss';
 import './../src/styles/typography.scss';
+import './../src/styles/spacing.scss';
 
 
 export const parameters = {

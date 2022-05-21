@@ -1,0 +1,32 @@
+.imiui-label {
+    display: inline-flex;
+    &.priority {
+        padding: 4px 16px;
+        border-radius: 16px;
+        &.high {
+            background-color: var(--imiui-secondary-red);
+        }
+        &.medium {
+            background-color: var(--imiui-primary-blue);
+        }
+        &.low {
+            background-color: var(--imiui-gray-100);
+        }
+    }
+    &.progress {
+        padding: 4px 8px;
+        border-radius: 4px;
+        &.completed {
+            background-color: var(--imiui-secondary-green);
+        }
+        &.in-progress {
+            background-color: var(--imiui-primary-blue);
+        }
+        &.more-info {
+            background-color: var(--imiui-primary-orange);
+        }
+        &.draft {
+            background-color: var(--imiui-gray-100);
+        }
+    }
+}

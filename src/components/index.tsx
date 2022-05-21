@@ -20,3 +20,5 @@ export { default as Avatar } from './avatar';
 export { default as Tabs } from './tabs';
 export { default as Paging } from './paging';
 export { default as Select } from './select';
+export { default as Menu } from './menu';
+export { default as Label } from './label';
