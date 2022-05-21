@@ -27,9 +27,13 @@ export default {
 const Template: ComponentStory<typeof Label> = (args) => {
 
     return (
-        <Label type='priority' priority='high' content='High'/>
+        <Label {...args}/>
     )
 }
 export const Base = Template.bind({});
 Base.args = {
+    type: 'priority',
+    priority: 'high',
+    progress: 'complete',
+    content: 'Label content'
 };
