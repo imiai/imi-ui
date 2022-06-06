@@ -4,10 +4,13 @@
         border-bottom: solid 1px var(--imiui-gray-50);
         display: flex;
         gap: 16px;
+        max-width: 100vw;
+        overflow: scroll;
         .item {
             display: flex;
             color: var(--imiui-primary-dark);
             padding-bottom: 18px;
+            width: max-content;
             &.active {
                 span {
                     color: var(--imiui-primary-blue);
