@@ -10,7 +10,9 @@
             display: flex;
             color: var(--imiui-primary-dark);
             padding-bottom: 18px;
-            width: max-content;
+            span {
+                width: max-content;
+            }
             &.active {
                 span {
                     color: var(--imiui-primary-blue);
