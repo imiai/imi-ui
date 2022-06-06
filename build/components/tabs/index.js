@@ -33,7 +33,7 @@ var Tabs = function (props) {
             headers.map(function (header, index) {
                 return (React.createElement("button", { key: index, id: "imiui-tab-".concat(index), className: "item".concat(currentTabIndex === index ? ' active' : ''), onClick: function () { return setCurrentTabIndex(index); } },
                     React.createElement("span", { className: 't-label-semibold-supertiny' }, header.title),
-                    React.createElement("div", { className: 'count t-label-semibold-supertiny c-gray-300' }, header.count)));
+                    header.count && React.createElement("div", { className: 'count t-label-semibold-supertiny c-gray-300' }, header.count)));
             }),
             React.createElement("div", { style: { left: "".concat(activeLineLeft, "px"), width: activeLineWidth }, className: "active-line" })),
         children && Children.count(children) > 0 ? children[currentTabIndex] : React.createElement(React.Fragment, null)));

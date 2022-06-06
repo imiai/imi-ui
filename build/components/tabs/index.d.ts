@@ -2,7 +2,7 @@ import React from 'react';
 import './styles.scss';
 interface ITabHeaderProps {
     title: string;
-    count: number;
+    count?: number;
 }
 interface ITabsProps {
     headers: Array<ITabHeaderProps>;
