@@ -4,7 +4,7 @@ import './styles.scss';
 
 interface ITabHeaderProps {
     title: string;
-    count?: number;
+    count: number | undefined;
 }
 
 interface ITabsProps {
@@ -48,7 +48,7 @@ const Tabs = (props: ITabsProps) => {
                     return (
                         <button key={index} id={`imiui-tab-${index}`} className={`item${currentTabIndex === index ? ' active' : ''}`} onClick={() => setCurrentTabIndex(index)}>
                             <span className='t-label-semibold-supertiny'>{header.title}</span>
-                            {header.count && <div className='count t-label-semibold-supertiny c-gray-300'>{header.count}</div>}
+                            {header.count !== undefined && <div className='count t-label-semibold-supertiny c-gray-300'>{header.count}</div>}
                         </button>
                     )
                 })}
