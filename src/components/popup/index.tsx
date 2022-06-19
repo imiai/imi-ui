@@ -31,11 +31,13 @@ const PopupJsx = (props: IPopupProps) => {
     }, [open])
 
     useEffect(() => {
-        if (open) {
+        if (openPopup) {
             document.body.style.overflow = 'hidden';
-        } 
-        return () => {document.body.style.overflow = 'unset';}
-    }, [open])
+        } else {
+            document.body.style.overflow = 'unset';
+        }
+    }, [openPopup])
+
     
     if (!openPopup) {
         return (

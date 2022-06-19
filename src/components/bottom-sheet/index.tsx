@@ -33,11 +33,12 @@ const BottomSheetJsx = (props: IBottomSheetProps) => {
     }, [open])
 
     useEffect(() => {
-        if (open) {
+        if (openSheet) {
             document.body.style.overflow = 'hidden';
-        } 
-        return () => {document.body.style.overflow = 'unset';}
-    }, [open])
+        } else {
+            document.body.style.overflow = 'unset';
+        }
+    }, [openSheet])
 
     useEffect(() => {
         let el = document.getElementById('imiui-bottomsheet-container')

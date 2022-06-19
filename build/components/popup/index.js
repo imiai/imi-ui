@@ -17,11 +17,13 @@ var PopupJsx = function (props) {
         return function () { return clearTimeout(id); };
     }, [open]);
     useEffect(function () {
-        if (open) {
+        if (openPopup) {
             document.body.style.overflow = 'hidden';
         }
-        return function () { document.body.style.overflow = 'unset'; };
-    }, [open]);
+        else {
+            document.body.style.overflow = 'unset';
+        }
+    }, [openPopup]);
     if (!openPopup) {
         return (React.createElement(React.Fragment, null));
     }
