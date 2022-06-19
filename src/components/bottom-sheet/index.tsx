@@ -35,9 +35,8 @@ const BottomSheetJsx = (props: IBottomSheetProps) => {
     useEffect(() => {
         if (open) {
             document.body.style.overflow = 'hidden';
-        } else {
-            document.body.style.overflow = 'unset';
-        }
+        } 
+        return () => {document.body.style.overflow = 'unset';}
     }, [open])
 
     useEffect(() => {
@@ -56,7 +55,7 @@ const BottomSheetJsx = (props: IBottomSheetProps) => {
             }
         }
         setOpacity(0.7)
-    }, [openSheet, height])
+    }, [title, openSheet, height])
 
     const onCloseSheet = useCallback(() => {
         setPositionTop(`${window.innerHeight + 12}px`);

@@ -23,9 +23,7 @@ var BottomSheetJsx = function (props) {
         if (open) {
             document.body.style.overflow = 'hidden';
         }
-        else {
-            document.body.style.overflow = 'unset';
-        }
+        return function () { document.body.style.overflow = 'unset'; };
     }, [open]);
     useEffect(function () {
         var el = document.getElementById('imiui-bottomsheet-container');
@@ -44,7 +42,7 @@ var BottomSheetJsx = function (props) {
             }
         }
         setOpacity(0.7);
-    }, [openSheet, height]);
+    }, [title, openSheet, height]);
     var onCloseSheet = useCallback(function () {
         setPositionTop("".concat(window.innerHeight + 12, "px"));
         setOpacity(0);
