@@ -1,0 +1,48 @@
+.imiui-chip {
+    padding: 0 12px;
+    display: flex;
+    align-items: center;
+    &.size_32 {
+        height: 32px;
+    }
+    &.size_40 {
+        height: 40px;
+    }
+    &.selected {
+        border: 1px solid var(--imiui-primary-blue);
+        border-radius: 100px;
+        background-color: var(--imiui-primary-white);
+        p {
+            color: var(--imiui-primary-blue);
+        }
+    }
+    &.unselected {
+        border: 1px solid var(--imiui-blue-50);
+        border-radius: 100px;
+        background-color: var(--imiui-blue-50);
+        p {
+            color: var(--imiui-primary-dark);
+        }
+    }
+    .left-icon {
+        margin-right: 8px;
+        width: 16px;
+        height: 16px;
+        svg {
+            width: 16px;
+            height: 16px;
+        }
+    }
+    .close-icon {
+        margin-left: auto;
+        padding: 0;
+        cursor: pointer;
+        background: none;
+        border: none;
+        width: 16px;
+        height: 16px;
+    }
+    p {
+        margin: 0;
+    }
+}

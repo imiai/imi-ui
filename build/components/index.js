@@ -3,6 +3,7 @@ export { default as ButtonFix } from './button/button-fix.js';
 export { default as Input } from './input/index.js';
 export { default as TextArea } from './textarea/index.js';
 export { default as Checkbox } from './checkbox/index.js';
+export { default as Chip } from './chip/index.js';
 export { default as RadioGroup } from './radio-group/index.js';
 export { default as Radio } from './radio/index.js';
 export { default as Inform } from './inform/index.js';
