@@ -22,3 +22,4 @@ export { default as Paging } from './paging';
 export { default as Select } from './select';
 export { default as Menu } from './menu';
 export { default as Label } from './label';
+export { default as Image } from './image';

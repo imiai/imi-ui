@@ -22,4 +22,5 @@ export { default as Paging } from './paging/index.js';
 export { default as Select } from './select/index.js';
 export { default as Menu } from './menu/index.js';
 export { default as Label } from './label/index.js';
+export { default as Image } from './image/index.js';
 //# sourceMappingURL=index.js.map
