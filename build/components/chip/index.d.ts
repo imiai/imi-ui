@@ -7,6 +7,7 @@ interface IChip extends React.HTMLProps<HTMLButtonElement> {
     onClose?: Function;
     iconLeft?: React.ReactNode;
     type?: "button" | "submit" | "reset";
+    textClassName?: string;
 }
 declare const Chip: (props: IChip) => JSX.Element;
 export default Chip;

@@ -9,16 +9,17 @@ interface IChip extends React.HTMLProps<HTMLButtonElement> {
     onClose?: Function;
     iconLeft?: React.ReactNode;
     type?: "button" | "submit" | "reset";
+    textClassName?: string;
 }
 
 const Chip = (props: IChip) => {
-    const { size = 32, content, isSelected = false, onClose, iconLeft, className, ...rest } = props;
+    const { size = 32, content, isSelected = false, onClose, iconLeft, className, textClassName = 't-body-regular-small', ...rest } = props;
 
     if (onClose) {
         return (
             <div className={`imiui-chip size_${size} ${isSelected ? 'selected' : 'unselected'} ${className}`}>
                 {iconLeft ? <div className="left-icon">{iconLeft}</div> : <></>}
-                <p className={'t-body-regular-small'}>{content}</p>
+                <p className={textClassName}>{content}</p>
                 {onClose &&
                     <button className="close-icon">
                         <CloseIcon width={16} height={16} fill={`${isSelected ? 'var(--imiui-primary-blue)' : 'var(--imiui-primary-dark)'}`} />
@@ -30,7 +31,7 @@ const Chip = (props: IChip) => {
     return (
         <button style={{cursor: 'pointer'}} className={`imiui-chip size_${size} ${isSelected ? 'selected' : 'unselected'} ${className}`} {...rest}>
             {iconLeft ? <div className="left-icon">{iconLeft}</div> : <></>}
-            <p className={'t-body-regular-small'}>{content}</p>
+            <p className={textClassName}>{content}</p>
         </button>
     )
 }
