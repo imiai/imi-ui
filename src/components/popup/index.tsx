@@ -27,7 +27,7 @@ interface IPopupHeader {
 export const Header = (props: IPopupHeader) => {
     const { title, onClose } = props;
     return (
-        <div className='header'>
+        <div className='imi-popup-header'>
             <span className='t-heading-bold-small'>{title}</span>
             <button onClick={onClose}><CloseIcon width={24} height={24} fill='var(--imiui-primary-dark)' /></button>
         </div>
