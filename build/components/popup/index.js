@@ -7,6 +7,13 @@ import CloseT2Icon from '../../icons/components/CloseT2Icon.js';
 import ReactDOM from 'react-dom';
 import './styles.scss.js';
 
+var Header = function (props) {
+    var title = props.title, onClose = props.onClose;
+    return (React.createElement("div", { className: 'header' },
+        React.createElement("span", { className: 't-heading-bold-small' }, title),
+        React.createElement("button", { onClick: onClose },
+            React.createElement(CloseIcon, { width: 24, height: 24, fill: 'var(--imiui-primary-dark)' }))));
+};
 var PopupJsx = function (props) {
     var _a = props.open, open = _a === void 0 ? false : _a, _b = props.clickOutsideToClose, clickOutsideToClose = _b === void 0 ? true : _b, _c = props.onClose, onClose = _c === void 0 ? function () { } : _c, title = props.title, subTitle = props.subTitle, image = props.image, imageSize = props.imageSize, mainButton = props.mainButton, _d = props.onMainButtonClick, onMainButtonClick = _d === void 0 ? function () { } : _d, subButton = props.subButton, _e = props.onSubButtonClick, onSubButtonClick = _e === void 0 ? function () { } : _e, children = props.children, className = props.className, rest = __rest(props, ["open", "clickOutsideToClose", "onClose", "title", "subTitle", "image", "imageSize", "mainButton", "onMainButtonClick", "subButton", "onSubButtonClick", "children", "className"]);
     var _f = useState(open), openPopup = _f[0], setOpenPopup = _f[1];
@@ -47,5 +54,5 @@ var Popup = function (props) {
     return ReactDOM.createPortal(React.createElement(PopupJsx, __assign({}, props)), document.querySelector('body'));
 };
 
-export { Popup as default };
+export { Header, Popup as default };
 //# sourceMappingURL=index.js.map

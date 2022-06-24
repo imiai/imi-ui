@@ -19,6 +19,21 @@ interface IPopupProps extends React.HTMLAttributes<HTMLDivElement> {
     clickOutsideToClose?: Boolean;
 }
 
+interface IPopupHeader {
+    title: string;
+    onClose: React.MouseEventHandler;
+}
+
+export const Header = (props: IPopupHeader) => {
+    const { title, onClose } = props;
+    return (
+        <div className='header'>
+            <span className='t-heading-bold-small'>{title}</span>
+            <button onClick={onClose}><CloseIcon width={24} height={24} fill='var(--imiui-primary-dark)' /></button>
+        </div>
+    )
+}
+
 const PopupJsx = (props: IPopupProps) => {
     const { open = false, clickOutsideToClose = true, onClose = () => {}, title, subTitle, image, imageSize, mainButton, onMainButtonClick = () => {}, subButton, onSubButtonClick = () => {}, children, className, ...rest } = props;
     const [openPopup, setOpenPopup] = useState<Boolean>(open);
