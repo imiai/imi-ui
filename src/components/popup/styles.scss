@@ -10,6 +10,7 @@
     width: 100vw;
     height: 100vh;
     padding: 32px;
+    z-index: 1300;
     .close {
         @extend %button-default;
 
