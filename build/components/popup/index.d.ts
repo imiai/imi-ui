@@ -19,6 +19,7 @@ interface IPopupHeader {
 }
 interface IPopupBody {
     children: React.ReactNode;
+    className?: string;
 }
 export declare const PopupHeader: (props: IPopupHeader) => JSX.Element;
 export declare const PopupBody: (props: IPopupBody) => JSX.Element;

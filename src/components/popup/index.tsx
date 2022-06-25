@@ -26,6 +26,7 @@ interface IPopupHeader {
 
 interface IPopupBody {
     children: React.ReactNode;
+    className?: string;
 }
 
 export const PopupHeader = (props: IPopupHeader) => {
@@ -39,9 +40,9 @@ export const PopupHeader = (props: IPopupHeader) => {
 }
 
 export const PopupBody = (props: IPopupBody) => {
-    const { children } = props;
+    const { children, className } = props;
     return (
-        <div className='imi-popup-body'>
+        <div className={`imi-popup-body${className ? ` ${className}` : ''}`}>
             {children}
         </div>
     )

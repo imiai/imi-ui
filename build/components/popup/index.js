@@ -15,8 +15,8 @@ var PopupHeader = function (props) {
             React.createElement(CloseIcon, { width: 24, height: 24, fill: 'var(--imiui-primary-dark)' }))));
 };
 var PopupBody = function (props) {
-    var children = props.children;
-    return (React.createElement("div", { className: 'imi-popup-body' }, children));
+    var children = props.children, className = props.className;
+    return (React.createElement("div", { className: "imi-popup-body".concat(className ? " ".concat(className) : '') }, children));
 };
 var PopupJsx = function (props) {
     var _a = props.open, open = _a === void 0 ? false : _a, _b = props.clickOutsideToClose, clickOutsideToClose = _b === void 0 ? true : _b, _c = props.onClose, onClose = _c === void 0 ? function () { } : _c, title = props.title, subTitle = props.subTitle, image = props.image, imageSize = props.imageSize, mainButton = props.mainButton, _d = props.onMainButtonClick, onMainButtonClick = _d === void 0 ? function () { } : _d, subButton = props.subButton, _e = props.onSubButtonClick, onSubButtonClick = _e === void 0 ? function () { } : _e, children = props.children, className = props.className, rest = __rest(props, ["open", "clickOutsideToClose", "onClose", "title", "subTitle", "image", "imageSize", "mainButton", "onMainButtonClick", "subButton", "onSubButtonClick", "children", "className"]);
