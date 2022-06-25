@@ -17,6 +17,10 @@ interface IPopupHeader {
     title: string;
     onClose: React.MouseEventHandler;
 }
-export declare const Header: (props: IPopupHeader) => JSX.Element;
+interface IPopupBody {
+    children: React.ReactNode;
+}
+export declare const PopupHeader: (props: IPopupHeader) => JSX.Element;
+export declare const PopupBody: (props: IPopupBody) => JSX.Element;
 declare const Popup: (props: IPopupProps) => React.ReactPortal;
 export default Popup;

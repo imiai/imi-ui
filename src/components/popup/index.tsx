@@ -24,7 +24,11 @@ interface IPopupHeader {
     onClose: React.MouseEventHandler;
 }
 
-export const Header = (props: IPopupHeader) => {
+interface IPopupBody {
+    children: React.ReactNode;
+}
+
+export const PopupHeader = (props: IPopupHeader) => {
     const { title, onClose } = props;
     return (
         <div className='imi-popup-header'>
@@ -33,6 +37,16 @@ export const Header = (props: IPopupHeader) => {
         </div>
     )
 }
+
+export const PopupBody = (props: IPopupBody) => {
+    const { children } = props;
+    return (
+        <div className='imi-popup-body'>
+            {children}
+        </div>
+    )
+}
+
 
 const PopupJsx = (props: IPopupProps) => {
     const { open = false, clickOutsideToClose = true, onClose = () => {}, title, subTitle, image, imageSize, mainButton, onMainButtonClick = () => {}, subButton, onSubButtonClick = () => {}, children, className, ...rest } = props;

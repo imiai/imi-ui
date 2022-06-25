@@ -153,3 +153,8 @@
     width: 100%;
     border-bottom: 1px solid var(--imiui-gray-50);
 }
+
+.imi-popup-body {
+    height: calc(80vh - 60px);
+    overflow: scroll;
+}
