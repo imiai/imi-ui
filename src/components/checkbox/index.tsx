@@ -13,7 +13,7 @@ const Checkbox = (props: ICheckboxProps) => {
         <label className="imiui-checkbox">
             <input {...rest} type="checkbox" />
             <span className="t-label-regular-tiny">{label}</span>
-            <span className="checkmark ripple">
+            <span className="checkmark">
                 <CheckboxSquareCheckedIcon fill="var(--imiui-primary-blue)" className="svg-checked" />
                 <CheckboxSquareUncheckedIcon className="svg-unchecked" />
             </span>

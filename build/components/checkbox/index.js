@@ -9,7 +9,7 @@ var Checkbox = function (props) {
     return (React.createElement("label", { className: "imiui-checkbox" },
         React.createElement("input", __assign({}, rest, { type: "checkbox" })),
         React.createElement("span", { className: "t-label-regular-tiny" }, label),
-        React.createElement("span", { className: "checkmark ripple" },
+        React.createElement("span", { className: "checkmark" },
             React.createElement(CheckboxSquareCheckedIcon, { fill: "var(--imiui-primary-blue)", className: "svg-checked" }),
             React.createElement(CheckboxSquareUncheckedIcon, { className: "svg-unchecked" }))));
 };
