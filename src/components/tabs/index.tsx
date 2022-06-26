@@ -68,7 +68,7 @@ const Tabs = (props: ITabsProps) => {
 export const TabItem = (props: ITabItem) => {
     const { title, active, onClick } = props;
     return (
-        <button className={`imiui-tabs__item${active ? ' active' : 'inactive'}`} onClick={onClick}>
+        <button className={`imiui-tabs__item${active ? ' active' : ' inactive'}`} onClick={onClick}>
             <span className='t-label-bold-small'>{title}</span>
         </button>
     )

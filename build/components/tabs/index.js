@@ -40,7 +40,7 @@ var Tabs = function (props) {
 };
 var TabItem = function (props) {
     var title = props.title, active = props.active, onClick = props.onClick;
-    return (React.createElement("button", { className: "imiui-tabs__item".concat(active ? ' active' : 'inactive'), onClick: onClick },
+    return (React.createElement("button", { className: "imiui-tabs__item".concat(active ? ' active' : ' inactive'), onClick: onClick },
         React.createElement("span", { className: 't-label-bold-small' }, title)));
 };
 
