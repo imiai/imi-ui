@@ -18,7 +18,7 @@ var Tabs = function (props) {
             itemWidths.push(elWidth);
         }
         setTabItemWidths(itemWidths);
-    }, []);
+    }, [headers.length]);
     useEffect(function () {
         setActiveLineWidth(tabItemWidths[currentTabIndex]);
         var left = 0;
@@ -27,7 +27,7 @@ var Tabs = function (props) {
             left = left + gap + tabItemWidths[i];
         }
         setActiveLineLeft(left);
-    }, [currentTabIndex, tabItemWidths]);
+    }, [isMobile, currentTabIndex, tabItemWidths]);
     return (React.createElement("div", { className: "imiui-tabs ".concat(className) },
         React.createElement("div", { className: 'imiui-tabs__header' },
             headers.map(function (header, index) {
@@ -38,6 +38,11 @@ var Tabs = function (props) {
             React.createElement("div", { style: { left: "".concat(activeLineLeft, "px"), width: activeLineWidth }, className: "active-line" })),
         children && Children.count(children) > 0 ? children[currentTabIndex] : React.createElement(React.Fragment, null)));
 };
+var TabItem = function (props) {
+    var title = props.title, active = props.active, onClick = props.onClick;
+    return (React.createElement("button", { className: "imiui-tabs__item".concat(active ? ' active' : 'inactive'), onClick: onClick },
+        React.createElement("span", { className: 't-label-bold-small' }, title)));
+};
 
-export { Tabs as default };
+export { TabItem, Tabs as default };
 //# sourceMappingURL=index.js.map

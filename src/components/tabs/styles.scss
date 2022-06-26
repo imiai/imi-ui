@@ -38,6 +38,17 @@
             transition: left linear 200ms, width linear 200ms;
         }
     }
+    &__item {
+        padding: 14px 16px;
+        &.active {
+            color: var(--imiui-primary-blue);
+            border-bottom: 2px solid var(--imiui-primary-blue);
+        }
+        &.inactive {
+            color: var(--imiui-gray-300);
+            border-bottom: 2px solid var(--imiui-primary-white);
+        }
+    }
 }
 
 

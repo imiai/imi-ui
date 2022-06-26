@@ -13,6 +13,12 @@ interface ITabsProps {
     children: React.ReactNode;
 }
 
+interface ITabItem {
+    title: string;
+    onClick?: React.MouseEventHandler;
+    active: boolean;
+}
+
 const Tabs = (props: ITabsProps) => {
     const { headers = [], className = '', children } = props;
     const [currentTabIndex, setCurrentTabIndex] = useState(0);
@@ -29,7 +35,7 @@ const Tabs = (props: ITabsProps) => {
             itemWidths.push(elWidth);
         }
         setTabItemWidths(itemWidths);
-    }, [])
+    }, [headers.length])
 
     useEffect(() => {
         setActiveLineWidth(tabItemWidths[currentTabIndex]);
@@ -39,7 +45,7 @@ const Tabs = (props: ITabsProps) => {
             left = left + gap + tabItemWidths[i]
         }
         setActiveLineLeft(left)
-    }, [currentTabIndex, tabItemWidths])
+    }, [isMobile, currentTabIndex, tabItemWidths])
 
     return (
         <div className={`imiui-tabs ${className}`}>
@@ -56,6 +62,15 @@ const Tabs = (props: ITabsProps) => {
             </div>
             {children && Children.count(children) > 0 ? children[currentTabIndex] : <></>}
         </div>
+    )
+}
+
+export const TabItem = (props: ITabItem) => {
+    const { title, active, onClick } = props;
+    return (
+        <button className={`imiui-tabs__item${active ? ' active' : 'inactive'}`} onClick={onClick}>
+            <span className='t-label-bold-small'>{title}</span>
+        </button>
     )
 }
 
