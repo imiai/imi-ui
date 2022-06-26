@@ -39,7 +39,8 @@
         }
     }
     &__item {
-        padding: 14px 16px;
+        height: 48px;
+        padding: 0 16px;
         &.active {
             color: var(--imiui-primary-blue);
             border-bottom: 2px solid var(--imiui-primary-blue);
