@@ -1,12 +1,25 @@
 import { __rest, __assign } from '../../node_modules/tslib/tslib.es6.js';
-import React, { Fragment } from 'react';
+import React, { useRef, useState, useLayoutEffect, Fragment } from 'react';
 import CloseT2Icon from '../../icons/components/CloseT2Icon.js';
 import './styles.scss.js';
 import Card from '../card/index.js';
 
 var Input = function (props) {
+    var ref = useRef(null);
+    var optionsRef = useRef(null);
     var _a = props.options, options = _a === void 0 ? [] : _a, _b = props.placeholder, placeholder = _b === void 0 ? '' : _b, className = props.className, _c = props.withLabel, withLabel = _c === void 0 ? false : _c, _d = props.hint, hint = _d === void 0 ? '' : _d, _e = props.error, error = _e === void 0 ? '' : _e, _f = props.isError, isError = _f === void 0 ? false : _f, onClear = props.onClear, endIcon = props.endIcon, onEndIconClick = props.onEndIconClick, rest = __rest(props, ["options", "placeholder", "className", "withLabel", "hint", "error", "isError", "onClear", "endIcon", "onEndIconClick"]);
-    var _g = React.useState(false), focused = _g[0], setFocused = _g[1];
+    var _g = useState(false), focused = _g[0], setFocused = _g[1];
+    var _h = useState({ top: 'calc(100% + 1px)', bottom: 'auto' }), optionsPosition = _h[0], setOptionsPosition = _h[1];
+    useLayoutEffect(function () {
+        var el = ref.current;
+        var opEl = optionsRef.current;
+        console.log(el.offsetParent.clientHeight, el.offsetTop, opEl.offsetHeight);
+        if (el && opEl) {
+            if (el.offsetParent.clientHeight - el.offsetTop < opEl.offsetHeight) {
+                setOptionsPosition({ top: 'auto', bottom: 'calc(100% + 1px)' });
+            }
+        }
+    }, [ref, optionsRef]);
     var onFocus = function () { return setFocused(true); };
     var onBlur = function () {
         var timer = setTimeout(function () {
@@ -35,7 +48,7 @@ var Input = function (props) {
         }
     };
     return (React.createElement(Fragment, null,
-        React.createElement("div", { className: "imiui-input".concat(isError ? ' error' : '').concat(rest.disabled ? ' disabled' : '').concat(withLabel ? ' label' : '').concat(className ? " ".concat(className) : '') },
+        React.createElement("div", { ref: ref, className: "imiui-input".concat(isError ? ' error' : '').concat(rest.disabled ? ' disabled' : '').concat(withLabel ? ' label' : '').concat(className ? " ".concat(className) : '') },
             React.createElement("input", __assign({}, rest, { onFocus: onFocus, onBlur: onBlur, onChange: function (event) { return onInputChange(event, null); }, className: "t-label-regular-tiny", placeholder: placeholder, style: { width: "calc(100% - ".concat(getInputWidth(), "px") } })),
             withLabel && React.createElement("label", null, placeholder),
             React.createElement("div", { className: "icon-container" },
@@ -45,7 +58,7 @@ var Input = function (props) {
                 onClear && endIcon && React.createElement("hr", null),
                 endIcon &&
                     React.createElement("button", { className: "icon", onClick: onEndIconClick ? function () { return onEndIconClick(); } : function () { } }, endIcon)),
-            focused && React.createElement(Card, { className: "autocomplete-options", variant: 'dialogue' }, options.map(function (option, index) {
+            React.createElement(Card, { ref: optionsRef, className: "autocomplete-options", variant: 'dialogue', style: __assign(__assign({}, optionsPosition), { visibility: focused ? 'visible' : 'hidden' }) }, options.map(function (option, index) {
                 return (React.createElement("button", { key: index, onClick: function (event) { return onInputChange(event, option); }, className: 't-label-regular-tiny' },
                     React.createElement("div", null, option.label)));
             }))),

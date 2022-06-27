@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useEffect, useLayoutEffect, useRef, useState } from "react";
 import { useClickAnyWhere, useOnClickOutside } from "../../hooks";
 import { ArrowDownIcon, ArrowDownSpecialIcon } from "../../icons";
 import Card from "../card";
@@ -13,12 +13,25 @@ interface ISelectItem {
 interface ISelect extends React.HTMLProps<HTMLInputElement> {
     options?: Array<ISelectItem>;
     className?: string;
+    withLabel?: boolean;
 }
 
 const Select = (props: ISelect) => {
-    const {options, className, ...rest} = props;
+    const {options, className, withLabel, ...rest} = props;
     const [showOptions, setShowOptions] = useState(false);
     const ref = useRef(null)
+    const optionsRef = useRef(null);
+    const [optionsPosition, setOptionsPosition] = useState({top: 'calc(100% + 1px)', bottom: 'auto'})
+
+    useLayoutEffect(() => {
+        let el = ref.current;
+        let opEl = optionsRef.current
+        if (el && opEl) {
+            if (el.offsetParent.clientHeight - el.offsetTop < opEl.offsetHeight) {
+                setOptionsPosition({top: 'auto', bottom: 'calc(100% + 1px)'})
+            }
+        }
+    }, [ref, optionsRef])
 
     useOnClickOutside(ref, () => setShowOptions(false))
     
@@ -41,10 +54,10 @@ const Select = (props: ISelect) => {
                 {...rest}
                 disabled
                 readOnly
-                withLabel={true}
+                withLabel={withLabel}
                 endIcon={<ArrowDownIcon fill="var(--imiui-gray-200)" className={`arrow-icon${showOptions ? ' rotate' : ''}`}/>}
             />
-            {showOptions && <Card className="options" variant='dialogue'>
+            <Card ref={optionsRef} id='imiui-select-options-id' style={{...optionsPosition, visibility: showOptions ? 'visible' : 'hidden'}} className="options" variant='dialogue'>
                 {options.map((option, index) => {
                     return (
                         <button key={index} onClick={(event) => onInputChange(event, option)} className={'t-label-regular-tiny'}>
@@ -52,7 +65,7 @@ const Select = (props: ISelect) => {
                         </button>
                     )
                 })}
-            </Card>}
+            </Card>
         </div>
     )
 }

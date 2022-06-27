@@ -32,13 +32,13 @@
         background-color: var(--imiui-primary-white);
         position: absolute;
         left: 0;
-        top: calc(100% + 1px);
         display: flex;
         flex-direction: column;
         width: 100%;
-        z-index: 1;
+        z-index: 1200;
 
         max-height: 330px;
+        overflow: scroll;
         border-radius: 8px;
 
         button {

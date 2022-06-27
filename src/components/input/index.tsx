@@ -1,5 +1,5 @@
 import { CloseT2Icon } from "../../icons";
-import React, { Fragment } from "react";
+import React, { Fragment, useLayoutEffect, useRef, useState } from "react";
 import './styles.scss';
 import Card from "../card";
 
@@ -20,8 +20,24 @@ interface IInputProps extends React.HTMLProps<HTMLInputElement> {
 }
 
 const Input = (props: IInputProps) => {
+    const ref = useRef(null);
+    const optionsRef = useRef(null);
+
     const { options = [], placeholder = '', className, withLabel = false, hint = '', error = '', isError = false, onClear, endIcon, onEndIconClick, ...rest } = props;
-    const [focused, setFocused] = React.useState(false)
+    const [focused, setFocused] = useState(false)
+    const [optionsPosition, setOptionsPosition] = useState({top: 'calc(100% + 1px)', bottom: 'auto'})
+
+    useLayoutEffect(() => {
+        let el = ref.current;
+        let opEl = optionsRef.current
+        console.log(el.offsetParent.clientHeight, el.offsetTop, opEl.offsetHeight)
+        if (el && opEl) {
+            if (el.offsetParent.clientHeight - el.offsetTop < opEl.offsetHeight) {
+                setOptionsPosition({top: 'auto', bottom: 'calc(100% + 1px)'})
+            }
+        }
+    }, [ref, optionsRef])
+
 
     const onFocus = () => setFocused(true)
     const onBlur = () => {
@@ -54,7 +70,7 @@ const Input = (props: IInputProps) => {
 
     return (
         <Fragment>
-            <div className={`imiui-input${isError ? ' error' : ''}${rest.disabled ? ' disabled' : ''}${withLabel ? ' label' : ''}${className ? ` ${className}` : ''}`}>
+            <div ref={ref} className={`imiui-input${isError ? ' error' : ''}${rest.disabled ? ' disabled' : ''}${withLabel ? ' label' : ''}${className ? ` ${className}` : ''}`}>
                 <input {...rest} onFocus={onFocus} onBlur={onBlur} onChange={(event) => onInputChange(event, null) } className={`t-label-regular-tiny`} placeholder={placeholder} style={{ width: `calc(100% - ${getInputWidth()}px` }} />
                 {withLabel && <label>{placeholder}</label>}
                 <div className="icon-container">
@@ -69,7 +85,7 @@ const Input = (props: IInputProps) => {
                         </button>
                     }
                 </div>
-                {focused && <Card className="autocomplete-options" variant='dialogue'>
+                <Card ref={optionsRef} className="autocomplete-options" variant='dialogue' style={{...optionsPosition, visibility: focused ? 'visible' : 'hidden'}} >
                     {options.map((option, index) => {
                         return (
                             <button key={index} onClick={(event) => onInputChange(event, option)} className={'t-label-regular-tiny'}>
@@ -77,7 +93,7 @@ const Input = (props: IInputProps) => {
                             </button>
                         )
                     })}
-                </Card>}
+                </Card>
             </div>
             {!error && hint && <span className="imiui-input-note hint t-label-regular-supertiny">{hint}</span>}
             {error && <span className="imiui-input-note error t-label-regular-supertiny">{error}</span>}

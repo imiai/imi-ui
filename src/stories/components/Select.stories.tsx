@@ -26,7 +26,11 @@ const Template: ComponentStory<typeof Select> = (args) => {
     }
 
     return (
+        <div>
         <Select {...args} value={value} onChange={onChange}/>
+        <Select {...args} value={value} onChange={onChange}/>
+        <Select {...args} value={value} onChange={onChange}/>
+        </div>
     )
 }
 export const Base = Template.bind({});
