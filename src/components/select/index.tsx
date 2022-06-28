@@ -28,7 +28,7 @@ const Select = (props: ISelect) => {
         let el = ref.current;
         let opEl = optionsRef.current
         if (el && opEl) {
-            if (el.offsetParent.clientHeight - el.offsetTop < opEl.offsetHeight) {
+            if (el.offsetParent.scrollHeight - el.offsetTop < opEl.offsetHeight) {
                 setOptionsPosition({top: 'auto', bottom: 'calc(100% + 1px)'})
             }
         }

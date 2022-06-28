@@ -22,7 +22,6 @@ interface IInputProps extends React.HTMLProps<HTMLInputElement> {
 
 const Input = (props: IInputProps) => {
     const ref = useRef(null);
-    const optionsRef = useRef(null);
 
     const { options = [], placeholder = '', className, inputClassName = '', withLabel = false, hint = '', error = '', isError = false, onClear, endIcon, onEndIconClick, ...rest } = props;
     const [focused, setFocused] = useState(false)
@@ -30,14 +29,14 @@ const Input = (props: IInputProps) => {
 
     useLayoutEffect(() => {
         let el = ref.current;
-        let opEl = optionsRef.current
-        console.log(el.offsetParent.clientHeight, el.offsetTop, opEl.offsetHeight)
-        if (el && opEl) {
-            if (el.offsetParent.clientHeight - el.offsetTop < opEl.offsetHeight) {
+        if (el) {
+            let _height = options.length * 36;
+            _height = _height > 330 ? 330 : _height;
+            if (el.offsetParent.scrollHeight - el.offsetTop < _height) {
                 setOptionsPosition({top: 'auto', bottom: 'calc(100% + 1px)'})
             }
         }
-    }, [ref, optionsRef])
+    }, [ref])
 
 
     const onFocus = () => setFocused(true)
@@ -86,7 +85,7 @@ const Input = (props: IInputProps) => {
                         </button>
                     }
                 </div>
-                <Card ref={optionsRef} className="autocomplete-options" variant='dialogue' style={{...optionsPosition, visibility: focused ? 'visible' : 'hidden'}} >
+                {focused && <Card className="autocomplete-options" variant='dialogue' style={{...optionsPosition}} >
                     {options.map((option, index) => {
                         return (
                             <button key={index} onClick={(event) => onInputChange(event, option)} className={'t-label-regular-tiny'}>
@@ -94,7 +93,7 @@ const Input = (props: IInputProps) => {
                             </button>
                         )
                     })}
-                </Card>
+                </Card>}
             </div>
             {!error && hint && <span className="imiui-input-note hint t-label-regular-supertiny">{hint}</span>}
             {error && <span className="imiui-input-note error t-label-regular-supertiny">{error}</span>}
