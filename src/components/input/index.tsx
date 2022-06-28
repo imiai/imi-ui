@@ -17,13 +17,14 @@ interface IInputProps extends React.HTMLProps<HTMLInputElement> {
     hint?: string;
     error?: string;
     options?: Array<ISelectItem>;
+    inputClassName?: string;
 }
 
 const Input = (props: IInputProps) => {
     const ref = useRef(null);
     const optionsRef = useRef(null);
 
-    const { options = [], placeholder = '', className, withLabel = false, hint = '', error = '', isError = false, onClear, endIcon, onEndIconClick, ...rest } = props;
+    const { options = [], placeholder = '', className, inputClassName = '', withLabel = false, hint = '', error = '', isError = false, onClear, endIcon, onEndIconClick, ...rest } = props;
     const [focused, setFocused] = useState(false)
     const [optionsPosition, setOptionsPosition] = useState({top: 'calc(100% + 1px)', bottom: 'auto'})
 
@@ -71,7 +72,7 @@ const Input = (props: IInputProps) => {
     return (
         <Fragment>
             <div ref={ref} className={`imiui-input${isError ? ' error' : ''}${rest.disabled ? ' disabled' : ''}${withLabel ? ' label' : ''}${className ? ` ${className}` : ''}`}>
-                <input {...rest} onFocus={onFocus} onBlur={onBlur} onChange={(event) => onInputChange(event, null) } className={`t-label-regular-tiny`} placeholder={placeholder} style={{ width: `calc(100% - ${getInputWidth()}px` }} />
+                <input {...rest} onFocus={onFocus} onBlur={onBlur} onChange={(event) => onInputChange(event, null) } className={`t-label-regular-tiny ${inputClassName}`} placeholder={placeholder} style={{ width: `calc(100% - ${getInputWidth()}px` }} />
                 {withLabel && <label>{placeholder}</label>}
                 <div className="icon-container">
                     {onClear && !rest.disabled &&

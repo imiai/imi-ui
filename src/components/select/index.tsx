@@ -53,7 +53,7 @@ const Select = (props: ISelect) => {
         <div className={`imiui-select${className ? ` ${className}` : ''}`} ref={ref} onClick={() => setShowOptions(!showOptions)}>
             <Input 
                 {...rest}
-                className={inputClassName}
+                inputClassName={inputClassName}
                 disabled
                 readOnly
                 withLabel={withLabel}
