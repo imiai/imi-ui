@@ -7,6 +7,7 @@ interface ISelectItem {
 interface ISelect extends React.HTMLProps<HTMLInputElement> {
     options?: Array<ISelectItem>;
     className?: string;
+    inputClassName?: string;
     withLabel?: boolean;
 }
 declare const Select: (props: ISelect) => JSX.Element;

@@ -13,11 +13,12 @@ interface ISelectItem {
 interface ISelect extends React.HTMLProps<HTMLInputElement> {
     options?: Array<ISelectItem>;
     className?: string;
+    inputClassName?: string;
     withLabel?: boolean;
 }
 
 const Select = (props: ISelect) => {
-    const {options, className, withLabel, ...rest} = props;
+    const {options, className, inputClassName = '', withLabel, ...rest} = props;
     const [showOptions, setShowOptions] = useState(false);
     const ref = useRef(null)
     const optionsRef = useRef(null);
@@ -52,6 +53,7 @@ const Select = (props: ISelect) => {
         <div className={`imiui-select${className ? ` ${className}` : ''}`} ref={ref} onClick={() => setShowOptions(!showOptions)}>
             <Input 
                 {...rest}
+                className={inputClassName}
                 disabled
                 readOnly
                 withLabel={withLabel}
