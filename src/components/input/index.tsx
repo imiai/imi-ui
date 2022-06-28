@@ -72,7 +72,7 @@ const Input = (props: IInputProps) => {
     return (
         <Fragment>
             <div ref={ref} className={`imiui-input${isError ? ' error' : ''}${rest.disabled ? ' disabled' : ''}${withLabel ? ' label' : ''}${className ? ` ${className}` : ''}`}>
-                <input {...rest} onFocus={onFocus} onBlur={onBlur} onChange={(event) => onInputChange(event, null) } className={`t-label-regular-tiny ${inputClassName}`} placeholder={placeholder} style={{ width: `calc(100% - ${getInputWidth()}px` }} />
+                <input {...rest} onFocus={onFocus} onBlur={onBlur} onChange={(event) => onInputChange(event, null) } className={`t-label-regular-tiny ${inputClassName}`} placeholder={placeholder} style={{ width: `calc(100% - ${getInputWidth()}px`, ...rest.style }} />
                 {withLabel && <label>{placeholder}</label>}
                 <div className="icon-container">
                     {onClear && !rest.disabled &&
