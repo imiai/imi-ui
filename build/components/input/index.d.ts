@@ -13,6 +13,7 @@ interface IInputProps extends React.HTMLProps<HTMLInputElement> {
     hint?: string;
     error?: string;
     options?: Array<ISelectItem>;
+    inputClassName?: string;
 }
 declare const Input: (props: IInputProps) => JSX.Element;
 export default Input;

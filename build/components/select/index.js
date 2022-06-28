@@ -36,7 +36,7 @@ var Select = function (props) {
         }, 50);
     };
     return (React.createElement("div", { className: "imiui-select".concat(className ? " ".concat(className) : ''), ref: ref, onClick: function () { return setShowOptions(!showOptions); } },
-        React.createElement(Input, __assign({}, rest, { className: inputClassName, disabled: true, readOnly: true, withLabel: withLabel, endIcon: React.createElement(ArrowDownIcon, { fill: "var(--imiui-gray-200)", className: "arrow-icon".concat(showOptions ? ' rotate' : '') }) })),
+        React.createElement(Input, __assign({}, rest, { inputClassName: inputClassName, disabled: true, readOnly: true, withLabel: withLabel, endIcon: React.createElement(ArrowDownIcon, { fill: "var(--imiui-gray-200)", className: "arrow-icon".concat(showOptions ? ' rotate' : '') }) })),
         React.createElement(Card, { ref: optionsRef, id: 'imiui-select-options-id', style: __assign(__assign({}, optionsPosition), { visibility: showOptions ? 'visible' : 'hidden' }), className: "options", variant: 'dialogue' }, options.map(function (option, index) {
             return (React.createElement("button", { key: index, onClick: function (event) { return onInputChange(event, option); }, className: 't-label-regular-tiny' },
                 React.createElement("div", null, option.label)));

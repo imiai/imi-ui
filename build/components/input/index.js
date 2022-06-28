@@ -7,9 +7,9 @@ import Card from '../card/index.js';
 var Input = function (props) {
     var ref = useRef(null);
     var optionsRef = useRef(null);
-    var _a = props.options, options = _a === void 0 ? [] : _a, _b = props.placeholder, placeholder = _b === void 0 ? '' : _b, className = props.className, _c = props.withLabel, withLabel = _c === void 0 ? false : _c, _d = props.hint, hint = _d === void 0 ? '' : _d, _e = props.error, error = _e === void 0 ? '' : _e, _f = props.isError, isError = _f === void 0 ? false : _f, onClear = props.onClear, endIcon = props.endIcon, onEndIconClick = props.onEndIconClick, rest = __rest(props, ["options", "placeholder", "className", "withLabel", "hint", "error", "isError", "onClear", "endIcon", "onEndIconClick"]);
-    var _g = useState(false), focused = _g[0], setFocused = _g[1];
-    var _h = useState({ top: 'calc(100% + 1px)', bottom: 'auto' }), optionsPosition = _h[0], setOptionsPosition = _h[1];
+    var _a = props.options, options = _a === void 0 ? [] : _a, _b = props.placeholder, placeholder = _b === void 0 ? '' : _b, className = props.className, _c = props.inputClassName, inputClassName = _c === void 0 ? '' : _c, _d = props.withLabel, withLabel = _d === void 0 ? false : _d, _e = props.hint, hint = _e === void 0 ? '' : _e, _f = props.error, error = _f === void 0 ? '' : _f, _g = props.isError, isError = _g === void 0 ? false : _g, onClear = props.onClear, endIcon = props.endIcon, onEndIconClick = props.onEndIconClick, rest = __rest(props, ["options", "placeholder", "className", "inputClassName", "withLabel", "hint", "error", "isError", "onClear", "endIcon", "onEndIconClick"]);
+    var _h = useState(false), focused = _h[0], setFocused = _h[1];
+    var _j = useState({ top: 'calc(100% + 1px)', bottom: 'auto' }), optionsPosition = _j[0], setOptionsPosition = _j[1];
     useLayoutEffect(function () {
         var el = ref.current;
         var opEl = optionsRef.current;
@@ -49,7 +49,7 @@ var Input = function (props) {
     };
     return (React.createElement(Fragment, null,
         React.createElement("div", { ref: ref, className: "imiui-input".concat(isError ? ' error' : '').concat(rest.disabled ? ' disabled' : '').concat(withLabel ? ' label' : '').concat(className ? " ".concat(className) : '') },
-            React.createElement("input", __assign({}, rest, { onFocus: onFocus, onBlur: onBlur, onChange: function (event) { return onInputChange(event, null); }, className: "t-label-regular-tiny", placeholder: placeholder, style: { width: "calc(100% - ".concat(getInputWidth(), "px") } })),
+            React.createElement("input", __assign({}, rest, { onFocus: onFocus, onBlur: onBlur, onChange: function (event) { return onInputChange(event, null); }, className: "t-label-regular-tiny ".concat(inputClassName), placeholder: placeholder, style: { width: "calc(100% - ".concat(getInputWidth(), "px") } })),
             withLabel && React.createElement("label", null, placeholder),
             React.createElement("div", { className: "icon-container" },
                 onClear && !rest.disabled &&
