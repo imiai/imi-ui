@@ -26,11 +26,14 @@
     &.disabled {
         background: var(--imiui-gray-25);
         outline: 1px solid var(--imiui-gray-50);
-        label {
-            color: var(--imiui-gray-300) !important;
+        &.label {
+            input:not(:placeholder-shown) + label,
+            input:focus + label {
+                color: var(--imiui-gray-300);
+            }
         }
         input {
-            color: var(--imiui-gray-300) !important;
+            color: var(--imiui-gray-300);
         }
         svg {
             fill: var(--imiui-gray-200);
