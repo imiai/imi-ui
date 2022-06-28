@@ -14,13 +14,14 @@ var Select = function (props) {
     var _c = useState({ top: 'calc(100% + 1px)', bottom: 'auto' }), optionsPosition = _c[0], setOptionsPosition = _c[1];
     useLayoutEffect(function () {
         var el = ref.current;
-        var opEl = optionsRef.current;
-        if (el && opEl) {
-            if (el.offsetParent.clientHeight - el.offsetTop < opEl.offsetHeight) {
+        if (el) {
+            var _height = options.length * 36;
+            _height = _height > 330 ? 330 : _height;
+            if (el.offsetParent.scrollHeight - el.offsetTop < _height) {
                 setOptionsPosition({ top: 'auto', bottom: 'calc(100% + 1px)' });
             }
         }
-    }, [ref, optionsRef]);
+    }, [ref]);
     useOnClickOutside(ref, function () { return setShowOptions(false); });
     var onInputChange = function (event, option) {
         if (option) {
@@ -37,7 +38,7 @@ var Select = function (props) {
     };
     return (React.createElement("div", { className: "imiui-select".concat(className ? " ".concat(className) : ''), ref: ref, onClick: function () { return setShowOptions(!showOptions); } },
         React.createElement(Input, __assign({}, rest, { inputClassName: inputClassName, disabled: true, readOnly: true, withLabel: withLabel, endIcon: React.createElement(ArrowDownIcon, { fill: "var(--imiui-gray-200)", className: "arrow-icon".concat(showOptions ? ' rotate' : '') }) })),
-        React.createElement(Card, { ref: optionsRef, id: 'imiui-select-options-id', style: __assign(__assign({}, optionsPosition), { visibility: showOptions ? 'visible' : 'hidden' }), className: "options", variant: 'dialogue' }, options.map(function (option, index) {
+        showOptions && React.createElement(Card, { ref: optionsRef, id: 'imiui-select-options-id', style: __assign({}, optionsPosition), className: "options", variant: 'dialogue' }, options.map(function (option, index) {
             return (React.createElement("button", { key: index, onClick: function (event) { return onInputChange(event, option); }, className: 't-label-regular-tiny' },
                 React.createElement("div", null, option.label)));
         }))));

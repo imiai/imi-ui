@@ -1,6 +1,6 @@
 {
   "name": "imi-ui",
-  "version": "0.0.89-beta.5",
+  "version": "0.0.89-beta.6",
   "main": "build/index.js",
   "module": "build/index.esm.js",
   "files": [

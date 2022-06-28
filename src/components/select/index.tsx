@@ -26,13 +26,14 @@ const Select = (props: ISelect) => {
 
     useLayoutEffect(() => {
         let el = ref.current;
-        let opEl = optionsRef.current
-        if (el && opEl) {
-            if (el.offsetParent.scrollHeight - el.offsetTop < opEl.offsetHeight) {
+        if (el) {
+            let _height = options.length * 36;
+            _height = _height > 330 ? 330 : _height;
+            if (el.offsetParent.scrollHeight - el.offsetTop < _height) {
                 setOptionsPosition({top: 'auto', bottom: 'calc(100% + 1px)'})
             }
         }
-    }, [ref, optionsRef])
+    }, [ref])
 
     useOnClickOutside(ref, () => setShowOptions(false))
     
@@ -59,7 +60,7 @@ const Select = (props: ISelect) => {
                 withLabel={withLabel}
                 endIcon={<ArrowDownIcon fill="var(--imiui-gray-200)" className={`arrow-icon${showOptions ? ' rotate' : ''}`}/>}
             />
-            <Card ref={optionsRef} id='imiui-select-options-id' style={{...optionsPosition, visibility: showOptions ? 'visible' : 'hidden'}} className="options" variant='dialogue'>
+            {showOptions && <Card ref={optionsRef} id='imiui-select-options-id' style={{...optionsPosition}} className="options" variant='dialogue'>
                 {options.map((option, index) => {
                     return (
                         <button key={index} onClick={(event) => onInputChange(event, option)} className={'t-label-regular-tiny'}>
@@ -67,7 +68,7 @@ const Select = (props: ISelect) => {
                         </button>
                     )
                 })}
-            </Card>
+            </Card>}
         </div>
     )
 }

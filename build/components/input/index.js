@@ -6,20 +6,19 @@ import Card from '../card/index.js';
 
 var Input = function (props) {
     var ref = useRef(null);
-    var optionsRef = useRef(null);
     var _a = props.options, options = _a === void 0 ? [] : _a, _b = props.placeholder, placeholder = _b === void 0 ? '' : _b, className = props.className, _c = props.inputClassName, inputClassName = _c === void 0 ? '' : _c, _d = props.withLabel, withLabel = _d === void 0 ? false : _d, _e = props.hint, hint = _e === void 0 ? '' : _e, _f = props.error, error = _f === void 0 ? '' : _f, _g = props.isError, isError = _g === void 0 ? false : _g, onClear = props.onClear, endIcon = props.endIcon, onEndIconClick = props.onEndIconClick, rest = __rest(props, ["options", "placeholder", "className", "inputClassName", "withLabel", "hint", "error", "isError", "onClear", "endIcon", "onEndIconClick"]);
     var _h = useState(false), focused = _h[0], setFocused = _h[1];
     var _j = useState({ top: 'calc(100% + 1px)', bottom: 'auto' }), optionsPosition = _j[0], setOptionsPosition = _j[1];
     useLayoutEffect(function () {
         var el = ref.current;
-        var opEl = optionsRef.current;
-        console.log(el.offsetParent.clientHeight, el.offsetTop, opEl.offsetHeight);
-        if (el && opEl) {
-            if (el.offsetParent.clientHeight - el.offsetTop < opEl.offsetHeight) {
+        if (el) {
+            var _height = options.length * 36;
+            _height = _height > 330 ? 330 : _height;
+            if (el.offsetParent.scrollHeight - el.offsetTop < _height) {
                 setOptionsPosition({ top: 'auto', bottom: 'calc(100% + 1px)' });
             }
         }
-    }, [ref, optionsRef]);
+    }, [ref]);
     var onFocus = function () { return setFocused(true); };
     var onBlur = function () {
         var timer = setTimeout(function () {
@@ -58,7 +57,7 @@ var Input = function (props) {
                 onClear && endIcon && React.createElement("hr", null),
                 endIcon &&
                     React.createElement("button", { className: "icon", onClick: onEndIconClick ? function () { return onEndIconClick(); } : function () { } }, endIcon)),
-            React.createElement(Card, { ref: optionsRef, className: "autocomplete-options", variant: 'dialogue', style: __assign(__assign({}, optionsPosition), { visibility: focused ? 'visible' : 'hidden' }) }, options.map(function (option, index) {
+            focused && React.createElement(Card, { className: "autocomplete-options", variant: 'dialogue', style: __assign({}, optionsPosition) }, options.map(function (option, index) {
                 return (React.createElement("button", { key: index, onClick: function (event) { return onInputChange(event, option); }, className: 't-label-regular-tiny' },
                     React.createElement("div", null, option.label)));
             }))),
