@@ -9,6 +9,7 @@ var Input = function (props) {
     var _a = props.options, options = _a === void 0 ? [] : _a, _b = props.placeholder, placeholder = _b === void 0 ? '' : _b, className = props.className, _c = props.inputClassName, inputClassName = _c === void 0 ? '' : _c, _d = props.withLabel, withLabel = _d === void 0 ? false : _d, _e = props.hint, hint = _e === void 0 ? '' : _e, _f = props.error, error = _f === void 0 ? '' : _f, _g = props.isError, isError = _g === void 0 ? false : _g, onClear = props.onClear, endIcon = props.endIcon, onEndIconClick = props.onEndIconClick, rest = __rest(props, ["options", "placeholder", "className", "inputClassName", "withLabel", "hint", "error", "isError", "onClear", "endIcon", "onEndIconClick"]);
     var _h = useState(false), focused = _h[0], setFocused = _h[1];
     var _j = useState({ top: 'calc(100% + 1px)', bottom: 'auto' }), optionsPosition = _j[0], setOptionsPosition = _j[1];
+    var _k = useState(options), renderOptions = _k[0], setRenderOptions = _k[1];
     useLayoutEffect(function () {
         var el = ref.current;
         if (el) {
@@ -38,6 +39,8 @@ var Input = function (props) {
         }
     };
     var onInputChange = function (event, option) {
+        var _options = options.filter(function (item) { return item.label.includes(event.target.value); });
+        setRenderOptions(_options);
         if (option) {
             event.target.value = option.value;
             rest.onChange(event);
@@ -57,7 +60,7 @@ var Input = function (props) {
                 onClear && endIcon && React.createElement("hr", null),
                 endIcon &&
                     React.createElement("button", { className: "icon", onClick: onEndIconClick ? function () { return onEndIconClick(); } : function () { } }, endIcon)),
-            focused && React.createElement(Card, { className: "autocomplete-options", variant: 'dialogue', style: __assign({}, optionsPosition) }, options.map(function (option, index) {
+            focused && React.createElement(Card, { className: "autocomplete-options", variant: 'dialogue', style: __assign({}, optionsPosition) }, renderOptions.map(function (option, index) {
                 return (React.createElement("button", { key: index, onClick: function (event) { return onInputChange(event, option); }, className: 't-label-regular-tiny' },
                     React.createElement("div", null, option.label)));
             }))),

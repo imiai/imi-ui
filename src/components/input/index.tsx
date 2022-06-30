@@ -26,6 +26,7 @@ const Input = (props: IInputProps) => {
     const { options = [], placeholder = '', className, inputClassName = '', withLabel = false, hint = '', error = '', isError = false, onClear, endIcon, onEndIconClick, ...rest } = props;
     const [focused, setFocused] = useState(false)
     const [optionsPosition, setOptionsPosition] = useState({top: 'calc(100% + 1px)', bottom: 'auto'})
+    const [renderOptions, setRenderOptions] = useState<Array<ISelectItem>>(options);
 
     useLayoutEffect(() => {
         let el = ref.current;
@@ -59,7 +60,9 @@ const Input = (props: IInputProps) => {
         }
     }
 
-    const onInputChange = (event: any, option: any) => {
+    const onInputChange = (event: any, option: ISelectItem) => {
+        let _options = options.filter(item => item.label.includes(event.target.value))
+        setRenderOptions(_options)
         if (option) {
             event.target.value = option.value;
             rest.onChange(event)
@@ -86,7 +89,7 @@ const Input = (props: IInputProps) => {
                     }
                 </div>
                 {focused && <Card className="autocomplete-options" variant='dialogue' style={{...optionsPosition}} >
-                    {options.map((option, index) => {
+                    {renderOptions.map((option, index) => {
                         return (
                             <button key={index} onClick={(event) => onInputChange(event, option)} className={'t-label-regular-tiny'}>
                                <div>{option.label}</div>

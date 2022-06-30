@@ -77,5 +77,5 @@ IconAndClear.args = {
 export const AutoCompleta = Template.bind({});
 AutoCompleta.args = {
     ...Base.args,
-    options: [{label:'asd', value: 'asd'}, {label:'dfg', value: 'dfg'}, {label:'dfg', value: 'dfg'}, {label:'dfg', value: 'dfg'}]
+    options: [{label:'asd', value: 'asd'}, {label:'dfg', value: 'dfg'}, {label:'hdf', value: 'hdf'}]
 }
