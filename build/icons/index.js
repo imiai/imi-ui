@@ -143,6 +143,7 @@ export { default as ScissorsIcon } from './components/ScissorsIcon.js';
 export { default as CoverImageIcon } from './components/CoverImageIcon.js';
 export { default as MoreT2Icon } from './components/MoreT2Icon.js';
 export { default as SettingIcon } from './components/SettingIcon.js';
+export { default as MusicIcon } from './components/MusicIcon.js';
 export { default as SortIcon } from './components/SortIcon.js';
 export { default as AttachmentIcon } from './components/AttachmentIcon.js';
 export { default as UploadIcon } from './components/UploadIcon.js';

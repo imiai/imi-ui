@@ -166,6 +166,7 @@ export {default as ScissorsIcon} from './components/ScissorsIcon';
 export {default as CoverImageIcon} from './components/CoverImageIcon';
 export {default as MoreT2Icon} from './components/MoreT2Icon';
 export {default as SettingIcon} from './components/SettingIcon';
+export {default as MusicIcon} from './components/MusicIcon';
 export {default as SortIcon} from './components/SortIcon';
 export {default as AttachmentIcon} from './components/AttachmentIcon';
 export {default as UploadIcon} from './components/UploadIcon';
