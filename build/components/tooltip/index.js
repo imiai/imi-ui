@@ -2,9 +2,9 @@ import React from 'react';
 import './styles.scss.js';
 
 var Tooltip = function (props) {
-    var title = props.title, _a = props.placement, placement = _a === void 0 ? 'top' : _a, children = props.children;
+    var title = props.title, _a = props.placement, placement = _a === void 0 ? 'top' : _a, children = props.children, _b = props.showTooltip, showTooltip = _b === void 0 ? true : _b;
     return (React.createElement("div", { className: "imiui-tooltip" },
-        React.createElement("span", { className: "tooltip ".concat(placement, " t-label-semibold-supertiny") }, title),
+        showTooltip && React.createElement("span", { className: "tooltip ".concat(placement, " t-label-semibold-supertiny") }, title),
         children));
 };
 
