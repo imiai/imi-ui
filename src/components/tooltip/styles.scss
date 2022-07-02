@@ -28,9 +28,9 @@
             }
         }
         &.left {
-            left: calc(-100% - 6px);
+            right: calc(100% + 6px);
             top: 50%;
-            transform: translate(50%, -50%);
+            transform: translate(0, -50%);
             &::after {
                 top: 50%;
                 right: -6px;
@@ -42,9 +42,9 @@
             }
         }
         &.right {
-            right: calc(-100% - 6px);
+            left: calc(100% + 6px);
             top: 50%;
-            transform: translate(-50%, -50%);
+            transform: translate(0, -50%);
             &::after {
                 top: 50%;
                 left: -6px;
