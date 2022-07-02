@@ -91,7 +91,7 @@ const Input = (props: IInputProps) => {
                 {focused && <Card className="autocomplete-options" variant='dialogue' style={{...optionsPosition}} >
                     {renderOptions.map((option, index) => {
                         return (
-                            <button key={index} onClick={(event) => onInputChange(event, option)} className={'t-label-regular-tiny'}>
+                            <button key={index} onClick={(event) => onInputChange(event, option)} className={`t-label-regular-tiny ${option.value === rest.value ? 'active' : ''}`}>
                                <div>{option.label}</div>
                             </button>
                         )

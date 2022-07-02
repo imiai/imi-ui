@@ -18,7 +18,7 @@ interface ISelect extends React.HTMLProps<HTMLInputElement> {
 }
 
 const Select = (props: ISelect) => {
-    const {options, className, inputClassName = '', withLabel, ...rest} = props;
+    const {options, className, inputClassName = '', label, withLabel, ...rest} = props;
     const [showOptions, setShowOptions] = useState(false);
     const ref = useRef(null)
     const optionsRef = useRef(null);
@@ -34,6 +34,16 @@ const Select = (props: ISelect) => {
             }
         }
     }, [ref])
+
+    useEffect(() => {
+        if (showOptions && optionsRef) {
+            let els = optionsRef.current.getElementsByClassName('active')
+            if (els && els.length > 0) {
+                let el = els[0]
+                optionsRef.current.scrollTo({top: el.offsetTop, left: 0})
+            }
+        }
+    }, [showOptions])
 
     useOnClickOutside(ref, () => setShowOptions(false))
     
@@ -63,8 +73,8 @@ const Select = (props: ISelect) => {
             {showOptions && <Card ref={optionsRef} id='imiui-select-options-id' style={{...optionsPosition}} className="options" variant='dialogue'>
                 {options.map((option, index) => {
                     return (
-                        <button key={index} onClick={(event) => onInputChange(event, option)} className={'t-label-regular-tiny'}>
-                            <div>{option.label}</div>
+                        <button key={index} onClick={(event) => onInputChange(event, option)} className={`t-label-regular-tiny ${option.label === rest.value ? 'active' : ''}`} >
+                            <p className="t-label-regular-supertiny">{option.label}</p>
                         </button>
                     )
                 })}

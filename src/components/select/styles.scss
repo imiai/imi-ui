@@ -42,13 +42,25 @@
         border-radius: 8px;
 
         button {
+            min-height: 36px;
             @extend %button-default;
 
             &:hover {
                 background-color: var(--imiui-blue-50);
             }
+            &.active {
+                background-color: var(--imiui-primary-blue);
+                color: var(--imiui-primary-white);
+            }
 
-            padding: 6px 12px;
+            p {
+                padding: 0;
+                margin: 0;
+                height: 36px;
+                line-height: 36px;
+            }
+
+            padding: 0 12px;
             text-align: left;
         }
     }
