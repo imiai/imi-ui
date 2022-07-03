@@ -56,13 +56,13 @@ var Input = function (props) {
             withLabel && React.createElement("label", null, placeholder),
             React.createElement("div", { className: "icon-container" },
                 onClear && !rest.disabled &&
-                    React.createElement("button", { className: "icon close" },
+                    React.createElement("button", { type: "button", className: "icon close" },
                         React.createElement(CloseT2Icon, null)),
                 onClear && endIcon && React.createElement("hr", null),
                 endIcon &&
-                    React.createElement("button", { className: "icon", onClick: onEndIconClick ? function () { return onEndIconClick(); } : function () { } }, endIcon)),
+                    React.createElement("button", { type: "button", className: "icon", onClick: onEndIconClick ? function () { return onEndIconClick(); } : function () { } }, endIcon)),
             focused && React.createElement(Card, { className: "autocomplete-options", variant: 'dialogue', style: __assign({}, optionsPosition) }, renderOptions.map(function (option, index) {
-                return (React.createElement("button", { key: index, onClick: function (event) { return onInputChange(event, option); }, className: "t-label-regular-tiny ".concat(option.value === rest.value ? 'active' : '') },
+                return (React.createElement("button", { type: "button", key: index, onClick: function (event) { return onInputChange(event, option); }, className: "t-label-regular-tiny ".concat(option.value === rest.value ? 'active' : '') },
                     React.createElement("div", null, option.label)));
             }))),
         !error && hint && React.createElement("span", { className: "imiui-input-note hint t-label-regular-supertiny" }, hint),
