@@ -120,6 +120,7 @@
     .icon-container {
         margin-left: auto;
         display: flex;
+        z-index: 1;
     }
     .icon {
         @extend %button-default;
