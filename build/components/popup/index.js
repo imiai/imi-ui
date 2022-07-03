@@ -10,7 +10,7 @@ import './styles.scss.js';
 var PopupHeader = function (props) {
     var title = props.title, onClose = props.onClose;
     return (React.createElement("div", { className: 'imi-popup-header' },
-        React.createElement("span", { className: 't-heading-bold-small' }, title),
+        React.createElement("span", { className: 't-heading-bold-small c-primary-dark' }, title),
         React.createElement("button", { onClick: onClose },
             React.createElement(CloseIcon, { width: 24, height: 24, fill: 'var(--imiui-primary-dark)' }))));
 };

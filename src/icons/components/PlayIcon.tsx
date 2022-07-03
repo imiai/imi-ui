@@ -1,7 +1,7 @@
 import React from 'react';
 import { IIconsProps } from './icons.types';
 
-const PlayNextIcon = (props: IIconsProps) => {
+const PlayIcon = (props: IIconsProps) => {
     const { fill = '#7790A6', className = '', width = 24, height = 24 } = props;
     return (
         <svg width={width} height={height} viewBox="0 0 24 24" fill={fill} className={className} xmlns="http://www.w3.org/2000/svg">
@@ -10,4 +10,4 @@ const PlayNextIcon = (props: IIconsProps) => {
     )
 }
 
-export default PlayNextIcon;
+export default PlayIcon;
