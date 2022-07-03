@@ -79,12 +79,12 @@ const Input = (props: IInputProps) => {
                 {withLabel && <label>{placeholder}</label>}
                 <div className="icon-container">
                     {onClear && !rest.disabled &&
-                        <button className="icon close">
+                        <button type="button" className="icon close">
                             <CloseT2Icon />
                         </button>}
                     {onClear && endIcon && <hr />}
                     {endIcon &&
-                        <button className="icon" onClick={onEndIconClick ? () => onEndIconClick() : () => { }}>
+                        <button type="button" className="icon" onClick={onEndIconClick ? () => onEndIconClick() : () => { }}>
                             {endIcon}
                         </button>
                     }
@@ -92,7 +92,7 @@ const Input = (props: IInputProps) => {
                 {focused && <Card className="autocomplete-options" variant='dialogue' style={{...optionsPosition}} >
                     {renderOptions.map((option, index) => {
                         return (
-                            <button key={index} onClick={(event) => onInputChange(event, option)} className={`t-label-regular-tiny ${option.value === rest.value ? 'active' : ''}`}>
+                            <button type="button" key={index} onClick={(event) => onInputChange(event, option)} className={`t-label-regular-tiny ${option.value === rest.value ? 'active' : ''}`}>
                                <div>{option.label}</div>
                             </button>
                         )

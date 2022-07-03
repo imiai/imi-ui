@@ -3,6 +3,7 @@ import './styles.scss';
 
 interface IButtonProps extends React.HTMLProps<HTMLButtonElement> {
     type: 'primary' | 'secondary' | 'tertiary';
+    buttonType?: "submit" | "button" | "reset";
     size: 54 | 48 | 40 | 32;
     startIcon?: React.ReactNode;
     endIcon?: React.ReactNode;
@@ -11,7 +12,7 @@ interface IButtonProps extends React.HTMLProps<HTMLButtonElement> {
 
 export const Button = (props: IButtonProps) => {
 
-    const { className = '', href = '', target = '_blank', type, size, disabled = false, startIcon, endIcon, children, ...rest } = props;
+    const { className = '', buttonType = 'button', href = '', target = '_blank', type, size, disabled = false, startIcon, endIcon, children, ...rest } = props;
 
     let content = (
         <>
@@ -30,7 +31,7 @@ export const Button = (props: IButtonProps) => {
     }
 
     return (
-        <button disabled={disabled} className={`imiui-button ${type} size-${size}${disabled ? ' disabled' : ''}${className ? ` ${className}` : ''}`} {...rest}>
+        <button type={buttonType} disabled={disabled} className={`imiui-button ${type} size-${size}${disabled ? ' disabled' : ''}${className ? ` ${className}` : ''}`} {...rest}>
            {content}
         </button>
     )
