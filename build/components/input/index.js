@@ -6,10 +6,10 @@ import Card from '../card/index.js';
 
 var Input = function (props) {
     var ref = useRef(null);
-    var _a = props.options, options = _a === void 0 ? [] : _a, _b = props.placeholder, placeholder = _b === void 0 ? '' : _b, className = props.className, _c = props.inputClassName, inputClassName = _c === void 0 ? '' : _c, _d = props.withLabel, withLabel = _d === void 0 ? false : _d, _e = props.hint, hint = _e === void 0 ? '' : _e, _f = props.error, error = _f === void 0 ? '' : _f, _g = props.isError, isError = _g === void 0 ? false : _g, onClear = props.onClear, endIcon = props.endIcon, onEndIconClick = props.onEndIconClick, rest = __rest(props, ["options", "placeholder", "className", "inputClassName", "withLabel", "hint", "error", "isError", "onClear", "endIcon", "onEndIconClick"]);
-    var _h = useState(false), focused = _h[0], setFocused = _h[1];
-    var _j = useState({ top: 'calc(100% + 1px)', bottom: 'auto' }), optionsPosition = _j[0], setOptionsPosition = _j[1];
-    var _k = useState(options), renderOptions = _k[0], setRenderOptions = _k[1];
+    var _a = props.options, options = _a === void 0 ? [] : _a, _b = props.placeholder, placeholder = _b === void 0 ? '' : _b, className = props.className, _c = props.inputClassName, inputClassName = _c === void 0 ? '' : _c, _d = props.withLabel, withLabel = _d === void 0 ? false : _d, _e = props.hint, hint = _e === void 0 ? '' : _e, _f = props.error, error = _f === void 0 ? '' : _f, _g = props.isError, isError = _g === void 0 ? false : _g, onClear = props.onClear, endIcon = props.endIcon, onEndIconClick = props.onEndIconClick, _h = props.style, style = _h === void 0 ? {} : _h, rest = __rest(props, ["options", "placeholder", "className", "inputClassName", "withLabel", "hint", "error", "isError", "onClear", "endIcon", "onEndIconClick", "style"]);
+    var _j = useState(false), focused = _j[0], setFocused = _j[1];
+    var _k = useState({ top: 'calc(100% + 1px)', bottom: 'auto' }), optionsPosition = _k[0], setOptionsPosition = _k[1];
+    var _l = useState(options), renderOptions = _l[0], setRenderOptions = _l[1];
     useLayoutEffect(function () {
         var el = ref.current;
         if (el) {
@@ -37,6 +37,7 @@ var Input = function (props) {
             minus += 20 + 16;
             return minus;
         }
+        return minus;
     };
     var onInputChange = function (event, option) {
         var _options = options.filter(function (item) { return item.label.includes(event.target.value); });
@@ -51,7 +52,7 @@ var Input = function (props) {
     };
     return (React.createElement(Fragment, null,
         React.createElement("div", { ref: ref, className: "imiui-input".concat(isError ? ' error' : '').concat(rest.disabled ? ' disabled' : '').concat(withLabel ? ' label' : '').concat(className ? " ".concat(className) : '') },
-            React.createElement("input", __assign({}, rest, { onFocus: onFocus, onBlur: onBlur, onChange: function (event) { return onInputChange(event, null); }, className: "t-label-regular-tiny ".concat(inputClassName), placeholder: placeholder, style: __assign({ width: "calc(100% - ".concat(getInputWidth(), "px") }, rest.style) })),
+            React.createElement("input", __assign({}, rest, { onFocus: onFocus, onBlur: onBlur, onChange: function (event) { return onInputChange(event, null); }, className: "t-label-regular-tiny ".concat(inputClassName), placeholder: placeholder, style: __assign({ width: "calc(100% - ".concat(getInputWidth(), "px") }, style) })),
             withLabel && React.createElement("label", null, placeholder),
             React.createElement("div", { className: "icon-container" },
                 onClear && !rest.disabled &&

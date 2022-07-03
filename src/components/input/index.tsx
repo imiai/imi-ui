@@ -23,7 +23,7 @@ interface IInputProps extends React.HTMLProps<HTMLInputElement> {
 const Input = (props: IInputProps) => {
     const ref = useRef(null);
 
-    const { options = [], placeholder = '', className, inputClassName = '', withLabel = false, hint = '', error = '', isError = false, onClear, endIcon, onEndIconClick, ...rest } = props;
+    const { options = [], placeholder = '', className, inputClassName = '', withLabel = false, hint = '', error = '', isError = false, onClear, endIcon, onEndIconClick, style = {}, ...rest } = props;
     const [focused, setFocused] = useState(false)
     const [optionsPosition, setOptionsPosition] = useState({top: 'calc(100% + 1px)', bottom: 'auto'})
     const [renderOptions, setRenderOptions] = useState<Array<ISelectItem>>(options);
@@ -58,6 +58,7 @@ const Input = (props: IInputProps) => {
             minus += 20 + 16;
             return minus;
         }
+        return minus
     }
 
     const onInputChange = (event: any, option: ISelectItem) => {
@@ -74,7 +75,7 @@ const Input = (props: IInputProps) => {
     return (
         <Fragment>
             <div ref={ref} className={`imiui-input${isError ? ' error' : ''}${rest.disabled ? ' disabled' : ''}${withLabel ? ' label' : ''}${className ? ` ${className}` : ''}`}>
-                <input {...rest} onFocus={onFocus} onBlur={onBlur} onChange={(event) => onInputChange(event, null) } className={`t-label-regular-tiny ${inputClassName}`} placeholder={placeholder} style={{ width: `calc(100% - ${getInputWidth()}px`, ...rest.style }} />
+                <input {...rest} onFocus={onFocus} onBlur={onBlur} onChange={(event) => onInputChange(event, null) } className={`t-label-regular-tiny ${inputClassName}`} placeholder={placeholder} style={{ width: `calc(100% - ${getInputWidth()}px`, ...style }} />
                 {withLabel && <label>{placeholder}</label>}
                 <div className="icon-container">
                     {onClear && !rest.disabled &&
