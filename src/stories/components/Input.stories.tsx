@@ -36,11 +36,7 @@ const Template: ComponentStory<typeof Input> = (args) => {
 
     return (
         <div>
-            <Input {...args} value={value} onChange={onChange}/>
-            <Input {...args} value={value} onChange={onChange}/>
-            <Input {...args} value={value} onChange={onChange}/>
-            <Input {...args} value={value} onChange={onChange}/>
-            <Input {...args} value={value} onChange={onChange}/>
+            <Input {...args} value={value} onChange={onChange} name='email'/>
         </div>
     )
 }

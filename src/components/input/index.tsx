@@ -49,7 +49,7 @@ const Input = (props: IInputProps) => {
     }
 
     const getInputWidth = () => {
-        let minus = 0;
+        let minus = withLabel ? 36 : 0;
         if (onClear && endIcon) {
             minus += 60 + 16;
             return minus;

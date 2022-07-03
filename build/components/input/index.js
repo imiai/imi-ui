@@ -28,7 +28,7 @@ var Input = function (props) {
         }, 100);
     };
     var getInputWidth = function () {
-        var minus = 0;
+        var minus = withLabel ? 36 : 0;
         if (onClear && endIcon) {
             minus += 60 + 16;
             return minus;
