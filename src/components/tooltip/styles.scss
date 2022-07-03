@@ -3,6 +3,7 @@
     display: inline-block;
     .tooltip {
         position: absolute;
+        display: none;
         opacity: 0;
         transition: all 200ms;
 
@@ -64,6 +65,7 @@
     &:hover {
         .tooltip {
             opacity: 1;
+            display: block;
         }
     }
 }
