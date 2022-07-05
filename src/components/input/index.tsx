@@ -40,17 +40,17 @@ const Input = (props: IInputProps) => {
     }, [ref])
 
 
-    const onFocus = () => {
+    const onFocus = (e: any) => {
         setFocused(true)
-        rest.onFocus
+        rest.onFocus(e)
     }
 
-    const onBlur = () => {
+    const onBlur = (e: any) => {
         let timer = setTimeout(() => {
             setFocused(false);
             clearTimeout(timer);
         }, 100)
-        rest.onBlur
+        rest.onBlur(e)
     }
 
     const getInputWidth = () => {
