@@ -79,7 +79,7 @@ const Input = (props: IInputProps) => {
                 {withLabel && <label>{placeholder}</label>}
                 <div className="icon-container">
                     {onClear && !rest.disabled &&
-                        <button type="button" className="icon close">
+                        <button type="button" className="icon close" onClick={() => onClear()}>
                             <CloseT2Icon />
                         </button>}
                     {onClear && endIcon && <hr />}

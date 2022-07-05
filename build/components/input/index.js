@@ -56,7 +56,7 @@ var Input = function (props) {
             withLabel && React.createElement("label", null, placeholder),
             React.createElement("div", { className: "icon-container" },
                 onClear && !rest.disabled &&
-                    React.createElement("button", { type: "button", className: "icon close" },
+                    React.createElement("button", { type: "button", className: "icon close", onClick: function () { return onClear(); } },
                         React.createElement(CloseT2Icon, null)),
                 onClear && endIcon && React.createElement("hr", null),
                 endIcon &&
