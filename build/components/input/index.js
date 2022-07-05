@@ -20,12 +20,16 @@ var Input = function (props) {
             }
         }
     }, [ref]);
-    var onFocus = function () { return setFocused(true); };
+    var onFocus = function () {
+        setFocused(true);
+        rest.onFocus;
+    };
     var onBlur = function () {
         var timer = setTimeout(function () {
             setFocused(false);
             clearTimeout(timer);
         }, 100);
+        rest.onBlur;
     };
     var getInputWidth = function () {
         var minus = withLabel ? 36 : 0;
