@@ -22,14 +22,14 @@ var Input = function (props) {
     }, [ref]);
     var onFocus = function (e) {
         setFocused(true);
-        rest.onFocus(e);
+        rest.onFocus && rest.onFocus(e);
     };
     var onBlur = function (e) {
         var timer = setTimeout(function () {
             setFocused(false);
             clearTimeout(timer);
         }, 100);
-        rest.onBlur(e);
+        rest.onBlur && rest.onBlur(e);
     };
     var getInputWidth = function () {
         var minus = withLabel ? 36 : 0;
