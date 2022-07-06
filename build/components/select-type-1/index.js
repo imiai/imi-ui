@@ -14,7 +14,7 @@ var SelectType1 = function (props) {
     var _c = useState({ top: 'calc(100% + 1px)', bottom: 'auto' }), optionsPosition = _c[0], setOptionsPosition = _c[1];
     useLayoutEffect(function () {
         var el = ref.current;
-        if (el) {
+        if (el && el.offsetParent) {
             var _height = options.length * 36;
             _height = _height > 330 ? 330 : _height;
             if (el.offsetParent.scrollHeight - el.offsetTop < _height) {

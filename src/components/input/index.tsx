@@ -30,7 +30,7 @@ const Input = (props: IInputProps) => {
 
     useLayoutEffect(() => {
         let el = ref.current;
-        if (el) {
+        if (el && el.offsetParent) {
             let _height = options.length * 36;
             _height = _height > 330 ? 330 : _height;
             if (el.offsetParent.scrollHeight - el.offsetTop < _height) {

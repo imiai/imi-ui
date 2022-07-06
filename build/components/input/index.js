@@ -12,7 +12,7 @@ var Input = function (props) {
     var _l = useState(options), renderOptions = _l[0], setRenderOptions = _l[1];
     useLayoutEffect(function () {
         var el = ref.current;
-        if (el) {
+        if (el && el.offsetParent) {
             var _height = options.length * 36;
             _height = _height > 330 ? 330 : _height;
             if (el.offsetParent.scrollHeight - el.offsetTop < _height) {
