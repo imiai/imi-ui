@@ -27,7 +27,7 @@ const Template: ComponentStory<typeof Select> = (args) => {
 
     return (
         <div style={{height: '100vh'}}>
-            <Select {...args} value={value?.label || ''} onChange={onChange}/>
+            <Select {...args} selectingOption={value} onChange={onChange}/>
         </div>
     )
 }
@@ -40,7 +40,7 @@ Base.args = {
         {label:'dfg', value: 2}, 
         {label:'zxc', value: 3}, 
         {label:'fse', value: 4}, 
-        {label:'wer', value: 5}, 
+        {label:'wer asda sdasda sa dasd asda', value: 5}, 
         {label:'fsd', value: 6}, 
         {label:'fse', value: 7}, 
         {label:'grh', value: 8}, 
@@ -52,3 +52,9 @@ Base.args = {
         {label:'tjd', value: 14}
     ]
 };
+
+export const Type2 = Template.bind({});
+Type2.args = {
+    variant: 'line',
+    ...Base.args
+}

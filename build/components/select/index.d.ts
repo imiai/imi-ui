@@ -1,14 +1,17 @@
 import React from "react";
-import './styles.scss';
-interface ISelectItem {
+export interface ISelectItem {
     label: string;
     value: any;
 }
-interface ISelect extends React.HTMLProps<HTMLInputElement> {
+export interface ISelect extends React.HTMLProps<HTMLInputElement> {
     options?: Array<ISelectItem>;
+    selectingOption?: ISelectItem;
     className?: string;
     inputClassName?: string;
     withLabel?: boolean;
 }
-declare const Select: (props: ISelect) => JSX.Element;
+interface ISelectGeneral extends ISelect {
+    variant?: 'box' | 'line';
+}
+declare const Select: (props: ISelectGeneral) => JSX.Element;
 export default Select;
