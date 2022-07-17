@@ -1,6 +1,7 @@
 @import '../../styles/mixin.scss';
 
 .imiui-bottomsheet {
+    z-index: 1300;
     position: fixed;
     bottom: 0;
     top: 0;
